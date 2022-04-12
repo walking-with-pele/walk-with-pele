@@ -12,14 +12,14 @@ class Landing extends React.Component {
               src='images/pele.jpg'
               as='a'
               size='small'
-              href='/landing'
+              href='/'
               target='_blank'
             />
           </Grid.Column>
 
           <Grid.Column>
             <Header as='h1'>Walking with Pele</Header>
-            <p>Some Description</p>
+            <Header as='h3'>Helping UH Students create their own stories</Header>
           </Grid.Column>
 
           <Grid.Column>
@@ -27,7 +27,7 @@ class Landing extends React.Component {
               src='images/pele.jpg'
               as='a'
               size='small'
-              href='/landing'
+              href='/'
               target='_blank'
             />
           </Grid.Column>
