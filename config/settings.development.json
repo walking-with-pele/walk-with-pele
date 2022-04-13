@@ -9,5 +9,10 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+  "defaultSpots": [
+    { "name": "Spot1", "address": "some address", "owner": "john@foo.com", "spotType": "beach" },
+    { "name": "spot2", "address": "some address", "owner": "john@foo.com", "spotType": "hike" },
+    { "name": "Spot3", "address": "some address", "owner": "admin@foo.com", "spotType": "library" }
   ]
 }
