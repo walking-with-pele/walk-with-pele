@@ -22,12 +22,12 @@ const MakeCard = (props) => (
 );
 
 const options = [
-  { text: 'My Spots', value: 1},
-  { text: 'Liked Spots', value: 2},
-  { text: 'Visited Spots', value: 3}
-]
+  { text: 'My Spots', value: 1 },
+  { text: 'Liked Spots', value: 2 },
+  { text: 'Visited Spots', value: 3 },
+];
 
-const defVal = 1
+const defVal = 1;
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class UserProfile extends React.Component {
@@ -41,7 +41,7 @@ class UserProfile extends React.Component {
   renderPage() {
     return (
       <Container>
-        <div style={{paddingTop: '20px', paddingBottom :'20px'}}>
+        <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           <Header as="h2" textAlign="left">User Profile</Header>
         </div>
         <Grid celled>
@@ -159,10 +159,10 @@ class UserProfile extends React.Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <div style={{paddingTop: '20px', paddingBottom :'20px'}}>
+        <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           <Menu compact>
-          <Dropdown options={options} simple item
-                    defaultValue={defVal} simple item/>
+            <Dropdown options={options} simple item
+              defaultValue={defVal} simple item/>
           </Menu>
         </div>
         <Card.Group itemsPerRow={3}>
