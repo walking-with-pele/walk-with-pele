@@ -16,9 +16,9 @@ class NavBar extends React.Component {
           <Header inverted as='h1'>Walking with Pele</Header>
         </Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Stuff</Menu.Item>,
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/rand" key='rand'>Spot of the Day</Menu.Item>,
             <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>List Spot</Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="active" exact to="/rand" key='rand'>Spot of the Day</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Spot</Menu.Item>,
           ]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
@@ -26,15 +26,16 @@ class NavBar extends React.Component {
         ) : ''}
         <Menu.Item position="right">
           {this.props.currentUser === '' ? (
-            <Dropdown id="login-dropdown" text="Login" pointing="top right" icon={'user'}>
+            <Dropdown id="login-dropdown" text="Login" pointing="top right" icon={'dropdown marker'}>
               <Dropdown.Menu>
                 <Dropdown.Item id="login-dropdown-sign-in" icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
                 <Dropdown.Item id="login-dropdown-sign-up" icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
               </Dropdown.Menu>
             </Dropdown>
           ) : (
-            <Dropdown id="navbar-current-user" text={this.props.currentUser} pointing="top right" icon={'user'}>
+            <Dropdown id="navbar-current-user" text={this.props.currentUser} pointing="top right" icon={'dropdown marker'}>
               <Dropdown.Menu>
+                <Dropdown.Item id="user-profile" icon="user" text="User Profile" as={NavLink} exact to="/signout"/>
                 <Dropdown.Item id="navbar-sign-out" icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
               </Dropdown.Menu>
             </Dropdown>
