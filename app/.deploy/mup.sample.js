@@ -9,6 +9,7 @@ module.exports = {
   app: {
     // if you edit the app 'name' field, be sure to run 'mup stop' if the app is already running.
     // otherwise you will have two apps deployed at once, with unpredictable results.
+    ///Users/hekai/.npm-global/bin/
     name: 'meteor-application-template-react',
     path: '../',
     servers: { one: {}, },
