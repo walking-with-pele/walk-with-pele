@@ -21,7 +21,7 @@ class RandomSpot extends React.Component {
     const rand = _.sample(this.props.spots.map((spot, index) => <Spot key={index} spot={spot}/>));
     return (
       <Container>
-        <Header as="h2" textAlign="center" inverted>List Contacts</Header>
+        <Header as="h2" textAlign="center">Spot of the Day</Header>
         <Card.Group>
           {rand}
         </Card.Group>

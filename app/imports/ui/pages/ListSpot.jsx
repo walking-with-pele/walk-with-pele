@@ -18,7 +18,7 @@ class ListSpot extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center" inverted>List Contacts</Header>
+        <Header as="h2" textAlign="center">List Spots</Header>
         <Card.Group>
           {this.props.spots.map((spot, index) => <Spot key={index} spot={spot}/>)}
         </Card.Group>
