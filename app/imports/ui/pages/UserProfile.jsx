@@ -4,9 +4,8 @@ import { Container, Dropdown, Header, Loader, Card, Image, Menu, Grid, List } fr
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Stuffs } from '../../api/stuff/Stuff';
-import StuffItem from '../components/StuffItem';
 
-const MakeCard = (props) => (
+const MakeCard = () => (
   <Card>
     <Card.Content>
       <Image size='large' src='/images/meteor-logo.png'/>
@@ -162,7 +161,7 @@ class UserProfile extends React.Component {
         <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           <Menu compact>
             <Dropdown options={options} simple item
-              defaultValue={defVal} simple item/>
+              defaultValue={defVal}/>
           </Menu>
         </div>
         <Card.Group itemsPerRow={3}>
