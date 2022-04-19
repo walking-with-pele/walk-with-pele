@@ -12,6 +12,7 @@ import RandomSpot from '../pages/RandomSpot';
 // import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 // import AddStuff from '../pages/AddStuff';
+import Reset from '../pages/Reset';
 import AddSpot from '../pages/AddSpot';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
@@ -29,12 +30,14 @@ class App extends React.Component {
           <NavBar/>
           <Switch>
             <Route exact path="/" component={Landing}/>
+            <Route exact path="/" component={Reset}/>
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <ProtectedRoute path="/list" component={ListSpot}/>
             <ProtectedRoute path="/user" component={UserProfile}/>
             <ProtectedRoute path="/add" component={AddSpot}/>
+            <Route path="/Reset" component={Reset}/>
             <ProtectedRoute path="/rand" component={RandomSpot}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
