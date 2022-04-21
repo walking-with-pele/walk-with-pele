@@ -16,7 +16,7 @@ class Spot extends React.Component {
           </Card.Description>
         </Card.Content>
         <Card.Content>
-          {this.props.spot.likes}
+          Likes: {this.props.spot.likes}
         </Card.Content>
         <Card.Content>
           Added by {this.props.spot.owner}
