@@ -4,8 +4,9 @@ import { Container, Dropdown, Header, Loader, Card, Image, Menu, Grid, List } fr
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Stuffs } from '../../api/stuff/Stuff';
-import StuffItem from '../components/StuffItem';
+import { Link } from 'react-router-dom';
 
+/*
 const MakeCard = (props) => (
   <Card>
     <Card.Content>
@@ -28,6 +29,7 @@ const options = [
 ];
 
 const defVal = 1;
+ */
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class UserProfile extends React.Component {
@@ -63,7 +65,7 @@ class UserProfile extends React.Component {
                 <List.Item>
                   <Image size='tiny' src='/images/meteor-logo.png' />
                   <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
+                    <List.Header as={Link} to={'/spot-page'}>Name of Spot</List.Header>
                     <List.Description>
                       Address
                     </List.Description>
@@ -159,20 +161,6 @@ class UserProfile extends React.Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-          <Menu compact>
-            <Dropdown options={options} simple item
-              defaultValue={defVal} simple item/>
-          </Menu>
-        </div>
-        <Card.Group itemsPerRow={3}>
-          <MakeCard/>
-          <MakeCard/>
-          <MakeCard/>
-          <MakeCard/>
-          <MakeCard/>
-          <MakeCard/>
-        </Card.Group>
       </Container>
     );
   }
