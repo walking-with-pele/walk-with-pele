@@ -38,7 +38,7 @@ class App extends React.Component {
             <ProtectedRoute path="/add" component={AddSpot}/>
             <ProtectedRoute path="/rand" component={RandomSpot}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-            <ProtectedRoute path="/spot-page" component={SpotPage}/>
+            <ProtectedRoute path="/spot-page/:_id" component={SpotPage}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <Route component={NotFound}/>
           </Switch>

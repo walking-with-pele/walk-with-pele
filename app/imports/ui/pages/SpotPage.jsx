@@ -1,10 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Button, Header, Loader, Card, Image, Menu, Grid, List } from 'semantic-ui-react';
+import { Container, Button, Header, Loader, Label, Image, Grid, List } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Stuffs } from '../../api/stuff/Stuff';
-import { Link } from 'react-router-dom';
+import { Spots } from '../../api/spot/Spots';
 
 /*
 const MakeCard = (props) => (
@@ -34,6 +33,10 @@ const defVal = 1;
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class SpotPage extends React.Component {
 
+  incrementMe = () => {
+    Spots.collection.update();
+  }
+
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
@@ -43,21 +46,21 @@ class SpotPage extends React.Component {
   renderPage() {
     return (
       <Container style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-        <Header as='h1'>Name of Spot</Header>
+        <Header as='h1'>{this.props.spot.name}</Header>
         <Grid>
           <Grid.Row>
             <Grid.Column width={9}>
 
-              <Header as='h3'>Category</Header>
-              <p>Address</p>
+              <Header as='h3'>{this.props.spot.spotType}</Header>
+              <p>{this.props.spot.address}</p>
               <Button>Write a Review</Button>
               <div className="ui labeled button" tabIndex="0">
-                <div className="ui button">
+                <Button className="ui button">
                   <i className="heart icon"></i> Like
-                </div>
-                <a className="ui basic label">
-                  # of likes
-                </a>
+                </Button>
+                <Label as='a' basic>
+                  {this.props.spot.likes}
+                </Label>
               </div>
               <p>google maps?↓</p>
               <Image size='medium' src='/images/meteor-logo.png'/>
@@ -113,20 +116,28 @@ class SpotPage extends React.Component {
 
 // Require an array of Stuff documents in the props.
 SpotPage.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+  spot: PropTypes.shape({
+    name: PropTypes.string,
+    address: PropTypes.string,
+    owner: PropTypes.string,
+    spotType: PropTypes.string,
+    likes: PropTypes.number,
+    _id: PropTypes.string,
+  }).isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-export default withTracker(() => {
+export default withTracker(({ match }) => {
+  const spotId = match.params._id;
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Stuffs.userPublicationName);
+  const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready();
   // Get the Stuff documents
-  const stuffs = Stuffs.collection.find({}).fetch();
+  const spot = Spots.collection.findOne(spotId);
   return {
-    stuffs,
+    spot,
     ready,
   };
 })(SpotPage);

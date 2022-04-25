@@ -3,8 +3,10 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Dropdown, Header, Loader, Card, Image, Menu, Grid, List } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Stuffs } from '../../api/stuff/Stuff';
+import { Spots } from '../../api/spot/Spots';
 import { Link } from 'react-router-dom';
+import Spot from '../components/Spot';
+import SpotForUp from '../components/SpotForUp';
 
 /*
 const MakeCard = (props) => (
@@ -57,56 +59,11 @@ class UserProfile extends React.Component {
               <Header as='h3'>Hobbies/Bio</Header>
             </Grid.Column>
           </Grid.Row>
-
           <Grid.Row>
             <Grid.Column width={8}>
               <Header as='h3'>Visited Spots</Header>
               <List>
-                <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as={Link} to={'/spot-page'}>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
-                </List.Item>
+                {this.props.spots.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
               </List>
             </Grid.Column>
             <Grid.Column width={8}>
@@ -168,20 +125,20 @@ class UserProfile extends React.Component {
 
 // Require an array of Stuff documents in the props.
 UserProfile.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+  spots: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Stuffs.userPublicationName);
+  const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready();
   // Get the Stuff documents
-  const stuffs = Stuffs.collection.find({}).fetch();
+  const spots = Spots.collection.find({}).fetch();
   return {
-    stuffs,
+    spots,
     ready,
   };
 })(UserProfile);
