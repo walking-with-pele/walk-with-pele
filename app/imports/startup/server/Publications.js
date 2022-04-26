@@ -15,8 +15,8 @@ Meteor.publish(Stuffs.userPublicationName, function () {
 
 Meteor.publish(Spots.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Spots.collection.find({ owner: username });
+    // const username = Meteor.users.findOne(this.userId).username;
+    return Spots.collection.find(); // put { owner: username } in find() to find owners created spots
   }
   return this.ready();
 });
