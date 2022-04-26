@@ -64,6 +64,10 @@ class SpotPage extends React.Component {
     Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
   }
 
+  checkForLikes(data) {
+    return data.filter(e => e.spotID === this.props.spot._id)[0].like;
+  }
+
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
@@ -71,7 +75,7 @@ class SpotPage extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
-    const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
+    // const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
     return (
       <Container style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
@@ -83,7 +87,7 @@ class SpotPage extends React.Component {
               <p>{this.props.spot.address}</p>
               <Button>Write a Review</Button>
               <div className="ui labeled button" tabIndex="0">
-                <Button className="ui button" active={likedPage} onClick={() => this.userLikesSpot()}>
+                <Button className="ui button" active={this.checkForLikes(this.props.like)} onClick={() => this.userLikesSpot()}>
                   <i className="heart icon"></i> Like
                 </Button>
                 <Label as='a' basic>

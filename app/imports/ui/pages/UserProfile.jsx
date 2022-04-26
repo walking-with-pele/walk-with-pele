@@ -4,6 +4,7 @@ import { Container, Header, Loader, Image, Grid, List } from 'semantic-ui-react'
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Spots } from '../../api/spot/Spots';
+import { Likes } from '../../api/like/Likes';
 import SpotForUp from '../components/SpotForUp';
 
 /*
@@ -68,19 +69,7 @@ class UserProfile extends React.Component {
               <Header as='h3'>Liked Spots</Header>
               <List>
                 <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
+                  { /* Map Liked spots here */ }
                 </List.Item>
                 <List.Item>
                   <Image size='tiny' src='/images/meteor-logo.png' />
@@ -124,6 +113,7 @@ class UserProfile extends React.Component {
 // Require an array of Stuff documents in the props.
 UserProfile.propTypes = {
   spots: PropTypes.array.isRequired,
+  likes: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -132,11 +122,14 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready();
+  const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
+  const ready = subscription.ready() && likeSubscription.ready();
   // Get the Stuff documents
   const spots = Spots.collection.find({}).fetch();
+  const likes = Likes.collection.find({}).fetch();
   return {
     spots,
+    likes,
     ready,
   };
 })(UserProfile);
