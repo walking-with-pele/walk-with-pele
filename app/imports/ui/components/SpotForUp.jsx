@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class Spot extends React.Component {
+class SpotForUp extends React.Component {
   render() {
     return (
       <List.Item>
@@ -27,7 +27,7 @@ class Spot extends React.Component {
 }
 
 // Require a document to be passed to this component.
-Spot.propTypes = {
+SpotForUp.propTypes = {
   spot: PropTypes.shape({
     name: PropTypes.string,
     address: PropTypes.string,
@@ -39,4 +39,4 @@ Spot.propTypes = {
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
-export default withRouter(Spot);
+export default withRouter(SpotForUp);
