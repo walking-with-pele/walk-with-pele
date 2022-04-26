@@ -46,8 +46,14 @@ class SpotPage extends React.Component {
 
     if (data.some(e => e.spotID === this.props.spot._id)) {
       console.log('page already liked');
-      Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } }); // fix this
       data = data.filter(e => e.spotID === this.props.spot._id); // looks for like that matches user to this page
+
+      if (data[0].like) {
+        Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes - 1 } });
+      } else {
+        Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
+      }
+
       Likes.collection.update(
         { _id: data[0]._id },
         { $set: { like: !(data[0].like) } },
