@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Spot extends React.Component {
@@ -15,8 +15,8 @@ class Spot extends React.Component {
             {this.props.spot.spotType}
           </Card.Description>
         </Card.Content>
-        <Card.Content extra>
-          <Link to={`/edit/${this.props.spot._id}`}>Edit</Link>
+        <Card.Content>
+          {this.props.spot.likes}
         </Card.Content>
       </Card>
     );
@@ -30,6 +30,7 @@ Spot.propTypes = {
     address: PropTypes.string,
     owner: PropTypes.string,
     spotType: PropTypes.string,
+    likes: PropTypes.number,
     _id: PropTypes.string,
   }).isRequired,
 };
