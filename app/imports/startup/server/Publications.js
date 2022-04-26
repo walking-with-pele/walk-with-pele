@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Spots } from '../../api/spot/Spots';
+import { Likes } from '../../api/like/Likes';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -17,6 +18,14 @@ Meteor.publish(Spots.userPublicationName, function () {
   if (this.userId) {
     // const username = Meteor.users.findOne(this.userId).username;
     return Spots.collection.find(); // put { owner: username } in find() to find owners created spots
+  }
+  return this.ready();
+});
+
+Meteor.publish(Likes.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Likes.collection.find({ owner: username });
   }
   return this.ready();
 });

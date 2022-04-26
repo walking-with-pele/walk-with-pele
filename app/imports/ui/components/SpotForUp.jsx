@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Image, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -7,21 +7,21 @@ import { Link, withRouter } from 'react-router-dom';
 class Spot extends React.Component {
   render() {
     return (
-      <Card centered as={Link} to={`/spot-page/${this.props.spot._id}`}>
-        <Card.Content>
-          <Card.Header>{this.props.spot.name}</Card.Header>
-          <Card.Meta>{this.props.spot.address}</Card.Meta>
-          <Card.Description>
+      <List.Item>
+        <Image size='tiny' src='/images/meteor-logo.png' />
+        <List.Content>
+          <List.Header as={Link} to={`/spot-page/${this.props.spot._id}`}>{this.props.spot.name}</List.Header>
+          <List.Description>
+            {this.props.spot.address}
+          </List.Description>
+          <List.Description>
             {this.props.spot.spotType}
-          </Card.Description>
-        </Card.Content>
-        <Card.Content>
-          Likes: {this.props.spot.likes}
-        </Card.Content>
-        <Card.Content>
-          Added by {this.props.spot.owner}
-        </Card.Content>
-      </Card>
+          </List.Description>
+          <List.Description>
+            Date Visited
+          </List.Description>
+        </List.Content>
+      </List.Item>
     );
   }
 }
