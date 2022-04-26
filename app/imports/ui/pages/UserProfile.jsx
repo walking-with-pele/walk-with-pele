@@ -1,11 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Dropdown, Header, Loader, Card, Image, Menu, Grid, List } from 'semantic-ui-react';
+import { Container, Header, Loader, Image, Grid, List } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Spots } from '../../api/spot/Spots';
-import { Link } from 'react-router-dom';
-import Spot from '../components/Spot';
 import SpotForUp from '../components/SpotForUp';
 
 /*
@@ -25,9 +23,9 @@ const MakeCard = (props) => (
 );
 
 const options = [
-  { text: 'My Spots', value: 1 },
-  { text: 'Liked Spots', value: 2 },
-  { text: 'Visited Spots', value: 3 },
+  { text: 'My Likes', value: 1 },
+  { text: 'Liked Likes', value: 2 },
+  { text: 'Visited Likes', value: 3 },
 ];
 
 const defVal = 1;
