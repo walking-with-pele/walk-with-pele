@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Spots } from '../../api/spot/Spots';
 import Spot from '../components/Spot';
+import { Comments } from '../../api/comment/Comments';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class RandomSpot extends React.Component {
@@ -18,7 +19,8 @@ class RandomSpot extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     // const info = this.props.spots.map((spot, index) => <Spot key={index} spot={spot}/>);
-    const rand = _.sample(this.props.spots.map((spot, index) => <Spot key={index} spot={spot}/>));
+    const rand = _.sample(this.props.spots.map((spot, index) => <Spot key={index} spot={spot}
+      comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>));
     return (
       <Container>
         <Header as="h2" textAlign="center">Spot of the Day</Header>
@@ -33,6 +35,7 @@ class RandomSpot extends React.Component {
 // Require an array of Stuff documents in the props.
 RandomSpot.propTypes = {
   spots: PropTypes.array.isRequired,
+  comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -40,12 +43,15 @@ RandomSpot.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
+  const subscription2 = Meteor.subscribe(Comments.userPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready();
+  const ready = subscription.ready() && subscription2.ready();
   // Get the Stuff documents
   const spots = Spots.collection.find({}).fetch();
+  const comments = Comments.collection.find({}).fetch();
   return {
     spots,
+    comments,
     ready,
   };
 })(RandomSpot);

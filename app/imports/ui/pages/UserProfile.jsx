@@ -22,9 +22,9 @@ const MakeCard = (props) => (
 );
 
 const options = [
-  { text: 'My Spots', value: 1 },
-  { text: 'Liked Spots', value: 2 },
-  { text: 'Visited Spots', value: 3 },
+  { text: 'My Comments', value: 1 },
+  { text: 'Liked Comments', value: 2 },
+  { text: 'Visited Comments', value: 3 },
 ];
 
 const defVal = 1;
@@ -58,7 +58,7 @@ class UserProfile extends React.Component {
 
           <Grid.Row>
             <Grid.Column width={8}>
-              <Header as='h3'>Visited Spots</Header>
+              <Header as='h3'>Visited Comments</Header>
               <List>
                 <List.Item>
                   <Image size='tiny' src='/images/meteor-logo.png' />
@@ -108,7 +108,7 @@ class UserProfile extends React.Component {
               </List>
             </Grid.Column>
             <Grid.Column width={8}>
-              <Header as='h3'>Liked Spots</Header>
+              <Header as='h3'>Liked Comments</Header>
               <List>
                 <List.Item>
                   <Image size='tiny' src='/images/meteor-logo.png' />

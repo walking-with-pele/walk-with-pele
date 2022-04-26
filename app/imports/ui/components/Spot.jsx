@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import Comment from '../components/Comment';
+import AddComment from '../components/AddComment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Spot extends React.Component {
@@ -18,6 +20,14 @@ class Spot extends React.Component {
         <Card.Content>
           {this.props.spot.likes}
         </Card.Content>
+        <Card.Content extra>
+          <Feed>
+            {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
+          </Feed>
+        </Card.Content>
+        <Card.Content extra>
+          <AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>
+        </Card.Content>
       </Card>
     );
   }
@@ -33,6 +43,7 @@ Spot.propTypes = {
     likes: PropTypes.number,
     _id: PropTypes.string,
   }).isRequired,
+  comments: PropTypes.array.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
