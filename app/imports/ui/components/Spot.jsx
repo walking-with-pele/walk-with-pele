@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 
@@ -9,7 +9,7 @@ import AddComment from '../components/AddComment';
 class Spot extends React.Component {
   render() {
     return (
-      <Card centered>
+      <Card centered as={Link} to={`/spot-page/${this.props.spot._id}`}>
         <Card.Content>
           <Card.Header>{this.props.spot.name}</Card.Header>
           <Card.Meta>{this.props.spot.address}</Card.Meta>
@@ -18,7 +18,10 @@ class Spot extends React.Component {
           </Card.Description>
         </Card.Content>
         <Card.Content>
-          {this.props.spot.likes}
+                Likes: {this.props.spot.likes}
+        </Card.Content>
+        <Card.Content>
+                Added by {this.props.spot.owner}
         </Card.Content>
         <Card.Content extra>
           <Feed>
