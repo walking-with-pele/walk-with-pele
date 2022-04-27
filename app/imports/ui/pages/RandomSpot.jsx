@@ -18,7 +18,6 @@ class RandomSpot extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
-    // const info = this.props.spots.map((spot, index) => <Spot key={index} spot={spot}/>);
     const rand = _.sample(this.props.spots.map((spot, index) => <Spot key={index} spot={spot}
       comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>));
     return (

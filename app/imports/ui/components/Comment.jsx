@@ -1,7 +1,8 @@
 import React from 'react';
 import { Feed } from 'semantic-ui-react';
+import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Comment extends React.Component {
@@ -9,10 +10,13 @@ class Comment extends React.Component {
     return (
       <Feed.Event >
         <Feed.Content>
-          <Feed.Date content={this.props.comment.createdAt.toLocaleDateString('en-US')} />
           <Feed.Summary>
-            {this.props.comment.comment}
+            <Feed.User as={Link} to={`/user/${Meteor.user().username}`}>{Meteor.user().username}</Feed.User>
+            <Feed.Date content={this.props.comment.createdAt.toLocaleDateString('en-US')} />
           </Feed.Summary>
+          <Feed.Meta>
+            {this.props.comment.comment}
+          </Feed.Meta>
         </Feed.Content>
       </Feed.Event>
     );
