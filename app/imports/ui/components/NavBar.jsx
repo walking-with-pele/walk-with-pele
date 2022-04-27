@@ -9,8 +9,8 @@ import { Roles } from 'meteor/alanning:roles';
 class NavBar extends React.Component {
   render() {
     const menuStyle = {
-      //marginBottom: '10px',
-      backgroundColor: '#024731'
+      // marginBottom: '10px',
+      backgroundColor: '#024731',
     };
     return (
       <Menu style={menuStyle} attached="top" borderless inverted>
@@ -18,10 +18,10 @@ class NavBar extends React.Component {
           <Image src='images/uhlogo2.png' alt="logo" size="small"/>
         </Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item className={"nav-button"} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>Spot of the Day</Menu.Item>,
-            <Menu.Item className={"nav-button"} as={NavLink} activeClassName="active" exact to="/list" key='list'>List Spot</Menu.Item>,
-            <Menu.Item className={"nav-button"} as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Spot</Menu.Item>,
-            <Menu.Item position="right"><Icon name='twitter'/><Icon name='facebook'/><Icon name='instagram'/></Menu.Item>
+          [<Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>Spot of the Day</Menu.Item>,
+            <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>List Spot</Menu.Item>,
+            <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Spot</Menu.Item>,
+            <Menu.Item key='social-media' position="right"><Icon name='twitter'/><Icon name='facebook'/><Icon name='instagram'/></Menu.Item>,
           ]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
@@ -29,7 +29,7 @@ class NavBar extends React.Component {
         ) : ''}
         <Menu.Item>
           {this.props.currentUser === '' ? (
-            <Dropdown className={"login-button"} id="login-dropdown" text="Login" pointing="top right" icon={'dropdown marker'}>
+            <Dropdown className={'login-button'} id="login-dropdown" text="Login" pointing="top right" icon={'dropdown marker'}>
               <Dropdown.Menu>
                 <Dropdown.Item id="login-dropdown-sign-in" icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
                 <Dropdown.Item id="login-dropdown-sign-up" icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
