@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Menu, Dropdown, Image, Icon } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
+
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class NavBar extends React.Component {
           [<Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>Spot of the Day</Menu.Item>,
             <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>List Spot</Menu.Item>,
             <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Spot</Menu.Item>,
+            <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>Top Spots</Menu.Item>,
             <Menu.Item key='social-media' position="right"><Icon name='twitter'/><Icon name='facebook'/><Icon name='instagram'/></Menu.Item>,
           ]
         ) : ''}
