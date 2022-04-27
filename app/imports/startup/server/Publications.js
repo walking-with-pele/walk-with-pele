@@ -17,8 +17,7 @@ Meteor.publish(Stuffs.userPublicationName, function () {
 
 Meteor.publish(Spots.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Spots.collection.find({ owner: username });
+    return Spots.collection.find({});
   }
   return this.ready();
 });
@@ -33,8 +32,7 @@ Meteor.publish(Likes.userPublicationName, function () {
 
 Meteor.publish(Comments.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Comments.collection.find({ owner: username });
+    return Comments.collection.find({});
   }
   return this.ready();
 });
