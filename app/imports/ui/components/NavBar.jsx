@@ -37,12 +37,15 @@ class NavBar extends React.Component {
           </Menu.Item>,
           ]
         ) : ''}
-        <Menu.Item key='social-media' position='right' fitted><Icon name='twitter'/></Menu.Item>
-        <Menu.Item key='social-media' fitted><Icon name='facebook'/></Menu.Item>
-        <Menu.Item key='social-media' fitted><Icon name='instagram'/></Menu.Item>
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>
+          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/admin" key='admin'>
+            <Icon name='pencil alternate'/>
+          Admin
+          </Menu.Item>
         ) : ''}
+        <Menu.Item position='right' fitted><Icon name='twitter'/></Menu.Item>
+        <Menu.Item fitted><Icon name='facebook'/></Menu.Item>
+        <Menu.Item fitted><Icon name='instagram'/></Menu.Item>
         <Menu.Item>
           {this.props.currentUser === '' ? (
             <Dropdown className={'login-button'} id="login-dropdown" text="Login" pointing="top right" icon={'dropdown'}>
