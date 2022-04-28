@@ -17,7 +17,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "mapColorMark": "red",
+      "mapMarkerColor": "red",
       "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.3188889,
       "coordinatesY": -157.9047222
@@ -28,7 +28,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "black",
+      "mapMarkerColor": "black",
       "description": "Learn the water sport of Hawai'i!! This class is for beginners and transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.264007,
       "coordinatesY": -157.804318
@@ -39,7 +39,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "mapColorMark": "blue",
+      "mapMarkerColor": "blue",
       "description": "Learn the basics of Stand-Up Paddling, one of the newest, fastest growing water sports. Participants must be able to swim. Transportation and equipment provided.",
       "coordinatesX": 21.306675,
       "coordinatesY": -157.879145
@@ -50,7 +50,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "yellow",
+      "mapMarkerColor": "yellow",
       "description": "Body Boarding is enjoyed at most beaches in the State of Hawai'i. Come learn the basics of body boarding and water safety at a beach with shore break. Transportation and equipment are provided. Participants must be able to swim. Body boarding is limited to UH students, faculty, staff and their guests.",
       "coordinatesX": 21.330790,
       "coordinatesY": -157.687088
@@ -61,7 +61,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 0,
-      "mapColorMark": "green",
+      "mapMarkerColor": "green",
       "description": "Explore the island of Oahu. Join organized hikes to scenic locations.\n\nTransportation provided.",
       "coordinatesX": 21.262127,
       "coordinatesY": -157.703867
@@ -72,7 +72,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "orange",
+      "mapMarkerColor": "orange",
       "description": "Excursions are lead to different parts of Oahu and are intended for the beginner kayaker. Learn kayak and water safety skills while experiencing different scenic areas around the island.",
       "coordinatesX": 21.39661392,
       "coordinatesY": -157.731385794
@@ -83,7 +83,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 0,
-      "mapColorMark": "white",
+      "mapMarkerColor": "white",
       "description": "Hours: 8:00am – 10:00pm",
       "coordinatesX": 21.300286,
       "coordinatesY": -157.816174
@@ -94,7 +94,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
-      "mapColorMark": "brown",
+      "mapMarkerColor": "brown",
       "description": "Hours: 8:00am – 7:00pm",
       "coordinatesX": 21.296285,
       "coordinatesY": -157.816770
@@ -105,7 +105,7 @@
       "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "mapColorMark": "purple",
+      "mapMarkerColor": "purple",
       "description": "Discover the natural beauty of Kualoa Ranch on a self-drive UTV tour of Ka’a’awa Valley. Following a guide, traverse the lush valley in an open-air 4WD vehicle to check out filming sites from Hollywood movies such as Jurassic Park. $UHM discount 20% off",
       "coordinatesX": 21.5233333,
       "coordinatesY": -157.8402778
@@ -116,7 +116,7 @@
       "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "mapColorMark": "gray",
+      "mapMarkerColor": "gray",
       "description": "We invite you to join us for a full-day, action-packed tour that will guide you to the finest sights on Oahu, and leave you in total amazement. $UHM discount 20% off",
       "coordinatesX": 21.254947,
       "coordinatesY": -157.807105
@@ -127,7 +127,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "orange",
+      "mapMarkerColor": "orange",
       "description": "Plan your vacation ahead of time by purchasing tickets for this 2-hour cruise from Oahu. Dine on a crab and steak dinner while watching live Hawaiian entertainment, a show called '60 Years of Aloha' and enjoying vistas over the Oahu coast.Read more about Star Casual Sunset and Show Cruise. $UHM discount 15% off",
       "coordinatesX": 21.3102778,
       "coordinatesY": -157.8686111
@@ -138,7 +138,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
-      "mapColorMark": "dark blue",
+      "mapMarkerColor": "dark blue",
       "description": "Ride a personal, self-propelled, electric underwater scooter through Oahu's underwater world. $UHM discount 10% off",
       "coordinatesX": 21.285405,
       "coordinatesY": -157.708300
