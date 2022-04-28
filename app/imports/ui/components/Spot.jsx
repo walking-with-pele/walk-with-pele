@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Feed } from 'semantic-ui-react';
+import { Card, Feed, Label, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
@@ -9,13 +9,18 @@ import AddComment from '../components/AddComment';
 class Spot extends React.Component {
   render() {
     return (
-      <Card centered as={Link} to={`/spot-page/${this.props.spot._id}`}>
+      <Card centered>
         <Card.Content>
+          <Label color='green' ribbon>
+            {this.props.spot.spotType}
+          </Label>
           <Card.Header>{this.props.spot.name}</Card.Header>
           <Card.Meta>{this.props.spot.address}</Card.Meta>
-          <Card.Description>
-            {this.props.spot.spotType}
-          </Card.Description>
+        </Card.Content>
+        <Card.Content>
+          <Button className="ui button" as={Link} to={`/spot-page/${this.props.spot._id}`}>
+                  View Page
+          </Button>
         </Card.Content>
         <Card.Content>
                 Likes: {this.props.spot.likes}
@@ -24,6 +29,7 @@ class Spot extends React.Component {
                 Added by {this.props.spot.owner}
         </Card.Content>
         <Card.Content extra>
+          <Card.Header>Comments</Card.Header>
           <Feed>
             {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
           </Feed>

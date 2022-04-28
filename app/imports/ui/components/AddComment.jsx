@@ -3,7 +3,6 @@ import { Segment } from 'semantic-ui-react';
 import { AutoForm, HiddenField, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import PropTypes from 'prop-types';
-import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { Comments } from '../../api/comment/Comments';
 
@@ -15,9 +14,8 @@ class AddComment extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, address, spotType } = data;
-    const owner = Meteor.user().username;
-    Comments.collection.insert({ name, address, spotType, owner },
+    const { comment, spotId, owner, createdAt } = data;
+    Comments.collection.insert({ comment, spotId, owner, createdAt },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -34,7 +32,7 @@ class AddComment extends React.Component {
     return (
       <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
         <Segment>
-          <TextField label="Add comment" name='comment'/>
+          <TextField label="Add Comment" name='comment'/>
           <SubmitField value='Submit'/>
           <ErrorsField/>
           <HiddenField name='owner' value={this.props.owner}/>
