@@ -19,13 +19,27 @@ class NavBar extends React.Component {
           <Image src='images/uhlogo2.png' alt="logo" size="small"/>
         </Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>Spot of the Day</Menu.Item>,
-            <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>List Spot</Menu.Item>,
-            <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Spot</Menu.Item>,
-            <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>Top Spots</Menu.Item>,
-            <Menu.Item key='social-media' position="right"><Icon name='twitter'/><Icon name='facebook'/><Icon name='instagram'/></Menu.Item>,
+          [<Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>
+            <Icon name='map marker alternate'/>
+          Spot of the Day
+          </Menu.Item>,
+          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>
+            <Icon name='heart outline'/>
+          Top Spots
+          </Menu.Item>,
+          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>
+            <Icon name='map outline'/>
+          All Spots
+          </Menu.Item>,
+          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>
+            <Icon name='add square'/>
+          Add Spot
+          </Menu.Item>,
           ]
         ) : ''}
+        <Menu.Item key='social-media' position='right' fitted><Icon name='twitter'/></Menu.Item>
+        <Menu.Item key='social-media' fitted><Icon name='facebook'/></Menu.Item>
+        <Menu.Item key='social-media' fitted><Icon name='instagram'/></Menu.Item>
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>
         ) : ''}
