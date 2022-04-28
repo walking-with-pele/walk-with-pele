@@ -18,7 +18,7 @@ class SpotsCollection {
       owner: String,
       spotType: {
         type: String,
-        allowedValues: ['beach', 'hike', 'library'],
+        allowedValues: ['beach', 'hike', 'library', 'park'],
         defaultValue: 'good',
       },
       likes: Number,
