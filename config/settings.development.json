@@ -1,7 +1,7 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "firstName": "admin", "lastName":  "chan", "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "firstName": "John", "lastName":  "Foo", "email": "john@foo.com", "password": "changeme" }
   ],
 
   "defaultData": [
@@ -11,8 +11,8 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultSpots": [
-    { "name": "Spot1", "address": "some address", "owner": "john@foo.com", "spotType": "beach", "likes": 0 },
-    { "name": "Spot2", "address": "some address", "owner": "john@foo.com", "spotType": "hike", "likes": 12 },
-    { "name": "Spot3", "address": "some address", "owner": "admin@foo.com", "spotType": "library", "likes": 28 }
+    { "name": "Spot1", "address": "some address", "owner": "John Foo", "spotType": "beach", "likes": 0 },
+    { "name": "Spot2", "address": "some address", "owner": "John Foo", "spotType": "hike", "likes": 12 },
+    { "name": "Spot3", "address": "some address", "owner": "admin chan", "spotType": "library", "likes": 28 }
   ]
 }
