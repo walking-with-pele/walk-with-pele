@@ -14,7 +14,8 @@ import ListStuffAdmin from '../pages/ListStuffAdmin';
 // import AddStuff from '../pages/AddStuff';
 import AddSpot from '../pages/AddSpot';
 import TopSpots from '../pages/TopSpots';
-import EditStuff from '../pages/EditStuff';
+// import EditStuff from '../pages/EditStuff';
+import EditSpot from '../pages/EditSpot';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -39,8 +40,8 @@ class App extends React.Component {
             <ProtectedRoute path="/add" component={AddSpot}/>
             <ProtectedRoute path="/rand" component={RandomSpot}/>
             <ProtectedRoute path="/top-spots" component={TopSpots}/>
-            <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <ProtectedRoute path="/spot-page/:_id" component={SpotPage}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditSpot}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <Route component={NotFound}/>
           </Switch>
