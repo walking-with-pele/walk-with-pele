@@ -5,31 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Spots } from '../../api/spot/Spots';
 import SpotForUp from '../components/SpotForUp';
-
-/*
-const MakeCard = (props) => (
-  <Card>
-    <Card.Content>
-      <Image size='large' src='/images/meteor-logo.png'/>
-      <Card.Header>Spot Name</Card.Header>
-      <Card.Meta>
-        <span className='date'>spot category</span>
-      </Card.Meta>
-      <Card.Description>
-        Description of place
-      </Card.Description>
-    </Card.Content>
-  </Card>
-);
-
-const options = [
-  { text: 'My Likes', value: 1 },
-  { text: 'Liked Likes', value: 2 },
-  { text: 'Visited Likes', value: 3 },
-];
-
-const defVal = 1;
- */
+import { Profiles } from '../../api/profile/Profiles';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class UserProfile extends React.Component {
@@ -52,9 +28,9 @@ class UserProfile extends React.Component {
               <Image circular src='/images/meteor-logo.png' />
             </Grid.Column>
             <Grid.Column width={12}>
-              <Header as='h3'>FirstName LastName</Header>
-              <Header as='h3'>Major</Header>
-              <Header as='h3'>Hobbies/Bio</Header>
+              <Header as='h3'>name</Header>
+              <Header as='h3'>major</Header>
+              <Header as='h3'>bio</Header>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -123,20 +99,32 @@ class UserProfile extends React.Component {
 
 // Require an array of Stuff documents in the props.
 UserProfile.propTypes = {
+  profile: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    major: PropTypes.string,
+    owner: PropTypes.string,
+    bio: PropTypes.string,
+  }).isRequired,
   spots: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
+  //const profileId = match.params._id;
+  //console.log(profileId);
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
+  const subscriptionProfile = Meteor.subscribe(Profiles.userPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready();
+  const ready = subscription.ready() && subscriptionProfile.ready();
   // Get the Stuff documents
   const spots = Spots.collection.find({}).fetch();
+  const profile = Profiles.collection.find({}).fetch();
   return {
     spots,
+    profile,
     ready,
   };
 })(UserProfile);
