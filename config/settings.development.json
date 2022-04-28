@@ -1,7 +1,7 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "firstName": "admin", "lastName":  "chan", "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "firstName": "John", "lastName":  "Foo", "email": "john@foo.com", "password": "changeme" }
   ],
 
   "defaultData": [
@@ -14,7 +14,7 @@
     {
       "name": "Beginner Sailing",
       "address": "Keehi Lagoon",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
       "mapColorMark": "red",
@@ -25,7 +25,7 @@
     {
       "name": "Beginning Surfing",
       "address": "Diamond Head",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
       "mapColorMark": "black",
@@ -36,7 +36,7 @@
     {
       "name": "Stand-Up Paddling",
       "address": "Sand Island",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
       "mapColorMark": "blue",
@@ -47,7 +47,7 @@
     {
       "name": "Body Boarding",
       "address": "Waimanalo",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
       "mapColorMark": "yellow",
@@ -58,7 +58,7 @@
     {
       "name": "Beginning Hiking ",
       "address": "Koko Head",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "hike",
       "likes": 0,
       "mapColorMark": "green",
@@ -69,7 +69,7 @@
     {
       "name": "Kayaking Excursions",
       "address": "Kailua Beach Adventures",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
       "mapColorMark": "orange",
@@ -80,7 +80,7 @@
     {
       "name": "Hamilton Library",
       "address": "In campus",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "library",
       "likes": 0,
       "mapColorMark": "white",
@@ -91,7 +91,7 @@
     {
       "name": "William S Richardson Law Library",
       "address": "In campus",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
       "mapColorMark": "brown",
@@ -102,7 +102,7 @@
     {
       "name": "ATV Raptor Tour",
       "address": "Kualoa Ranch",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
       "mapColorMark": "purple",
@@ -113,7 +113,7 @@
     {
       "name": "Oahu Circle Island and Snorkeling Tour",
       "address": "Diamond Head Beach Park",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
       "mapColorMark": "gray",
@@ -124,7 +124,7 @@
     {
       "name": "Star Casual Sunset and Show Cruise",
       "address": "Aloha Tower Marketplace",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
       "mapColorMark": "orange",
@@ -135,7 +135,7 @@
     {
       "name": "Oahu Submarine Scooter Adventure",
       "address": "377 Keahole St",
-      "owner": "admin@foo.com",
+      "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
       "mapColorMark": "dark blue",
