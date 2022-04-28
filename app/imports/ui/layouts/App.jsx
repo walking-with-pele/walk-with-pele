@@ -10,7 +10,8 @@ import Landing from '../pages/Landing';
 import ListSpot from '../pages/ListSpot';
 import RandomSpot from '../pages/RandomSpot';
 // import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
+// import ListStuffAdmin from '../pages/ListStuffAdmin';
+import ListSpotAdmin from '../pages/ListSpotAdmin';
 // import AddStuff from '../pages/AddStuff';
 import AddSpot from '../pages/AddSpot';
 import TopSpots from '../pages/TopSpots';
@@ -42,7 +43,7 @@ class App extends React.Component {
             <ProtectedRoute path="/top-spots" component={TopSpots}/>
             <ProtectedRoute path="/spot-page/:_id" component={SpotPage}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditSpot}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <AdminProtectedRoute path="/admin" component={ListSpotAdmin}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>
