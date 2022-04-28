@@ -47,7 +47,8 @@ class ListSpot extends React.Component {
 
   search(type, content) {
     let search = this.props.spots;
-    search = search.filter(data => data[type].includes(content));
+    const modContent = content.toLowerCase();
+    search = search.filter(data => (data[type]).toLowerCase().includes(modContent));
     this.setState({ searchResults: search });
   }
 
