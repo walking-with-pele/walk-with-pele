@@ -22,27 +22,27 @@ class UserProfile extends React.Component {
         <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           <Header as="h2" textAlign="left">User Profile</Header>
         </div>
-        <Grid celled>
+        <Grid celled style={{ height: '670px' }}>
           <Grid.Row>
             <Grid.Column width={4}>
-              <Image circular src='/images/meteor-logo.png' />
+              <Image size='medium' circular src={this.props.profile.image} />
             </Grid.Column>
             <Grid.Column width={12}>
-              <Header as='h3'>{this.props.profile.firstName} {this.props.profile.lastName} </Header>
+              <Header as='h1'>{this.props.profile.firstName} {this.props.profile.lastName} </Header>
               <Header as='h3'>{this.props.profile.major}</Header>
               <Header as='h3'>{this.props.profile.bio}</Header>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={8}>
+            <Grid.Column width={8} style={{ height: '200px' }}>
               <Header as='h3'>Visited Spots</Header>
-              <List>
+              <List style={{ height: '250px', overflow: 'scroll' }}>
                 {this.props.spots.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
               </List>
             </Grid.Column>
             <Grid.Column width={8}>
               <Header as='h3'>Liked Spots</Header>
-              <List>
+              <List style={{ height: '250px', overflow: 'scroll' }}>
                 <List.Item>
                   <Image size='tiny' src='/images/meteor-logo.png' />
                   <List.Content>
@@ -104,6 +104,7 @@ UserProfile.propTypes = {
     lastName: PropTypes.string,
     major: PropTypes.string,
     bio: PropTypes.string,
+    image: PropTypes.string,
     owner: PropTypes.string,
   }).isRequired,
   spots: PropTypes.array.isRequired,
