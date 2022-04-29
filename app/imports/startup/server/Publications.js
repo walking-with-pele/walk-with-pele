@@ -31,9 +31,10 @@ Meteor.publish(Likes.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Spots.userPublicationName, function () {
+Meteor.publish(Profiles.userPublicationName, function () {
   if (this.userId) {
-    return Spots.collection.find({});
+    const username = Meteor.users.findOne(this.userId).username;
+    return Profiles.collection.find({ owner: username });
   }
   return this.ready();
 });

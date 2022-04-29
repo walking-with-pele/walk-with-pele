@@ -28,9 +28,9 @@ class UserProfile extends React.Component {
               <Image circular src='/images/meteor-logo.png' />
             </Grid.Column>
             <Grid.Column width={12}>
-              <Header as='h3'>name</Header>
-              <Header as='h3'>major</Header>
-              <Header as='h3'>bio</Header>
+              <Header as='h3'>{this.props.profile.firstName} {this.props.profile.lastName} </Header>
+              <Header as='h3'>{this.props.profile.major}</Header>
+              <Header as='h3'>{this.props.profile.bio}</Header>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -103,25 +103,24 @@ UserProfile.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     major: PropTypes.string,
-    owner: PropTypes.string,
     bio: PropTypes.string,
+    owner: PropTypes.string,
   }).isRequired,
   spots: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
+// eslint-disable-next-line no-empty-pattern
 export default withTracker(() => {
-  //const profileId = match.params._id;
-  //console.log(profileId);
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   const subscriptionProfile = Meteor.subscribe(Profiles.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready() && subscriptionProfile.ready();
-  // Get the Stuff documents
+  // Get the documents
   const spots = Spots.collection.find({}).fetch();
-  const profile = Profiles.collection.find({}).fetch();
+  const profile = Profiles.collection.findOne();
   return {
     spots,
     profile,
