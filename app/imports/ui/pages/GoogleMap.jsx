@@ -24,7 +24,6 @@ function checkType(spotType) {
   default:
     break;
   }
-  console.log(markerColor);
   return markerColor;
 }
 
