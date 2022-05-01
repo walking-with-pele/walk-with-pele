@@ -19,6 +19,11 @@ class ProfilesCollection {
       bio: String,
       image: String,
       owner: String,
+      // likedSpots: { type: Array, optional: true },
+      // 'likedSpots.$': {
+      // type: String,
+      // optional: true,
+      // },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

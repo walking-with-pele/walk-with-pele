@@ -3,9 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Image, Grid, List } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { _ } from 'meteor/underscore';
 import { Spots } from '../../api/spot/Spots';
 import SpotForUp from '../components/SpotForUp';
 import { Profiles } from '../../api/profile/Profiles';
+import { Likes } from '../../api/like/Likes';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class UserProfile extends React.Component {
@@ -17,6 +19,11 @@ class UserProfile extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
+    // pull spotIds from likes collection that are liked
+    const likedOnes = _.pluck(Likes.collection.find({ like: true }).fetch(), 'spotID');
+    const ArrOfSpots = [];
+    // pull the spots using the ids of liked collection and add them into array
+    likedOnes.forEach(element => { ArrOfSpots.push(Spots.collection.findOne({ _id: element })); });
     return (
       <Container>
         <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
@@ -43,51 +50,7 @@ class UserProfile extends React.Component {
             <Grid.Column width={8}>
               <Header as='h3'>Liked Spots</Header>
               <List style={{ height: '250px', overflow: 'scroll' }}>
-                <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Image size='tiny' src='/images/meteor-logo.png' />
-                  <List.Content>
-                    <List.Header as='a'>Name of Spot</List.Header>
-                    <List.Description>
-                      Address
-                    </List.Description>
-                    <List.Description>
-                      Category
-                    </List.Description>
-                    <List.Description>
-                      Date Visited
-                    </List.Description>
-                  </List.Content>
-                </List.Item>
+                {ArrOfSpots.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
               </List>
             </Grid.Column>
           </Grid.Row>
@@ -109,6 +72,7 @@ UserProfile.propTypes = {
   }).isRequired,
   spots: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
+  like: PropTypes.array.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
@@ -117,12 +81,15 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   const subscriptionProfile = Meteor.subscribe(Profiles.userPublicationName);
+  const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready() && subscriptionProfile.ready();
+  const ready = subscription.ready() && subscriptionProfile.ready() && likeSubscription.ready();
   // Get the documents
   const spots = Spots.collection.find({}).fetch();
   const profile = Profiles.collection.findOne();
+  const like = Likes.collection.find({}).fetch();
   return {
+    like,
     spots,
     profile,
     ready,

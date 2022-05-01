@@ -6,7 +6,7 @@
 
   "defaultProfiles": [
     { "firstName": "admin", "lastName":  "chan", "major": "Computer Science", "bio": "hi this is bio for admin", "owner": "admin@foo.com", "image": "/images/meteor-logo.png" },
-    { "firstName": "Phillip", "lastName":  "Johnson", "major": "Computer Science", "bio": "hi this is bio", "owner": "john@foo.com", "image": "/images/pele.jpg"}
+    { "firstName": "Phillip", "lastName":  "Johnson", "major": "Computer Science", "bio": "hi this is bio", "owner": "john@foo.com", "image": "/images/pele.jpg" }
   ],
 
   "defaultData": [
