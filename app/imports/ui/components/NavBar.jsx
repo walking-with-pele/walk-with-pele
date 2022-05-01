@@ -20,7 +20,7 @@ class NavBar extends React.Component {
         </Menu.Item>
         {this.props.currentUser ? (
           [<Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>
-            <Icon name='map marker alternate'/>
+            <Icon name='star outline'/>
           Spot of the Day
           </Menu.Item>,
           <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>
@@ -28,12 +28,16 @@ class NavBar extends React.Component {
           Top Spots
           </Menu.Item>,
           <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>
-            <Icon name='map outline'/>
+            <Icon name='map marker alternate'/>
           All Spots
           </Menu.Item>,
           <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>
             <Icon name='add square'/>
           Add Spot
+          </Menu.Item>,
+          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/map" key='map'>
+            <Icon name='map outline'/>
+                  Map
           </Menu.Item>,
           ]
         ) : ''}
