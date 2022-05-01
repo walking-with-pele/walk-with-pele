@@ -40,7 +40,8 @@ class Map extends React.Component {
       defaultZoom={10}
       defaultCenter={{ lat: 21.315603, lng: -157.858093 }} // map center view
     >
-      {this.props.spots.map((spot, index) => <Marker key={index} icon={{ url: checkType(spot.spotType) }} position={{ lat: spot.coordinatesX, lng: spot.coordinatesY }}/>)}
+      {this.props.spots.map((spot, index) => <Marker key={index} icon={{ url: checkType(spot.spotType) }}
+        position={{ lat: spot.coordinatesX, lng: spot.coordinatesY }}/>)}
     </GoogleMap>));
 
     return (
