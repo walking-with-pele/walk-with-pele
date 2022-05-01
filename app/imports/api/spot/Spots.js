@@ -25,11 +25,8 @@ class SpotsCollection {
         type: Number,
         defaultValue: 0,
       },
-      mapMarkerColor: {
-        type: String,
-        allowedValues: ['red', 'black', 'blue', 'yellow', 'green', 'orange', 'white', 'brown', 'purple', 'gray', 'dark blue'],
-        defaultValue: 'red',
-      },
+      imageAddress: String,
+      picture: String,
       description: String,
       coordinatesX: Number,
       coordinatesY: Number,
