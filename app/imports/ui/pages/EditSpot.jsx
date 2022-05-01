@@ -15,8 +15,8 @@ class EditSpot extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, address, spotType, mapMarkerColor, description, coordinatesX, coordinatesY, _id } = data;
-    Spots.collection.update(_id, { $set: { name, address, spotType, mapMarkerColor, description, coordinatesX, coordinatesY } }, (error) => (error ?
+    const { name, address, spotType, description, coordinatesX, coordinatesY, _id } = data;
+    Spots.collection.update(_id, { $set: { name, address, spotType, description, coordinatesX, coordinatesY } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -37,7 +37,6 @@ class EditSpot extends React.Component {
               <TextField name='name'/>
               <TextField name='address'/>
               <SelectField name='spotType'/>
-              <SelectField name='mapMarkerColor'/>
               <LongTextField name='description'/>
               <NumField name='coordinatesX'/>
               <NumField name='coordinatesY'/>
