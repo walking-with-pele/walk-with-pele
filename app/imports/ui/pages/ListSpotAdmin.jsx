@@ -1,15 +1,14 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Card, Header, Loader } from 'semantic-ui-react';
+import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { _ } from 'meteor/underscore';
+import SpotAdmin from '../components/SpotAdmin';
 import { Spots } from '../../api/spot/Spots';
-import Spot from '../components/Spot';
 import { Comments } from '../../api/comment/Comments';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class RandomSpot extends React.Component {
+class ListSpotAdmin extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,13 +17,12 @@ class RandomSpot extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
-    const rand = _.sample(this.props.spots.map((spot, index) => <Spot key={index} spot={spot}
-      comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>));
     return (
       <Container>
-        <Header as="h2" textAlign="center">Spot of the Day</Header>
+        <Header as="h2" textAlign="center">List Spots (Admin)</Header>
         <Card.Group>
-          {rand}
+          {this.props.spots.map((spot, index) => <SpotAdmin key={index} spot={spot}
+            comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>)}
         </Card.Group>
       </Container>
     );
@@ -32,7 +30,7 @@ class RandomSpot extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-RandomSpot.propTypes = {
+ListSpotAdmin.propTypes = {
   spots: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
@@ -53,4 +51,4 @@ export default withTracker(() => {
     comments,
     ready,
   };
-})(RandomSpot);
+})(ListSpotAdmin);

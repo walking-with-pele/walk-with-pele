@@ -1,161 +1,147 @@
 {
   "defaultAccounts": [
-    {
-      "email": "admin@foo.com",
-      "password": "changeme",
-      "role": "admin"
-    },
-    {
-      "email": "john@foo.com",
-      "password": "changeme"
-    }
+    { "firstName": "admin", "lastName":  "chan", "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "firstName": "John", "lastName":  "Foo", "email": "john@foo.com", "password": "changeme" }
   ],
+
   "defaultData": [
-    {
-      "name": "Basket",
-      "quantity": 3,
-      "owner": "john@foo.com",
-      "condition": "excellent"
-    },
-    {
-      "name": "Bicycle",
-      "quantity": 2,
-      "owner": "john@foo.com",
-      "condition": "poor"
-    },
-    {
-      "name": "Banana",
-      "quantity": 2,
-      "owner": "admin@foo.com",
-      "condition": "good"
-    },
-    {
-      "name": "Boogie Board",
-      "quantity": 2,
-      "owner": "admin@foo.com",
-      "condition": "excellent"
-    }
+    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
+    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
+    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
+    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultSpots": [
     {
       "name": "Beginner Sailing",
       "address": "Keehi Lagoon",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "mapColorMark": "red",
+      "mapMarkerColor": "red",
       "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
-      "coordinates": [21.3188889 , -157.9047222]
+      "coordinatesX": 21.3188889,
+      "coordinatesY": -157.9047222
     },
     {
       "name": "Beginning Surfing",
       "address": "Diamond Head",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "black",
+      "mapMarkerColor": "black",
       "description": "Learn the water sport of Hawai'i!! This class is for beginners and transportation and equipment are provided. Participants must be able to swim.",
-      "coordinates": [21.264007 , -157.804318]
+      "coordinatesX": 21.264007,
+      "coordinatesY": -157.804318
     },
     {
       "name": "Stand-Up Paddling",
       "address": "Sand Island",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "mapColorMark": "blue",
+      "mapMarkerColor": "blue",
       "description": "Learn the basics of Stand-Up Paddling, one of the newest, fastest growing water sports. Participants must be able to swim. Transportation and equipment provided.",
-      "coordinates": [21.306675 , -157.879145]
+      "coordinatesX": 21.306675,
+      "coordinatesY": -157.879145
     },
     {
       "name": "Body Boarding",
       "address": "Waimanalo",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "yellow",
+      "mapMarkerColor": "yellow",
       "description": "Body Boarding is enjoyed at most beaches in the State of Hawai'i. Come learn the basics of body boarding and water safety at a beach with shore break. Transportation and equipment are provided. Participants must be able to swim. Body boarding is limited to UH students, faculty, staff and their guests.",
-      "coordinates": [21.330790 , -157.687088]
+      "coordinatesX": 21.330790,
+      "coordinatesY": -157.687088
     },
     {
-      "name": "Beginning Hiking",
+      "name": "Beginning Hiking ",
       "address": "Koko Head",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "hike",
       "likes": 0,
-      "mapColorMark": "green",
+      "mapMarkerColor": "green",
       "description": "Explore the island of Oahu. Join organized hikes to scenic locations.\n\nTransportation provided.",
-      "coordinates": [21.262127, -157.703867]
+      "coordinatesX": 21.262127,
+      "coordinatesY": -157.703867
     },
     {
       "name": "Kayaking Excursions",
       "address": "Kailua Beach Adventures",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "orange",
+      "mapMarkerColor": "orange",
       "description": "Excursions are lead to different parts of Oahu and are intended for the beginner kayaker. Learn kayak and water safety skills while experiencing different scenic areas around the island.",
-      "coordinates": [21.39661392, -157.731385794]
+      "coordinatesX": 21.39661392,
+      "coordinatesY": -157.731385794
     },
     {
       "name": "Hamilton Library",
       "address": "In campus",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "library",
       "likes": 0,
-      "mapColorMark": "white",
+      "mapMarkerColor": "white",
       "description": "Hours: 8:00am – 10:00pm",
-      "coordinates": [21.300286, -157.816174]
+      "coordinatesX": 21.300286,
+      "coordinatesY": -157.816174
     },
     {
       "name": "William S Richardson Law Library",
       "address": "In campus",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
-      "mapColorMark": "brown",
+      "mapMarkerColor": "brown",
       "description": "Hours: 8:00am – 7:00pm",
-      "coordinates": [21.296285, -157.816770]
+      "coordinatesX": 21.296285,
+      "coordinatesY": -157.816770
     },
     {
       "name": "ATV Raptor Tour",
       "address": "Kualoa Ranch",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "mapColorMark": "purple",
+      "mapMarkerColor": "purple",
       "description": "Discover the natural beauty of Kualoa Ranch on a self-drive UTV tour of Ka’a’awa Valley. Following a guide, traverse the lush valley in an open-air 4WD vehicle to check out filming sites from Hollywood movies such as Jurassic Park. $UHM discount 20% off",
-      "coordinates": [21.5233333, -157.8402778]
+      "coordinatesX": 21.5233333,
+      "coordinatesY": -157.8402778
     },
     {
       "name": "Oahu Circle Island and Snorkeling Tour",
       "address": "Diamond Head Beach Park",
-      "owner": "john@foo.com",
+      "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "mapColorMark": "gray",
+      "mapMarkerColor": "gray",
       "description": "We invite you to join us for a full-day, action-packed tour that will guide you to the finest sights on Oahu, and leave you in total amazement. $UHM discount 20% off",
-      "coordinates": [21.254947, -157.807105]
+      "coordinatesX": 21.254947,
+      "coordinatesY": -157.807105
     },
     {
       "name": "Star Casual Sunset and Show Cruise",
       "address": "Aloha Tower Marketplace",
-      "owner": "john@foo.com",
+      "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "mapColorMark": "red with A mark",
+      "mapMarkerColor": "orange",
       "description": "Plan your vacation ahead of time by purchasing tickets for this 2-hour cruise from Oahu. Dine on a crab and steak dinner while watching live Hawaiian entertainment, a show called '60 Years of Aloha' and enjoying vistas over the Oahu coast.Read more about Star Casual Sunset and Show Cruise. $UHM discount 15% off",
-      "coordinates": [21.3102778, -157.8686111]
+      "coordinatesX": 21.3102778,
+      "coordinatesY": -157.8686111
     },
     {
       "name": "Oahu Submarine Scooter Adventure",
       "address": "377 Keahole St",
-      "owner": "admin@foo.com",
+      "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
-      "mapColorMark": "red with Z mark",
+      "mapMarkerColor": "dark blue",
       "description": "Ride a personal, self-propelled, electric underwater scooter through Oahu's underwater world. $UHM discount 10% off",
-      "coordinates": [21.285405, -157.708300]
+      "coordinatesX": 21.285405,
+      "coordinatesY": -157.708300
     }
   ]
 }

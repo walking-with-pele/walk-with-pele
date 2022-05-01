@@ -9,7 +9,7 @@ import Spot from '../components/Spot';
 import { Comments } from '../../api/comment/Comments';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class RandomSpot extends React.Component {
+class TopSpots extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,13 +18,16 @@ class RandomSpot extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
-    const rand = _.sample(this.props.spots.map((spot, index) => <Spot key={index} spot={spot}
-      comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>));
+    const topThreeSpots = _.first((_.sortBy(this.props.spots, 'likes')).reverse(), 3);
+    const allSpots = topThreeSpots.map((spot, index) => <Spot key={index} spot={spot}
+      comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>);
+
     return (
       <Container>
-        <Header as="h2" textAlign="center">Spot of the Day</Header>
+        <Header as="h2" textAlign="center">Top 3 Spots</Header>
+        <Header as="h3" textAlign="center">Click on card to view spot details!</Header>
         <Card.Group>
-          {rand}
+          {allSpots}
         </Card.Group>
       </Container>
     );
@@ -32,7 +35,7 @@ class RandomSpot extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-RandomSpot.propTypes = {
+TopSpots.propTypes = {
   spots: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
@@ -53,4 +56,4 @@ export default withTracker(() => {
     comments,
     ready,
   };
-})(RandomSpot);
+})(TopSpots);

@@ -1,4 +1,29 @@
 .landing-page-background {
-    background-color: antiquewhite;
+    background-color: white;
     background-size: cover;
+}
+
+.login-button {
+  color: white;
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 4px;
+  font-size: 17px;
+  padding: 7px 12px;
+  font-weight: bold;
+  margin: 6px 0;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 100px;
+}
+.login-button:hover, .login-button:active {
+  color:#fff;
+  background:#009688;
+}
+.nav-button{
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
 }

@@ -19,9 +19,20 @@ class SpotsCollection {
       spotType: {
         type: String,
         allowedValues: ['beach', 'hike', 'library', 'park'],
-        defaultValue: 'good',
+        defaultValue: 'beach',
       },
-      likes: Number,
+      likes: {
+        type: Number,
+        defaultValue: 0,
+      },
+      mapMarkerColor: {
+        type: String,
+        allowedValues: ['red', 'black', 'blue', 'yellow', 'green', 'orange', 'white', 'brown', 'purple', 'gray', 'dark blue'],
+        defaultValue: 'red',
+      },
+      description: String,
+      coordinatesX: Number,
+      coordinatesY: Number,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

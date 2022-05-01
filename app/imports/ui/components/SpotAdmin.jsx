@@ -6,7 +6,7 @@ import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class Spot extends React.Component {
+class SpotAdmin extends React.Component {
   render() {
     return (
       <Card centered>
@@ -37,13 +37,16 @@ class Spot extends React.Component {
         <Card.Content extra>
           <AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>
         </Card.Content>
+        <Card.Content extra>
+          <Link to={`/edit/${this.props.spot._id}`}>Edit</Link>
+        </Card.Content>
       </Card>
     );
   }
 }
 
 // Require a document to be passed to this component.
-Spot.propTypes = {
+SpotAdmin.propTypes = {
   spot: PropTypes.shape({
     name: PropTypes.string,
     address: PropTypes.string,
@@ -56,4 +59,4 @@ Spot.propTypes = {
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
-export default withRouter(Spot);
+export default withRouter(SpotAdmin);

@@ -23,7 +23,7 @@ class Footer extends React.Component {
             </Grid.Column>
             <Grid.Column>
               <div style={divStyle} className="ui center aligned container">
-                <p>Join our `ohana and Enjoy the relaxing Spots and Actitivies!</p>
+                <p>Join our `ohana and Enjoy the relaxing Comments and Actitivies!</p>
                 <Input icon="mail outline" placeholder="Email address" />
                 <div style={divStyle}>
                   <a href="https://www.facebook.com/">
