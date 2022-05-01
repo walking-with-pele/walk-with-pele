@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Feed, Label, Button, Dropdown } from 'semantic-ui-react';
+import { Card, Feed, Label, Button, Popup } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
@@ -35,11 +35,9 @@ class Spot extends React.Component {
           </Feed>
         </Card.Content>
         <Card.Content extra>
-          <Dropdown text='Add Comment' icon='comment alternate'>
-            <Dropdown.Menu>
-              <AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>
-            </Dropdown.Menu>
-          </Dropdown>
+          <Card.Content extra>
+            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button floated='right' icon='comment'/>} hoverable/>
+          </Card.Content>
         </Card.Content>
       </Card>
     );
