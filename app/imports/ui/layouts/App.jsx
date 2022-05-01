@@ -17,7 +17,6 @@ import AddSpot from '../pages/AddSpot';
 import TopSpots from '../pages/TopSpots';
 // import EditStuff from '../pages/EditStuff';
 import EditSpot from '../pages/EditSpot';
-import GoogleMap from '../pages/GoogleMap';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -43,7 +42,6 @@ class App extends React.Component {
             <ProtectedRoute path="/rand" component={RandomSpot}/>
             <ProtectedRoute path="/top-spots" component={TopSpots}/>
             <ProtectedRoute path="/spot-page/:_id" component={SpotPage}/>
-            <ProtectedRoute path="/map" component={GoogleMap}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditSpot}/>
             <AdminProtectedRoute path="/admin" component={ListSpotAdmin}/>
             <Route component={NotFound}/>
