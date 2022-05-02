@@ -39,11 +39,21 @@ class Landing extends React.Component {
       textAlign: 'center',
       textShadow: '2px 2px 4px black',
     };
+    const uhmName = {
+      width: '80vw',
+      margin: 'auto',
+      height: '150px',
+      marginTop: '10px',
+      marginBottom: '10px',
+    };
     const imageStyle = {
       boxShadow: '5px 5px 10px 2px rgba(56, 125, 255, 0.17)',
     };
     return (
       <div id='landing-page'>
+        <div style={uhmName}>
+          <Image src={'images/uhm-name.png'} alt="uhm-name"/>
+        </div>
         <Grid style={landingStyle} columns={2}>
           <Grid.Column style={textStyle}>
             <Image
