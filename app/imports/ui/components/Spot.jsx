@@ -38,9 +38,7 @@ class Spot extends React.Component {
           </Feed>
         </Card.Content>
         <Card.Content extra>
-          <Card.Content extra>
-            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button floated='right' icon='comment'/>} hoverable/>
-          </Card.Content>
+          <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button floated='right' icon='comment'/>} hoverable/>
         </Card.Content>
       </Card>
     );
