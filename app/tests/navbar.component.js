@@ -30,11 +30,41 @@ class NavBar {
     await testController.click('#navbar-sign-out');
   }
 
+  async gotoUserProfilePage(testController) {
+    await testController.expect(Selector('#navbar-current-user').exists).ok();
+    await testController.click('#navbar-current-user');
+    await testController.click('#navbar-user-profile');
+  }
+
   /** Pull down login menu, go to sign up page. */
   async gotoSignupPage(testController) {
     await this.ensureLogout(testController);
     await testController.click('#login-dropdown');
     await testController.click('#login-dropdown-sign-up');
+  }
+
+  async gotoRandomSpotPage(testController) {
+    await testController.click('#navbar-random-spot');
+  }
+
+  async gotoTopSpotPage(testController) {
+    await testController.click('#navbar-top-spot');
+  }
+
+  async gotoListSpotPage(testController) {
+    await testController.click('#navbar-list-spot');
+  }
+
+  async gotoAddSpotPage(testController) {
+    await testController.click('#navbar-add-spot');
+  }
+
+  async gotoMapPage(testController) {
+    await testController.click('#navbar-map');
+  }
+
+  async gotoAdminPage(testController) {
+    await testController.click('#navbar-admin');
   }
 }
 

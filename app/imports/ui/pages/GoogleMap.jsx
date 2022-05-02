@@ -44,7 +44,7 @@ class Map extends React.Component {
     </GoogleMap>));
 
     return (
-      <div
+      <div id="map-page"
         style={
           { width: '100vw', height: '100vh' }
         }>

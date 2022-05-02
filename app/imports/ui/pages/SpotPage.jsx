@@ -73,7 +73,7 @@ class SpotPage extends React.Component {
   renderPage() {
     const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
     return (
-      <Container style={{ paddingTop: '20px', paddingBottom: '20px' }}>
+      <Container id="spot-page" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
         <Grid>
           <Grid.Row>

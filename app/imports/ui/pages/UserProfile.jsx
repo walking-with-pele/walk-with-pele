@@ -25,7 +25,7 @@ class UserProfile extends React.Component {
     // pull the spots using the ids of liked collection and add them into array
     likedOnes.forEach(element => { ArrOfSpots.push(Spots.collection.findOne({ _id: element })); });
     return (
-      <Container>
+      <Container id="user-profile-page">
         <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           <Header as="h2" textAlign="left">User Profile</Header>
         </div>

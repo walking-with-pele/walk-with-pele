@@ -47,7 +47,7 @@ class AddSpot extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Grid container centered>
+      <Grid id="add-spot-page" container centered>
         <Grid.Column>
           <Header as="h2" textAlign="center">Add Spot</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
