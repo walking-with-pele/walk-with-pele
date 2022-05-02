@@ -118,7 +118,7 @@ class SpotPage extends React.Component {
 // Require an array of Stuff documents in the props.
 SpotPage.propTypes = {
   spot: PropTypes.object.isRequired,
-  like: PropTypes.object.isRequired,
+  like: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
