@@ -19,30 +19,30 @@ class NavBar extends React.Component {
           <Image src='images/uhlogo2.png' alt="logo" size="small"/>
         </Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>
+          [<Menu.Item id="navbar-random-spot" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>
             <Icon name='star outline'/>
           Spot of the Day
           </Menu.Item>,
-          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>
+          <Menu.Item id="navbar-top-spot" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>
             <Icon name='heart outline'/>
           Top Spots
           </Menu.Item>,
-          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>
+          <Menu.Item id="navbar-list-spot" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/list" key='list'>
             <Icon name='map marker alternate'/>
           All Spots
           </Menu.Item>,
-          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>
+          <Menu.Item id="navbar-add-spot" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/add" key='add'>
             <Icon name='add square'/>
           Add Spot
           </Menu.Item>,
-          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/map" key='map'>
+          <Menu.Item id="navbar-map" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/map" key='map'>
             <Icon name='map outline'/>
                   Map
           </Menu.Item>,
           ]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item className={'nav-button'} as={NavLink} activeClassName="active" exact to="/admin" key='admin'>
+          <Menu.Item id="navbar-admin" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/admin" key='admin'>
             <Icon name='pencil alternate'/>
           Admin
           </Menu.Item>
@@ -61,7 +61,7 @@ class NavBar extends React.Component {
           ) : (
             <Dropdown id="navbar-current-user" text={this.props.currentUser} pointing="top right" icon={'dropdown'}>
               <Dropdown.Menu>
-                <Dropdown.Item id="user-profile" icon="user" text="User Profile" as={NavLink} exact to="/user"/>
+                <Dropdown.Item id="navbar-user-profile" icon="user" text="User Profile" as={NavLink} exact to="/user"/>
                 <Dropdown.Item id="navbar-sign-out" icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
               </Dropdown.Menu>
             </Dropdown>

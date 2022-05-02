@@ -37,7 +37,7 @@ class Landing extends React.Component {
       boxShadow: '0 6px 20px rgba(56, 125, 255, 0.17)',
     };
     return (
-      <div>
+      <div id='landing-page'>
         <div style={uhmName}>
           <Image src={'images/uhm-name.png'} alt="uhm-name"/>
         </div>
