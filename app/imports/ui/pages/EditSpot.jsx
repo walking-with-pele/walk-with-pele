@@ -15,8 +15,8 @@ class EditSpot extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, address, spotType, description, coordinatesX, coordinatesY, _id } = data;
-    Spots.collection.update(_id, { $set: { name, address, spotType, description, coordinatesX, coordinatesY } }, (error) => (error ?
+    const { name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY, _id } = data;
+    Spots.collection.update(_id, { $set: { name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -43,6 +43,8 @@ class EditSpot extends React.Component {
               <SubmitField value='Submit'/>
               <ErrorsField/>
               <HiddenField name='owner' />
+              <HiddenField name='imageAddress' />
+              <HiddenField name='picture' />
             </Segment>
           </AutoForm>
         </Grid.Column>
