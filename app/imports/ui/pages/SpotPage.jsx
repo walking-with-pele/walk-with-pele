@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Button, Header, Loader, Label, Image, Grid, Feed, Icon, Popup } from 'semantic-ui-react';
+import { Container, Button, Segment, Header, Loader, Label, Image, Grid, Feed, Icon, Popup } from 'semantic-ui-react';
 import { _ } from 'meteor/underscore';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -9,6 +9,7 @@ import { Likes } from '../../api/like/Likes';
 import { Comments } from '../../api/comment/Comments';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
+// import GoogleMapSpot from '../components/GoogleMapSpot';
 
 /*
 const MakeCard = (props) => (
@@ -79,9 +80,9 @@ class SpotPage extends React.Component {
     return (
       <Container id="spot-page" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
-        <Grid>
+        <Grid columns={2}>
           <Grid.Row>
-            <Grid.Column width={9}>
+            <Grid.Column>
               <Label size='large' color='green'>{this.props.spot.spotType}</Label>
               <Header as='h3'>{this.props.spot.address}</Header>
               <div className="ui labeled button" tabIndex="0">
@@ -93,18 +94,21 @@ class SpotPage extends React.Component {
                   {this.props.spot.likes}
                 </Label>
               </div>
-              <Header as='h4'>google maps?↓</Header>
-              <Image size='medium' src={this.props.spot.imageAddress}/>
+              <Header as='h3'>Map ↓</Header>
+              <Image src={this.props.spot.imageAddress}/>
+              {/* <GoogleMapSpot spot={this.props.spot}/> */}
             </Grid.Column>
-            <Grid.Column width={7}>
+            <Grid.Column>
               <Image src={this.props.spot.picture}/>
             </Grid.Column>
           </Grid.Row>
-          <Header as='h3' floated='left'>Comments</Header>
           <Grid.Row>
-            <Feed>
-              {_.map(this.props.comments.filter(comment => (comment.spotId === this.props.spot._id)), (comment, index) => <Comment key={index} comment={comment}/>)}
-            </Feed>
+            <Segment>
+              <Header as='h3' floated='left'>Comments</Header>
+              <Feed size='large'>
+                {_.map(this.props.comments.filter(comment => (comment.spotId === this.props.spot._id)), (comment, index) => <Comment key={index} comment={comment}/>)}
+              </Feed>
+            </Segment>
           </Grid.Row>
           <Grid.Row>
             <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button icon='comment'/>} hoverable/>

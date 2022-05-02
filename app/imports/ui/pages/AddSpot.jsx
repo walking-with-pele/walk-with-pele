@@ -30,9 +30,9 @@ class AddSpot extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, address, spotType, description, coordinatesX, coordinatesY } = data;
+    const { name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY } = data;
     const owner = Meteor.user().username;
-    Spots.collection.insert({ name, address, spotType, description, coordinatesX, coordinatesY, owner },
+    Spots.collection.insert({ name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
