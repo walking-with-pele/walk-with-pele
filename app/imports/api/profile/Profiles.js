@@ -3,33 +3,27 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /**
- * The SpotsCollection. It encapsulates state and variable values for Spot.
+ * The ProfilesCollection. It encapsulates state and variable values for Spot.
  */
-class SpotsCollection {
+class ProfilesCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'SpotsCollection';
+    this.name = 'ProfilesCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      name: String,
-      address: String,
+      firstName: String,
+      lastName: String,
+      major: String,
+      bio: String,
+      image: String,
       owner: String,
-      spotType: {
-        type: String,
-        allowedValues: ['beach', 'hike', 'library', 'park'],
-        defaultValue: 'beach',
-      },
-      likes: {
-        type: Number,
-        defaultValue: 0,
-      },
-      imageAddress: String,
-      picture: String,
-      description: String,
-      coordinatesX: Number,
-      coordinatesY: Number,
+      // likedSpots: { type: Array, optional: true },
+      // 'likedSpots.$': {
+      // type: String,
+      // optional: true,
+      // },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
@@ -40,7 +34,7 @@ class SpotsCollection {
 }
 
 /**
- * The singleton instance of the SpotsCollection.
- * @type {SpotsCollection}
+ * The singleton instance of the ProfilesCollection.
+ * @type {ProfilesCollection}
  */
-export const Spots = new SpotsCollection();
+export const Profiles = new ProfilesCollection();
