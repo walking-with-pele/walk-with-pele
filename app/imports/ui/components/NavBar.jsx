@@ -10,7 +10,7 @@ import { Roles } from 'meteor/alanning:roles';
 class NavBar extends React.Component {
   render() {
     const menuStyle = {
-      // marginBottom: '10px',
+      marginBottom: '14px',
       backgroundColor: '#024731',
     };
     return (

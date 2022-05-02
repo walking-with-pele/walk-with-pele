@@ -5,11 +5,15 @@ import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 
+
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Spot extends React.Component {
   render() {
+    const cardStyle = {
+      boxShadow: '5px 5px 10px 2px rgba(56, 125, 255, 0.17)',
+    };
     return (
-      <Card centered>
+      <Card centered style={cardStyle}>
         <Image label={{
           as: 'a',
           color: 'green',
