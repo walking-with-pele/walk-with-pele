@@ -5,31 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Spots } from '../../api/spot/Spots';
 import { Likes } from '../../api/like/Likes';
-
-/*
-const MakeCard = (props) => (
-  <Card>
-    <Card.Content>
-      <Image size='large' src='/images/meteor-logo.png'/>
-      <Card.Header>Spot Name</Card.Header>
-      <Card.Meta>
-        <span className='date'>spot category</span>
-      </Card.Meta>
-      <Card.Description>
-        Description of place
-      </Card.Description>
-    </Card.Content>
-  </Card>
-);
-
-const options = [
-  { text: 'My Likes', value: 1 },
-  { text: 'Liked Likes', value: 2 },
-  { text: 'Visited Likes', value: 3 },
-];
-
-const defVal = 1;
- */
+import { VisitedSpots } from '../../api/visitedSpot/VisitedSpots';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class SpotPage extends React.Component {
@@ -64,6 +40,24 @@ class SpotPage extends React.Component {
     Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
   }
 
+  userVisitedSpot() {
+    const data = this.props.visited;
+    const visited = true;
+    const spotID = this.props.spot._id;
+    const owner = Meteor.user().username;
+
+    if (data.some(e => e.spotID === this.props.spot._id)) {
+      console.log('page already visited');
+
+      VisitedSpots.collection.update(
+        { _id: data[0]._id },
+        { $set: { visited: !(data[0].visited) } },
+      );
+      return;
+    }
+    VisitedSpots.collection.insert({ visited, spotID, owner });
+  }
+
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
@@ -72,6 +66,7 @@ class SpotPage extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
+    const visitedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
     return (
       <Container style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
@@ -90,6 +85,9 @@ class SpotPage extends React.Component {
                   {this.props.spot.likes}
                 </Label>
               </div>
+              <Button className="ui button" active={visitedPage} onClick={() => this.userVisitedSpot()}>
+                <i className="user icon"></i> Mark as visited
+              </Button>
               <p>google maps?↓</p>
               <Image size='medium' src='/images/meteor-logo.png'/>
             </Grid.Column>
@@ -102,7 +100,7 @@ class SpotPage extends React.Component {
             <Header as='h3'>Reviews</Header>
             <List style={{ paddingTop: '20px', paddingBottom: '20px' }}>
               <List.Item style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-                <Image size='tiny' src='/images/meteor-logo.png' />
+                <Image size='tiny' src='/images/meteor-logo.png'/>
                 <List.Content>
                   <List.Description>
                     Review...
@@ -113,7 +111,7 @@ class SpotPage extends React.Component {
                 </List.Content>
               </List.Item>
               <List.Item style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-                <Image size='tiny' src='/images/meteor-logo.png' />
+                <Image size='tiny' src='/images/meteor-logo.png'/>
                 <List.Content>
                   <List.Description>
                     Review...
@@ -124,7 +122,7 @@ class SpotPage extends React.Component {
                 </List.Content>
               </List.Item>
               <List.Item style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-                <Image size='tiny' src='/images/meteor-logo.png' />
+                <Image size='tiny' src='/images/meteor-logo.png'/>
                 <List.Content>
                   <List.Description>
                     Review...
@@ -160,6 +158,14 @@ SpotPage.propTypes = {
     some: PropTypes.any, // not sure why
     filter: PropTypes.any, // not sure why
   }).isRequired,
+  visited: PropTypes.shape({
+    visited: PropTypes.bool,
+    owner: PropTypes.string,
+    spotID: PropTypes.string,
+    _id: PropTypes.string,
+    some: PropTypes.any, // not sure why
+    filter: PropTypes.any, // not sure why
+  }).isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -170,13 +176,16 @@ export default withTracker(({ match }) => {
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
   const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
-  const ready = subscription.ready() && likeSubscription.ready();
+  const visitedSubscription = Meteor.subscribe(VisitedSpots.userPublicationName);
+  const ready = subscription.ready() && likeSubscription.ready() && visitedSubscription.ready();
   // Get the Stuff documents
   const spot = Spots.collection.findOne(spotId);
   const like = Likes.collection.find({}).fetch();
+  const visited = VisitedSpots.collection.find({}).fetch();
   return {
     spot,
     like,
+    visited,
     ready,
   };
 })(SpotPage);

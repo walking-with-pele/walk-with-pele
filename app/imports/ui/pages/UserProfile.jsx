@@ -8,6 +8,7 @@ import { Spots } from '../../api/spot/Spots';
 import SpotForUp from '../components/SpotForUp';
 import { Profiles } from '../../api/profile/Profiles';
 import { Likes } from '../../api/like/Likes';
+import { VisitedSpots } from '../../api/visitedSpot/VisitedSpots';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class UserProfile extends React.Component {
@@ -24,6 +25,12 @@ class UserProfile extends React.Component {
     const ArrOfSpots = [];
     // pull the spots using the ids of liked collection and add them into array
     likedOnes.forEach(element => { ArrOfSpots.push(Spots.collection.findOne({ _id: element })); });
+
+    // do the same for visited spots
+    const visitedOnes = _.pluck(VisitedSpots.collection.find({ visited: true }).fetch(), 'spotID');
+    const ArrOfSpots2 = [];
+    // pull the spots using the ids of liked collection and add them into array
+    visitedOnes.forEach(element => { ArrOfSpots2.push(Spots.collection.findOne({ _id: element })); });
     return (
       <Container>
         <div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
@@ -44,7 +51,7 @@ class UserProfile extends React.Component {
             <Grid.Column width={8} style={{ height: '200px' }}>
               <Header as='h3'>Visited Spots</Header>
               <List style={{ height: '250px', overflow: 'scroll' }}>
-                {this.props.spots.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
+                {ArrOfSpots2.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
               </List>
             </Grid.Column>
             <Grid.Column width={8}>
