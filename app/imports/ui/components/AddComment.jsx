@@ -30,16 +30,18 @@ class AddComment extends React.Component {
   render() {
     let fRef = null;
     return (
-      <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-        <Segment>
-          <TextField label="Add Comment" name='comment'/>
-          <SubmitField value='Submit'/>
-          <ErrorsField/>
-          <HiddenField name='owner' value={this.props.owner}/>
-          <HiddenField name='spotId' value={this.props.spotId}/>
-          <HiddenField name='createdAt' value={new Date()}/>
-        </Segment>
-      </AutoForm>
+      <div id='add-comment'>
+        <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+          <Segment>
+            <TextField id='comment-form-text' label="Add Comment" name='comment'/>
+            <SubmitField id='comment-form-submit' value='Submit'/>
+            <ErrorsField/>
+            <HiddenField name='owner' value={this.props.owner}/>
+            <HiddenField name='spotId' value={this.props.spotId}/>
+            <HiddenField name='createdAt' value={new Date()}/>
+          </Segment>
+        </AutoForm>
+      </div>
     );
   }
 }

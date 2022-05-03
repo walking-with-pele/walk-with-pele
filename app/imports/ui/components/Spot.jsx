@@ -25,7 +25,7 @@ class Spot extends React.Component {
           <Card.Meta>{this.props.spot.address}</Card.Meta>
         </Card.Content>
         <Card.Content>
-          <Button className="ui button" as={Link} to={`/spot-page/${this.props.spot._id}`}>
+          <Button id='view-page' className="ui button" as={Link} to={`/spot-page/${this.props.spot._id}`}>
                   View Page
           </Button>
         </Card.Content>
@@ -40,9 +40,6 @@ class Spot extends React.Component {
           <Feed>
             {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
           </Feed>
-        </Card.Content>
-        <Card.Content extra>
-          <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button floated='right' icon='comment'/>} hoverable/>
         </Card.Content>
       </Card>
     );

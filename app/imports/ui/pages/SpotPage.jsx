@@ -111,7 +111,7 @@ class SpotPage extends React.Component {
             </Segment>
           </Grid.Row>
           <Grid.Row>
-            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button icon='comment'/>} hoverable/>
+            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button id='add-comment-popup'  icon='comment'/>} hoverable/>
           </Grid.Row>
         </Grid>
       </Container>

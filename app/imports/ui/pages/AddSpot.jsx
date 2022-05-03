@@ -50,17 +50,17 @@ class AddSpot extends React.Component {
       <Grid id="add-spot-page" container centered>
         <Grid.Column>
           <Header as="h2" textAlign="center">Add Spot</Header>
-          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+          <AutoForm id='add-spot-form' ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
-              <TextField name='name'/>
-              <TextField name='address'/>
+              <TextField id='add-form-name' name='name'/>
+              <TextField id='add-form-address' name='address'/>
               <SelectField name='spotType'/>
-              <TextField name='imageAddress'/>
-              <TextField name='picture'/>
-              <LongTextField name='description'/>
-              <NumField label="x-coordinate" name='coordinatesX'/>
-              <NumField label="y-coordinate" name='coordinatesY'/>
-              <SubmitField value='Submit'/>
+              <TextField id='add-form-image-address' name='imageAddress'/>
+              <TextField id='add-form-picture' name='picture'/>
+              <LongTextField id='add-form-description' name='description'/>
+              <NumField id='add-form-x' label="x-coordinate" name='coordinatesX'/>
+              <NumField id='add-form-y' label="y-coordinate" name='coordinatesY'/>
+              <SubmitField id='add-form-submit' value='Submit'/>
               <ErrorsField/>
             </Segment>
           </AutoForm>
