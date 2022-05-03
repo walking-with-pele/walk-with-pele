@@ -67,7 +67,7 @@ test('Test View Spot button on Spot component', async (testController) => {
   await spotPage.isDisplayed(testController);
 });
 
-test('Test Add Comment button on Spot component', async (testController) => {
+test('Test Add Comment button on Spot page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
