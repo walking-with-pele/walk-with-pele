@@ -303,13 +303,85 @@
       "name": "Āina Haina Public Library",
       "address": "5246 Kalanianaʻole Hwy",
       "owner": "John Foo",
-      "spotType": "library",
+      "spotType": "park",
       "likes": 4,
       "imageAdress": "images/ahplm.png",
       "picture" : "images/ahpl.png",
-      "description": "Hours:  9:00am-4:00pm",
+      "description": "“Swimming with dolphins” is on a thousand bucket lists, but Dolphin Quest Oahu lets you turn your dreams into a slippery, rubbery reality.",
       "coordinatesX": 21.278820131459884,
       "coordinatesY": -157.7532414178674
+    },
+    {
+      "name": "Polynesian Cultural Center",
+      "address": "55-370 Kamehameha Hwy, Laie, HI 96762",
+      "owner": "John Foo",
+      "spotType": "park",
+      "likes": 9,
+      "imageAdress": "images/pccm.png",
+      "picture" : "images/pcc.png",
+      "description": "The Polynesian Cultural Center is a living theme park where you can find everything from hula dancing to spear throwing.",
+      "coordinatesX": 21.2866687190997,
+      "coordinatesY": -157.83455072114262
+    },
+    {
+      "name": "Shark’s Cove",
+      "address": "Haleiwa, HI 96712",
+      "owner": "John Foo",
+      "spotType": "beach",
+      "likes": 9,
+      "imageAdress": "images/scmm.png",
+      "picture" : "images/sc.png",
+      "description": "If you want to strap on an oxygen tank and explore the coral for yourself, Shark’s Cove is the place to go.",
+      "coordinatesX": 21.652090274822214,
+      "coordinatesY": -158.06299452295002
+    },
+    {
+      "name": "Dolphin Quest Oahu",
+      "address": "5000 Kahala Ave, Honolulu, HI 96816, USA",
+      "owner": "John Foo",
+      "spotType": "park",
+      "likes": 9,
+      "imageAdress": "images/dqom.png",
+      "picture" : "images/dqo.png",
+      "description": "“Swimming with dolphins” is on a thousand bucket lists, but Dolphin Quest Oahu lets you turn your dreams into a slippery, rubbery reality.",
+      "coordinatesX": 21.272023980529216,
+      "coordinatesY": -157.7742067499818
+    },
+    {
+      "name": "Manoa Falls",
+      "address": "Honolulu Hawaii",
+      "owner": "John Foo",
+      "spotType": "park",
+      "likes": 9,
+      "imageAdress": "images/mfm.png",
+      "picture" : "images/mf.png",
+      "description": "Nestled in the heart of a tropical rainforest, Manoa Falls is a 150-foot waterfall that empties into a shimmering rock pool.",
+      "coordinatesX": 21.346619121300336,
+      "coordinatesY": -157.80178582580888
+    },
+    {
+      "name": "Honolulu Zoo",
+      "address": "151 Kapahulu Ave",
+      "owner": "John Foo",
+      "spotType": "park",
+      "likes": 9,
+      "imageAdress": "images/hzm.png",
+      "picture" : "images/hz.png",
+      "description": "Home to more than 900 species, the Honolulu Zoo showcases a variety of rare and exotic animals.",
+      "coordinatesX": 21.271394522339243,
+      "coordinatesY": -157.8213712143308
+    },
+    {
+      "name": "Pearl Harbor",
+      "address": "151 Kapahulu Ave",
+      "owner": "John Foo",
+      "spotType": "park",
+      "likes": 11,
+      "imageAdress": "images/phm.png",
+      "picture" : "images/ph.png",
+      "description": "There’s a sober shadow amidst the glittering beaches and resorts of Honolulu, and that shadow is named Pearl Harbor.",
+      "coordinatesX": 21.3545465013813,
+      "coordinatesY": -157.98079428482768
     }
   ]
 }
