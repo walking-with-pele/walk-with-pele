@@ -64,13 +64,13 @@ class ListSpot extends React.Component {
   renderPage() {
     let fRef = null;
     return (
-      <Container>
+      <Container id="list-spot-page">
         <Header as="h2" textAlign="center">List Spots</Header>
         <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submitSearch(data, fRef)} >
           <Segment>
-            <SelectField name='searchBy'/>
-            <TextField name='containing'/>
-            <SubmitField value='Search'/>
+            <SelectField id='search-form-filter' name='searchBy'/>
+            <TextField id='search-form-text' name='containing'/>
+            <SubmitField id='search-form-submit' value='Search'/>
             <ErrorsField/>
           </Segment>
         </AutoForm>

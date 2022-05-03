@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Feed, Label, Button } from 'semantic-ui-react';
+import { Card, Feed, Button, Image, Popup } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
@@ -10,10 +10,13 @@ class SpotAdmin extends React.Component {
   render() {
     return (
       <Card centered>
+        <Image label={{
+          as: 'a',
+          color: 'green',
+          content: `${this.props.spot.spotType}`,
+          ribbon: true,
+        }} src={this.props.spot.picture} wrapped/>
         <Card.Content>
-          <Label color='green' ribbon>
-            {this.props.spot.spotType}
-          </Label>
           <Card.Header>{this.props.spot.name}</Card.Header>
           <Card.Meta>{this.props.spot.address}</Card.Meta>
         </Card.Content>
@@ -35,7 +38,7 @@ class SpotAdmin extends React.Component {
           </Feed>
         </Card.Content>
         <Card.Content extra>
-          <AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>
+          <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button floated='right' icon='comment'/>} hoverable/>
         </Card.Content>
         <Card.Content extra>
           <Link to={`/edit/${this.props.spot._id}`}>Edit</Link>
@@ -47,14 +50,7 @@ class SpotAdmin extends React.Component {
 
 // Require a document to be passed to this component.
 SpotAdmin.propTypes = {
-  spot: PropTypes.shape({
-    name: PropTypes.string,
-    address: PropTypes.string,
-    owner: PropTypes.string,
-    spotType: PropTypes.string,
-    likes: PropTypes.number,
-    _id: PropTypes.string,
-  }).isRequired,
+  spot: PropTypes.object.isRequired,
   comments: PropTypes.array.isRequired,
 };
 

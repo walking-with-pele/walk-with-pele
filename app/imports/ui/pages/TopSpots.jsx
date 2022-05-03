@@ -23,7 +23,7 @@ class TopSpots extends React.Component {
       comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>);
 
     return (
-      <Container>
+      <Container id="top-spots-page">
         <Header as="h2" textAlign="center">Top 3 Spots</Header>
         <Header as="h3" textAlign="center">Click on card to view spot details!</Header>
         <Card.Group>

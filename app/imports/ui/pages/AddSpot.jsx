@@ -30,9 +30,9 @@ class AddSpot extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, address, spotType, description, coordinatesX, coordinatesY } = data;
+    const { name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY } = data;
     const owner = Meteor.user().username;
-    Spots.collection.insert({ name, address, spotType, description, coordinatesX, coordinatesY, owner },
+    Spots.collection.insert({ name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -47,20 +47,20 @@ class AddSpot extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Grid container centered>
+      <Grid id="add-spot-page" container centered>
         <Grid.Column>
           <Header as="h2" textAlign="center">Add Spot</Header>
-          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+          <AutoForm id='add-spot-form' ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
-              <TextField name='name'/>
-              <TextField name='address'/>
+              <TextField id='add-form-name' name='name'/>
+              <TextField id='add-form-address' name='address'/>
               <SelectField name='spotType'/>
-              <TextField name='imageAddress'/>
-              <TextField name='picture'/>
-              <LongTextField name='description'/>
-              <NumField label="x-coordinate" name='coordinatesX'/>
-              <NumField label="y-coordinate" name='coordinatesY'/>
-              <SubmitField value='Submit'/>
+              <TextField id='add-form-image-address' name='imageAddress'/>
+              <TextField id='add-form-picture' name='picture'/>
+              <LongTextField id='add-form-description' name='description'/>
+              <NumField id='add-form-x' label="x-coordinate" name='coordinatesX'/>
+              <NumField id='add-form-y' label="y-coordinate" name='coordinatesY'/>
+              <SubmitField id='add-form-submit' value='Submit'/>
               <ErrorsField/>
             </Segment>
           </AutoForm>

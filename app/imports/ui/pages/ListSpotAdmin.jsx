@@ -18,7 +18,7 @@ class ListSpotAdmin extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
+      <Container id="admin-page">
         <Header as="h2" textAlign="center">List Spots (Admin)</Header>
         <Card.Group>
           {this.props.spots.map((spot, index) => <SpotAdmin key={index} spot={spot}

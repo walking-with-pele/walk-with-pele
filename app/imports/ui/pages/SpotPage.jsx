@@ -1,10 +1,15 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Button, Header, Loader, Label, Image, Grid, List } from 'semantic-ui-react';
+import { Container, Button, Segment, Header, Loader, Label, Image, Grid, Feed, Icon, Popup } from 'semantic-ui-react';
+import { _ } from 'meteor/underscore';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Spots } from '../../api/spot/Spots';
 import { Likes } from '../../api/like/Likes';
+import { Comments } from '../../api/comment/Comments';
+import Comment from '../components/Comment';
+import AddComment from '../components/AddComment';
+import GoogleMapSpot from '../components/GoogleMapSpot';
 
 /*
 const MakeCard = (props) => (
@@ -73,68 +78,39 @@ class SpotPage extends React.Component {
   renderPage() {
     const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
     return (
-      <Container style={{ paddingTop: '20px', paddingBottom: '20px' }}>
+      <Container id="spot-page" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
-        <Grid>
+        <Grid columns={2}>
           <Grid.Row>
-            <Grid.Column width={9}>
-
-              <Header as='h3'>{this.props.spot.spotType}</Header>
-              <p>{this.props.spot.address}</p>
-              <Button>Write a Review</Button>
+            <Grid.Column>
+              <Label size='large' color='green'>{this.props.spot.spotType}</Label>
+              <Header as='h3'>{this.props.spot.address}</Header>
               <div className="ui labeled button" tabIndex="0">
-                <Button className="ui button" active={likedPage} onClick={() => this.userLikesSpot()}>
-                  <i className="heart icon"></i> Like
+                <Button className="ui button" icon labelPosition='right' active={likedPage} onClick={() => this.userLikesSpot()}>
+                  Like
+                  <Icon name="heart"/>
                 </Button>
                 <Label as='a' basic>
                   {this.props.spot.likes}
                 </Label>
               </div>
-              <p>google maps?↓</p>
-              <Image size='medium' src='/images/meteor-logo.png'/>
+              <Header as='h3'>Map ↓</Header>
+               <GoogleMapSpot spot={this.props.spot}/>
             </Grid.Column>
-            <Grid.Column width={7}>
-              <Image src='/images/meteor-logo.png'/>
+            <Grid.Column>
+              <Image src={this.props.spot.picture}/>
             </Grid.Column>
           </Grid.Row>
-          <div className="ui divider"></div>
           <Grid.Row>
-            <Header as='h3'>Reviews</Header>
-            <List style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-              <List.Item style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-                <Image size='tiny' src='/images/meteor-logo.png' />
-                <List.Content>
-                  <List.Description>
-                    Review...
-                  </List.Description>
-                  <List.Description>
-                    -Reviewer
-                  </List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-                <Image size='tiny' src='/images/meteor-logo.png' />
-                <List.Content>
-                  <List.Description>
-                    Review...
-                  </List.Description>
-                  <List.Description>
-                    -Reviewer
-                  </List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-                <Image size='tiny' src='/images/meteor-logo.png' />
-                <List.Content>
-                  <List.Description>
-                    Review...
-                  </List.Description>
-                  <List.Description>
-                    -Reviewer
-                  </List.Description>
-                </List.Content>
-              </List.Item>
-            </List>
+            <Segment>
+              <Header as='h3' floated='left'>Comments</Header>
+              <Feed size='large'>
+                {_.map(this.props.comments.filter(comment => (comment.spotId === this.props.spot._id)), (comment, index) => <Comment key={index} comment={comment}/>)}
+              </Feed>
+            </Segment>
+          </Grid.Row>
+          <Grid.Row>
+            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button id='add-comment-popup'  icon='comment'/>} hoverable/>
           </Grid.Row>
         </Grid>
       </Container>
@@ -144,22 +120,9 @@ class SpotPage extends React.Component {
 
 // Require an array of Stuff documents in the props.
 SpotPage.propTypes = {
-  spot: PropTypes.shape({
-    name: PropTypes.string,
-    address: PropTypes.string,
-    owner: PropTypes.string,
-    spotType: PropTypes.string,
-    likes: PropTypes.number,
-    _id: PropTypes.string,
-  }).isRequired,
-  like: PropTypes.shape({
-    like: PropTypes.bool,
-    owner: PropTypes.string,
-    spotID: PropTypes.string,
-    _id: PropTypes.string,
-    some: PropTypes.any, // not sure why
-    filter: PropTypes.any, // not sure why
-  }).isRequired,
+  spot: PropTypes.object.isRequired,
+  like: PropTypes.array.isRequired,
+  comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -170,13 +133,16 @@ export default withTracker(({ match }) => {
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
   const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
-  const ready = subscription.ready() && likeSubscription.ready();
+  const commentSubscription = Meteor.subscribe(Comments.userPublicationName);
+  const ready = subscription.ready() && likeSubscription.ready() && commentSubscription.ready();
   // Get the Stuff documents
   const spot = Spots.collection.findOne(spotId);
   const like = Likes.collection.find({}).fetch();
+  const comments = Comments.collection.find({}).fetch();
   return {
     spot,
     like,
+    comments,
     ready,
   };
 })(SpotPage);

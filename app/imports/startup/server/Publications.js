@@ -4,6 +4,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 import { Spots } from '../../api/spot/Spots';
 import { Comments } from '../../api/comment/Comments';
 import { Likes } from '../../api/like/Likes';
+import { Profiles } from '../../api/profile/Profiles';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -26,6 +27,14 @@ Meteor.publish(Likes.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Likes.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
+Meteor.publish(Profiles.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Profiles.collection.find({ owner: username });
   }
   return this.ready();
 });

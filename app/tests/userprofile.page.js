@@ -1,16 +1,16 @@
 import { Selector } from 'testcafe';
 
-class LandingPage {
+class UserProfilePage {
   constructor() {
-    this.pageId = '#landing-page';
+    this.pageId = '#user-profile-page';
     this.pageSelector = Selector(this.pageId);
   }
 
   /** Asserts that this page is currently displayed. */
   async isDisplayed(testController) {
     // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
-    await testController.wait(60000).expect(this.pageSelector.exists).ok();
+    await testController.expect(this.pageSelector.exists).ok();
   }
 }
 
-export const landingPage = new LandingPage();
+export const userProfilePage = new UserProfilePage();

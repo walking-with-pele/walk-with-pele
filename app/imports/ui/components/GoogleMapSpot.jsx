@@ -1,10 +1,7 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
-import { withTracker } from 'meteor/react-meteor-data';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Loader } from 'semantic-ui-react';
-import { Spots } from '../../api/spot/Spots';
 
 function checkType(spotType) {
   let markerColor = '';
@@ -28,25 +25,21 @@ function checkType(spotType) {
 }
 
 // Setting the lat and lng of the spot
-class Map extends React.Component {
-  render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
-  }
-
+class MapSpot extends React.Component {
   // Render the page once subscriptions have been received.
-  renderPage() {
+  render() {
     const WrappedMap = withScriptjs(withGoogleMap(() => <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 21.315603, lng: -157.858093 }} // map center view
+      defaultZoom={13}
+      defaultCenter={{ lat: this.props.spot.coordinatesX, lng: this.props.spot.coordinatesY }} // map center view
     >
-      {this.props.spots.map((spot, index) => <Marker key={index} icon={{ url: checkType(spot.spotType) }}
-        position={{ lat: spot.coordinatesX, lng: spot.coordinatesY }}/>)}
+      <Marker icon={{ url: checkType(this.props.spot.spotType) }}
+        position={{ lat: this.props.spot.coordinatesX, lng: this.props.spot.coordinatesY }}/>
     </GoogleMap>));
 
     return (
       <div id="map-page"
         style={
-          { width: '100vw', height: '100vh' }
+          { width: '20vw', height: '20vh' }
         }>
         <WrappedMap
           googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyA1wrzzbc00syIBFmXnoG4cFaHvyMVMCm0'}
@@ -61,21 +54,9 @@ class Map extends React.Component {
 
 // import functions form the react-google-maps
 
-Map.propTypes = {
-  spots: PropTypes.array.isRequired,
-  ready: PropTypes.bool.isRequired,
+MapSpot.propTypes = {
+  spot: PropTypes.object.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-export default withTracker(() => {
-  // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Spots.userPublicationName);
-  // Determine if the subscription is ready
-  const ready = subscription.ready();
-  // Get the Stuff documents
-  const spots = Spots.collection.find({}).fetch();
-  return {
-    spots,
-    ready,
-  };
-})(Map);
+export default withRouter(MapSpot);
