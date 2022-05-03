@@ -58,7 +58,7 @@
     {
       "firstName": "Sydney G",
       "lastName": "Cohen",
-      "email": "audra_monah@gmail.com",
+      "email": "audra_sydney@gmail.com",
       "password": "changeme"
     },
     {
@@ -266,7 +266,7 @@
       "lastName": "Cohen",
       "major": "Computer Science",
       "bio": "Web fanatic. Gamer. Friendly travel enthusiast. Writer. Creator. Foodaholic.",
-      "owner": "audra_monah@gmail.com",
+      "owner": "audra_sydney@gmail.com",
       "image": "/images/pele.jpg"
     },
     {
@@ -339,6 +339,46 @@
       "major": "Computer Science",
       "bio": "Professional social media expert. Avid creator. Food nerd. Passionate zombie evangelist.",
       "owner": "jerrell_conr@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Joan J",
+      "lastName": "Focht",
+      "major": "Computer Science",
+      "bio": "Explorer. Certified tv geek. Bacon maven. Entrepreneur. Analyst. Evil zombie specialist. Organizer.",
+      "owner": "haleigh2014@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Loretta M",
+      "lastName": "Corbo",
+      "major": "Computer Science",
+      "bio": "Hipster-friendly bacon aficionado. Coffee fanatic. Evil explorer. Beer evangelist. Devoted reader. Falls down a lot. Alcohol buff.",
+      "owner": "cecile.anders@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Gary K",
+      "lastName": "Swisher",
+      "major": "Computer Science",
+      "bio": "Thinker. Travel fanatic. Twitter nerd. Gamer. Zombie evangelist.",
+      "owner": "cheyenne_strei@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Helen A",
+      "lastName": "Holte",
+      "major": "Computer Science",
+      "bio": "Internet enthusiast. Alcohol expert. Zombie practitioner. Gamer. Wannabe thinker. Explorer.",
+      "owner": "kaleigh.tow@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Andre S",
+      "lastName": "Duvall",
+      "major": "Computer Science",
+      "bio": "Friendly problem solver. Wannabe music fanatic. Gamer. Subtly charming tv evangelist. Twitter expert. Creator.",
+      "owner": "jewell2014@yahoo.com",
       "image": "/images/pele.jpg"
     }
   ],
