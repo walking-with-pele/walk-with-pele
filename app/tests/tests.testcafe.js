@@ -101,7 +101,7 @@ test('Test the Add Spot form', async (testController) => {
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.gotoAddSpotPage(testController);
   await addSpotPage.isDisplayed(testController);
-  await addSpotPage.addspot(testController, 'Waianae Beach', 'Waianae', 'images/meteor-logo.png', 'images/meteor-logo.png', 'A beach in Waianae', '12', '13');
+  await addSpotPage.addspot(testController, 'Waianae Beach', 'Waianae', 'images/meteor-logo.png', 'A beach in Waianae', '12', '13');
   await navBar.gotoListSpotPage(testController);
   await listSpotPage.isDisplayedAfterAdd(testController);
 });

@@ -1,10 +1,8 @@
 import React from 'react';
-import { Card, Feed, Image, Button, Popup } from 'semantic-ui-react';
+import { Card, Feed, Image, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
-import AddComment from '../components/AddComment';
-
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Spot extends React.Component {

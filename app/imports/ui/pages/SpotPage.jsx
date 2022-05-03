@@ -95,7 +95,7 @@ class SpotPage extends React.Component {
                 </Label>
               </div>
               <Header as='h3'>Map ↓</Header>
-               <GoogleMapSpot spot={this.props.spot}/>
+              <GoogleMapSpot spot={this.props.spot}/>
             </Grid.Column>
             <Grid.Column>
               <Image src={this.props.spot.picture}/>
@@ -110,7 +110,7 @@ class SpotPage extends React.Component {
             </Segment>
           </Grid.Row>
           <Grid.Row>
-            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button id='add-comment-popup'  icon='comment'/>} hoverable/>
+            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button id='add-comment-popup' icon='comment'/>} hoverable/>
           </Grid.Row>
         </Grid>
       </Container>

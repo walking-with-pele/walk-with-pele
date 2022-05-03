@@ -25,7 +25,6 @@ class SpotsCollection {
         type: Number,
         defaultValue: 0,
       },
-      imageAddress: String,
       picture: String,
       description: String,
       coordinatesX: Number,

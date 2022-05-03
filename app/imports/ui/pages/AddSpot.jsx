@@ -16,7 +16,6 @@ const formSchema = new SimpleSchema({
     allowedValues: ['beach', 'hike', 'library', 'park'],
     defaultValue: 'beach',
   },
-  imageAddress: String,
   picture: String,
   description: String,
   coordinatesX: Number,
@@ -30,9 +29,9 @@ class AddSpot extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY } = data;
+    const { name, address, spotType, picture, description, coordinatesX, coordinatesY } = data;
     const owner = Meteor.user().username;
-    Spots.collection.insert({ name, address, spotType, imageAddress, picture, description, coordinatesX, coordinatesY, owner },
+    Spots.collection.insert({ name, address, spotType, picture, description, coordinatesX, coordinatesY, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -55,7 +54,6 @@ class AddSpot extends React.Component {
               <TextField id='add-form-name' name='name'/>
               <TextField id='add-form-address' name='address'/>
               <SelectField name='spotType'/>
-              <TextField id='add-form-image-address' name='imageAddress'/>
               <TextField id='add-form-picture' name='picture'/>
               <LongTextField id='add-form-description' name='description'/>
               <NumField id='add-form-x' label="x-coordinate" name='coordinatesX'/>
