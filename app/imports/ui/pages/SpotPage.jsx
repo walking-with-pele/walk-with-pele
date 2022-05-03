@@ -9,7 +9,7 @@ import { Likes } from '../../api/like/Likes';
 import { Comments } from '../../api/comment/Comments';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
-// import GoogleMapSpot from '../components/GoogleMapSpot';
+import GoogleMapSpot from '../components/GoogleMapSpot';
 
 /*
 const MakeCard = (props) => (
@@ -95,8 +95,7 @@ class SpotPage extends React.Component {
                 </Label>
               </div>
               <Header as='h3'>Map ↓</Header>
-              <Image src={this.props.spot.imageAddress}/>
-              {/* <GoogleMapSpot spot={this.props.spot}/> */}
+               <GoogleMapSpot spot={this.props.spot}/>
             </Grid.Column>
             <Grid.Column>
               <Image src={this.props.spot.picture}/>
