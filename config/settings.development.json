@@ -1,19 +1,372 @@
 {
   "defaultAccounts": [
-    { "firstName": "admin", "lastName":  "chan", "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "firstName": "John", "lastName":  "Foo", "email": "john@foo.com", "password": "changeme" }
+    {
+      "firstName": "admin",
+      "lastName": "chan",
+      "email": "admin@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Foo",
+      "email": "john@foo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Melisa B",
+      "lastName": "Smith",
+      "email": "kelvin2006@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Audrey S",
+      "lastName": "Chappell",
+      "email": "citlalli.gorcza@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Sheldon S",
+      "lastName": "Smith",
+      "email": "jasen.adam5@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Norman E",
+      "lastName": "Wilson",
+      "email": "santina_cormi@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Elizabeth M",
+      "lastName": "Smith",
+      "email": "madelynn1974@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Mildred L",
+      "lastName": "Horton",
+      "email": "torrance1979@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Michael L",
+      "lastName": "Bouchard",
+      "email": "efren_torph8@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Sydney G",
+      "lastName": "Cohen",
+      "email": "audra_monah@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Gary K",
+      "lastName": "Swisher",
+      "email": "clarabelle_gutkows@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Robert K",
+      "lastName": "Bouton",
+      "email": "melia.heidenrei@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Sydney G",
+      "lastName": "Cohen",
+      "email": "audra_monah@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Janet P",
+      "lastName": "Copeland",
+      "email": "trystan2017@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Robert P",
+      "lastName": "Morgan",
+      "email": "talia2004@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Norman E",
+      "lastName": "Wilson",
+      "email": "santina_cormi@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Charles O",
+      "lastName": "Breunig",
+      "email": "cesar_johnst@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Norman J",
+      "lastName": "Dittman",
+      "email": "kylie1976@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Joe B",
+      "lastName": "Morris",
+      "email": "dana.larso8@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Joseph A",
+      "lastName": "Leishman",
+      "email": "isadore1998@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Ashley D",
+      "lastName": "Schmidt",
+      "email": "justina.cumm@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Julie R",
+      "lastName": "Brown",
+      "email": "jerrell_conr@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Joan J",
+      "lastName": "Focht",
+      "email": "haleigh2014@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Loretta M",
+      "lastName": "Corbo",
+      "email": "cecile.anders@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Gary K",
+      "lastName": "Swisher",
+      "email": "cheyenne_strei@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Helen A",
+      "lastName": "Holte",
+      "email": "kaleigh.tow@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "firstName": "Andre S",
+      "lastName": "Duvall",
+      "email": "jewell2014@yahoo.com",
+      "password": "changeme"
+    }
   ],
-
   "defaultProfiles": [
-    { "firstName": "admin", "lastName":  "chan", "major": "Computer Science", "bio": "hi this is bio for admin", "owner": "admin@foo.com", "image": "/images/meteor-logo.png" },
-    { "firstName": "Phillip", "lastName":  "Johnson", "major": "Computer Science", "bio": "hi this is bio", "owner": "john@foo.com", "image": "/images/pele.jpg" }
+    {
+      "firstName": "admin",
+      "lastName": "chan",
+      "major": "Computer Science",
+      "bio": "hi this is bio for admin",
+      "owner": "admin@foo.com",
+      "image": "/images/meteor-logo.png"
+    },
+    {
+      "firstName": "Phillip",
+      "lastName": "Johnson",
+      "major": "Computer Science",
+      "bio": "hi this is bio",
+      "owner": "john@foo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Melisa B",
+      "lastName": "Smith",
+      "major": "Computer Science",
+      "bio": "I believe that the will of the people is resolved by a strong leadership. Even in a democratic society",
+      "owner": "kelvin2006@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Audrey S",
+      "lastName": "Chappell",
+      "major": "Computer Science",
+      "bio": "Internet lover. Total explorer. Food buff. Devoted introvert",
+      "owner": "citlalli.gorcza@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Sheldon S",
+      "lastName": "Smith",
+      "major": "Computer Science",
+      "bio": "There is a trade off - as you grow older you gain wisdom but you lose spontaneity.",
+      "owner": "jasen.adam5@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Norman E",
+      "lastName": "Wilson",
+      "major": "Computer Science",
+      "bio": "Coffee practitioner. Subtly charming introvert. Writer. Analyst. Pop culture evangelist. Professional entrepreneur.",
+      "owner": "santina_cormi@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Elizabeth M",
+      "lastName": "Smith",
+      "major": "Computer Science",
+      "bio": "Freelance music fan. Zombie nerd. Communicator. Bacon maven. Student. Unable to type with boxing gloves on. Alcohol guru.",
+      "owner": "madelynn1974@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Mildred L",
+      "lastName": "Horton",
+      "major": "Computer Science",
+      "bio": "Tv practitioner. Professional troublemaker. Unable to type with boxing gloves on. Freelance student.",
+      "owner": "torrance1979@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Michael L",
+      "lastName": "Bouchard",
+      "major": "Computer Science",
+      "bio": "When life gives you lemons, squirt the juice in Justin Bieber’s eyes and run.",
+      "owner": "efren_torph8@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Sydney G",
+      "lastName": "Cohen",
+      "major": "Computer Science",
+      "bio": "Web fanatic. Gamer. Friendly travel enthusiast. Writer. Creator. Foodaholic.",
+      "owner": "audra_monah@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Gary K",
+      "lastName": "Swisher",
+      "major": "Computer Science",
+      "bio": "You can't be a proper comic unless you've been out on stage and felt the fear.",
+      "owner": "clarabelle_gutkows@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Robert K",
+      "lastName": "Bouton",
+      "major": "Computer Science",
+      "bio": "Evil internet advocate. Avid writer. Wannabe tv expert. Professional troublemaker.",
+      "owner": "melia.heidenrei@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Sydney G",
+      "lastName": "Cohen",
+      "major": "Computer Science",
+      "bio": "Web fanatic. Gamer. Friendly travel enthusiast. Writer. Creator. Foodaholic.",
+      "owner": "audra_monah@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Janet P",
+      "lastName": "Copeland",
+      "major": "Computer Science",
+      "bio": "Subtly charming food practitioner. Freelance troublemaker. Evil reader. Friendly music nerd.",
+      "owner": "trystan2017@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Robert P",
+      "lastName": "Morgan",
+      "major": "Computer Science",
+      "bio": "Subtly charming food practitioner. Freelance troublemaker. Evil reader. Friendly music nerd.",
+      "owner": "talia2004@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Norman E",
+      "lastName": "Wilson",
+      "major": "Computer Science",
+      "bio": "Travelling expands the mind rarely.;Hans Christian Andersen;travel",
+      "owner": "santina_cormi@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Charles O",
+      "lastName": "Breunig",
+      "major": "Computer Science",
+      "bio": "Devoted tv ninja. Entrepreneur. Internet lover. Friendly food nerd. Beer trailblazer. Problem solver. Bacon aficionado.",
+      "owner": "cesar_johnst@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Norman J",
+      "lastName": "Dittman",
+      "major": "Computer Science",
+      "bio": "My heart lies in music and acting, however, my inspiration comes from adrenaline rush I get from sports... and life.",
+      "owner": "kylie1976@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Joe B",
+      "lastName": "Morris",
+      "major": "Computer Science",
+      "bio": "Hope is a necessity for normal life and the major weapon against the suicide impulse.",
+      "owner": "dana.larso8@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Joseph A",
+      "lastName": "Leishman",
+      "major": "Computer Science",
+      "bio": "General coffeeaholic. Web buff. Prone to fits of apathy. Professional introvert.",
+      "owner": "isadore1998@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Ashley D",
+      "lastName": "Schmidt",
+      "major": "Computer Science",
+      "bio": "Falls down a lot. Introvert. Award-winning thinker. Certified communicator. Bacon specialist.",
+      "owner": "justina.cumm@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Julie R",
+      "lastName": "Brown",
+      "major": "Computer Science",
+      "bio": "Professional social media expert. Avid creator. Food nerd. Passionate zombie evangelist.",
+      "owner": "jerrell_conr@hotmail.com",
+      "image": "/images/pele.jpg"
+    }
   ],
-
   "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+    {
+      "name": "Basket",
+      "quantity": 3,
+      "owner": "john@foo.com",
+      "condition": "excellent"
+    },
+    {
+      "name": "Bicycle",
+      "quantity": 2,
+      "owner": "john@foo.com",
+      "condition": "poor"
+    },
+    {
+      "name": "Banana",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "good"
+    },
+    {
+      "name": "Boogie Board",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "excellent"
+    }
   ],
   "defaultSpots": [
     {
@@ -22,8 +375,8 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "picture" : "images/BS.jpg",
-     "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
+      "picture": "images/BS.jpg",
+      "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.3188889,
       "coordinatesY": -157.9047222
     },
@@ -33,7 +386,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture" : "images/DH.jpeg",
+      "picture": "images/DH.jpeg",
       "description": "Learn the water sport of Hawai'i!! This class is for beginners and transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.264007,
       "coordinatesY": -157.804318
@@ -44,7 +397,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "picture" : "images/Sand-Island.jpeg",
+      "picture": "images/Sand-Island.jpeg",
       "description": "Learn the basics of Stand-Up Paddling, one of the newest, fastest growing water sports. Participants must be able to swim. Transportation and equipment provided.",
       "coordinatesX": 21.306675,
       "coordinatesY": -157.879145
@@ -55,7 +408,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture" : "images/BB.jpeg",
+      "picture": "images/BB.jpeg",
       "description": "Body Boarding is enjoyed at most beaches in the State of Hawai'i. Come learn the basics of body boarding and water safety at a beach with shore break. Transportation and equipment are provided. Participants must be able to swim. Body boarding is limited to UH students, faculty, staff and their guests.",
       "coordinatesX": 21.330790,
       "coordinatesY": -157.687088
@@ -66,7 +419,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 0,
-      "picture" : "images/koko.jpeg",
+      "picture": "images/koko.jpeg",
       "description": "Explore the island of Oahu. Join organized hikes to scenic locations.\n\nTransportation provided.",
       "coordinatesX": 21.262127,
       "coordinatesY": -157.703867
@@ -77,7 +430,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture" : "images/ke.jpeg",
+      "picture": "images/ke.jpeg",
       "description": "Excursions are lead to different parts of Oahu and are intended for the beginner kayaker. Learn kayak and water safety skills while experiencing different scenic areas around the island.",
       "coordinatesX": 21.39661392,
       "coordinatesY": -157.731385794
@@ -88,7 +441,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 0,
-      "picture" : "images/hl.jpeg",
+      "picture": "images/hl.jpeg",
       "description": "Hours: 8:00am – 10:00pm",
       "coordinatesX": 21.300286,
       "coordinatesY": -157.816174
@@ -99,7 +452,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
-      "picture" : "images/wl.jpeg",
+      "picture": "images/wl.jpeg",
       "description": "Hours: 8:00am – 7:00pm",
       "coordinatesX": 21.296285,
       "coordinatesY": -157.816770
@@ -110,7 +463,7 @@
       "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "picture" : "images/at.jpeg",
+      "picture": "images/at.jpeg",
       "description": "Discover the natural beauty of Kualoa Ranch on a self-drive UTV tour of Ka’a’awa Valley. Following a guide, traverse the lush valley in an open-air 4WD vehicle to check out filming sites from Hollywood movies such as Jurassic Park. $UHM discount 20% off",
       "coordinatesX": 21.5233333,
       "coordinatesY": -157.8402778
@@ -121,7 +474,7 @@
       "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "picture" : "images/ot.jpeg",
+      "picture": "images/ot.jpeg",
       "description": "We invite you to join us for a full-day, action-packed tour that will guide you to the finest sights on Oahu, and leave you in total amazement. $UHM discount 20% off",
       "coordinatesX": 21.254947,
       "coordinatesY": -157.807105
@@ -132,7 +485,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture" : "images/sc.jpeg",
+      "picture": "images/sc.jpeg",
       "description": "Plan your vacation ahead of time by purchasing tickets for this 2-hour cruise from Oahu. Dine on a crab and steak dinner while watching live Hawaiian entertainment, a show called '60 Years of Aloha' and enjoying vistas over the Oahu coast.Read more about Star Casual Sunset and Show Cruise. $UHM discount 15% off",
       "coordinatesX": 21.3102778,
       "coordinatesY": -157.8686111
@@ -143,7 +496,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
-      "picture" : "images/oa.png",
+      "picture": "images/oa.png",
       "description": "Ride a personal, self-propelled, electric underwater scooter through Oahu's underwater world. $UHM discount 10% off",
       "coordinatesX": 21.285405,
       "coordinatesY": -157.708300
@@ -154,7 +507,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
-      "picture" : "images/ml.png",
+      "picture": "images/ml.png",
       "description": "Hours: 8:00am – 2:30pm",
       "coordinatesX": 21.34887,
       "coordinatesY": -157.89152
@@ -165,7 +518,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 17,
-      "picture" : "images/slpl.png",
+      "picture": "images/slpl.png",
       "description": "Hours: 8:00am – 4:00pm",
       "coordinatesX": 21.3432348,
       "coordinatesY": -157.9125879
@@ -176,7 +529,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 14,
-      "picture" : "images/kppl.png",
+      "picture": "images/kppl.png",
       "description": "Hours: 8:00am – 5:00pm",
       "coordinatesX": 21.333233,
       "coordinatesY": -157.872313
@@ -187,7 +540,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 15,
-      "picture" : "images/hccl.png",
+      "picture": "images/hccl.png",
       "description": "Hours: 9:00am – 3:00pm",
       "coordinatesX": 21.32067367716786,
       "coordinatesY": -157.8697529782404
@@ -198,7 +551,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 21,
-      "picture" : "images/lpl.png",
+      "picture": "images/lpl.png",
       "description": "Hours: 9:00am – 4:00pm",
       "coordinatesX": 21.32064,
       "coordinatesY": -157.86033
@@ -209,7 +562,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 21,
-      "picture" : "images/apl.png",
+      "picture": "images/apl.png",
       "description": "Hours: 9:00am – 4:00pm",
       "coordinatesX": 21.38054,
       "coordinatesY": -157.93119
@@ -220,7 +573,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 8,
-      "picture" : "images/klb.png",
+      "picture": "images/klb.png",
       "description": "Keehi Lagoon Beach is a great place for canoeing and boating since the waters are usually calm in the protected lagoon. Provide free lesson to UHM students",
       "coordinatesX": 21.3319238,
       "coordinatesY": -157.8970574
@@ -231,7 +584,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
-      "picture" : "images/ab.png",
+      "picture": "images/ab.png",
       "description": "Good beach to see the sunset in a very chill environment on this side of the island.",
       "coordinatesX": 21.2927778,
       "coordinatesY": -157.8502778
@@ -242,7 +595,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 3,
-      "picture" : "images/kb.png",
+      "picture": "images/kb.png",
       "description": "Kai Beach is displayed on the Pearl Harbor USGS topo map quad. UHM student who is interested in visiting Kai Beach can print the free topographic map and other maps using the link above. Login hawaii.edu emails.",
       "coordinatesX": 21.3605556,
       "coordinatesY": -157.9688889
@@ -253,7 +606,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 13,
-      "picture" : "images/mtk.png",
+      "picture": "images/mtk.png",
       "description": "Further along Kalanianaole Highway is the Makapuu Lighthouse hiking trail. This easy route with its moderate incline to the 647-ft.",
       "coordinatesX": 21.308778,
       "coordinatesY": -157.650445
@@ -264,7 +617,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 23,
-      "picture" : "images/kth.png",
+      "picture": "images/kth.png",
       "description": "Depending on your speed, the Koko Head trail can take anywhere from 15 minutes running, to a slower climb of 90 minutes to hike to the top",
       "coordinatesX": 21.2775,
       "coordinatesY": -157.69406
@@ -275,7 +628,7 @@
       "owner": "John Foo",
       "spotType": "library",
       "likes": 13,
-      "picture" : "images/kccl.jpeg",
+      "picture": "images/kccl.jpeg",
       "description": "Needs UHM student to enter",
       "coordinatesX": 21.270984129933087,
       "coordinatesY": -157.79941880250445
@@ -286,7 +639,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 4,
-      "picture" : "images/ahpl.png",
+      "picture": "images/ahpl.png",
       "description": "“Swimming with dolphins” is on a thousand bucket lists, but Dolphin Quest Oahu lets you turn your dreams into a slippery, rubbery reality.",
       "coordinatesX": 21.278820131459884,
       "coordinatesY": -157.7532414178674
@@ -297,7 +650,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture" : "images/pcc.png",
+      "picture": "images/pcc.png",
       "description": "The Polynesian Cultural Center is a living theme park where you can find everything from hula dancing to spear throwing.",
       "coordinatesX": 21.2866687190997,
       "coordinatesY": -157.83455072114262
@@ -308,7 +661,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 9,
-      "picture" : "images/sc.png",
+      "picture": "images/sc.png",
       "description": "If you want to strap on an oxygen tank and explore the coral for yourself, Shark’s Cove is the place to go.",
       "coordinatesX": 21.652090274822214,
       "coordinatesY": -158.06299452295002
@@ -319,7 +672,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture" : "images/dqo.png",
+      "picture": "images/dqo.png",
       "description": "“Swimming with dolphins” is on a thousand bucket lists, but Dolphin Quest Oahu lets you turn your dreams into a slippery, rubbery reality.",
       "coordinatesX": 21.272023980529216,
       "coordinatesY": -157.7742067499818
@@ -330,7 +683,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture" : "images/mf.png",
+      "picture": "images/mf.png",
       "description": "Nestled in the heart of a tropical rainforest, Manoa Falls is a 150-foot waterfall that empties into a shimmering rock pool.",
       "coordinatesX": 21.346619121300336,
       "coordinatesY": -157.80178582580888
@@ -341,7 +694,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture" : "images/hz.png",
+      "picture": "images/hz.png",
       "description": "Home to more than 900 species, the Honolulu Zoo showcases a variety of rare and exotic animals.",
       "coordinatesX": 21.271394522339243,
       "coordinatesY": -157.8213712143308
@@ -352,10 +705,12 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 11,
-      "picture" : "images/ph.png",
+      "picture": "images/ph.png",
       "description": "There’s a sober shadow amidst the glittering beaches and resorts of Honolulu, and that shadow is named Pearl Harbor.",
       "coordinatesX": 21.3545465013813,
       "coordinatesY": -157.98079428482768
     }
   ]
 }
+
+
