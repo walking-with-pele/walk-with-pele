@@ -94,7 +94,7 @@
     {
       "firstName": "Norman E",
       "lastName": "Wilson",
-      "email": "santina_cormi@yahoo.com",
+      "email": "santina_norman@yahoo.com",
       "password": "changeme"
     },
     {
@@ -290,7 +290,7 @@
       "lastName": "Wilson",
       "major": "Computer Science",
       "bio": "Travelling expands the mind rarely.;Hans Christian Andersen;travel",
-      "owner": "santina_cormi@yahoo.com",
+      "owner": "santina_norman@yahoo.com",
       "image": "/images/pele.jpg"
     },
     {
