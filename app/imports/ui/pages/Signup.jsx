@@ -33,7 +33,7 @@ class Signup extends React.Component {
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/add' } };
+    const { from } = this.props.location.state || { from: { pathname: '/create-profile' } };
     // if correct authentication, redirect to from: page instead of signup screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;
@@ -47,26 +47,6 @@ class Signup extends React.Component {
             </Header>
             <Form onSubmit={this.submit}>
               <Segment stacked>
-                <Form.Input
-                  label="First Name"
-                  id="signup-form-firstName"
-                  icon="user"
-                  iconPosition="left"
-                  name="firstName"
-                  type="firstName"
-                  placeholder="First Name"
-                  onChange={this.handleChange}
-                />
-                <Form.Input
-                  label="Last Name"
-                  id="signup-form-lastName"
-                  icon="user"
-                  iconPosition="left"
-                  name="lastName"
-                  type="lastName"
-                  placeholder="Last Name"
-                  onChange={this.handleChange}
-                />
                 <Form.Input
                   label="Email"
                   id="signup-form-email"

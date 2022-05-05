@@ -24,6 +24,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import UserProfile from '../pages/UserProfile';
 import SpotPage from '../pages/SpotPage';
+import CreateProfile from '../pages/CreateProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -37,6 +38,7 @@ class App extends React.Component {
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
+            <Route path="/create-profile" component={CreateProfile}/>
             <ProtectedRoute path="/list" component={ListSpot}/>
             <ProtectedRoute path="/user" component={UserProfile}/>
             <ProtectedRoute path="/add" component={AddSpot}/>
