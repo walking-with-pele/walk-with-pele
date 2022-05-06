@@ -1,8 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
+import swal from 'sweetalert';
 import { Container, Button, Header, Loader, Label, Image, Grid, List } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { _ } from 'meteor/underscore';
 import { Spots } from '../../api/spot/Spots';
 import { Likes } from '../../api/like/Likes';
 import { VisitedSpots } from '../../api/visitedSpot/VisitedSpots';
@@ -26,8 +28,10 @@ class SpotPage extends React.Component {
 
       if (data[0].like) {
         Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes - 1 } });
+        swal('Success', 'Spot removed from likes', 'info');
       } else {
         Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
+        swal('Success', 'Spot liked', 'success');
       }
 
       Likes.collection.update(
@@ -38,6 +42,7 @@ class SpotPage extends React.Component {
     }
     Likes.collection.insert({ like, spotID, owner });
     Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
+    swal('Success', 'Spot liked', 'success');
   }
 
   userVisitedSpot() {
@@ -47,15 +52,21 @@ class SpotPage extends React.Component {
     const owner = Meteor.user().username;
 
     if (data.some(e => e.spotID === this.props.spot._id)) {
-      console.log('page already visited');
-
+      // pulls spot that is associated with this page.
+      const spotToEdit = _.findWhere(data, { spotID: spotID });
+      if (spotToEdit.visited) {
+        swal('Success', 'Spot removed from visited', 'info');
+      } else {
+        swal('Success', 'Spot marked as visited', 'success');
+      }
       VisitedSpots.collection.update(
-        { _id: data[0]._id },
-        { $set: { visited: !(data[0].visited) } },
+        { _id: spotToEdit._id },
+        { $set: { visited: !(spotToEdit.visited) } },
       );
       return;
     }
     VisitedSpots.collection.insert({ visited, spotID, owner });
+    swal('Success', 'Spot marked as visited', 'success');
   }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
@@ -66,7 +77,7 @@ class SpotPage extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
-    const visitedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
+    const visitedPage = this.props.visited.some(e => e.spotID === this.props.spot._id);
     return (
       <Container style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
