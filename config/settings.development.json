@@ -1,165 +1,111 @@
 {
   "defaultAccounts": [
     {
-      "firstName": "admin",
-      "lastName": "chan",
       "email": "admin@foo.com",
       "password": "changeme",
       "role": "admin"
     },
     {
-      "firstName": "John",
-      "lastName": "Foo",
       "email": "john@foo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Melisa B",
-      "lastName": "Smith",
       "email": "kelvin2006@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Audrey S",
-      "lastName": "Chappell",
       "email": "citlalli.gorcza@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Sheldon S",
-      "lastName": "Smith",
       "email": "jasen.adam5@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Norman E",
-      "lastName": "Wilson",
       "email": "santina_cormi@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Elizabeth M",
-      "lastName": "Smith",
       "email": "madelynn1974@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Mildred L",
-      "lastName": "Horton",
       "email": "torrance1979@hotmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Michael L",
-      "lastName": "Bouchard",
       "email": "efren_torph8@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Sydney G",
-      "lastName": "Cohen",
       "email": "audra_sydney@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Gary K",
-      "lastName": "Swisher",
       "email": "clarabelle_gutkows@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Robert K",
-      "lastName": "Bouton",
       "email": "melia.heidenrei@hotmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Sydney G",
-      "lastName": "Cohen",
       "email": "audra_monah@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Janet P",
-      "lastName": "Copeland",
       "email": "trystan2017@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Robert P",
-      "lastName": "Morgan",
       "email": "talia2004@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Norman E",
-      "lastName": "Wilson",
       "email": "santina_norman@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Charles O",
-      "lastName": "Breunig",
       "email": "cesar_johnst@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Norman J",
-      "lastName": "Dittman",
       "email": "kylie1976@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Joe B",
-      "lastName": "Morris",
       "email": "dana.larso8@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Joseph A",
-      "lastName": "Leishman",
       "email": "isadore1998@hotmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Ashley D",
-      "lastName": "Schmidt",
       "email": "justina.cumm@hotmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Julie R",
-      "lastName": "Brown",
       "email": "jerrell_conr@hotmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Joan J",
-      "lastName": "Focht",
       "email": "haleigh2014@yahoo.com",
       "password": "changeme"
     },
     {
-      "firstName": "Loretta M",
-      "lastName": "Corbo",
       "email": "cecile.anders@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Gary K",
-      "lastName": "Swisher",
       "email": "cheyenne_strei@gmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Helen A",
-      "lastName": "Holte",
       "email": "kaleigh.tow@hotmail.com",
       "password": "changeme"
     },
     {
-      "firstName": "Andre S",
-      "lastName": "Duvall",
       "email": "jewell2014@yahoo.com",
       "password": "changeme"
     }
