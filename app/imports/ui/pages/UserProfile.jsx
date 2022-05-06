@@ -62,14 +62,7 @@ class UserProfile extends React.Component {
 
 // Require an array of Stuff documents in the props.
 UserProfile.propTypes = {
-  profile: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
-    major: PropTypes.string,
-    bio: PropTypes.string,
-    image: PropTypes.string,
-    owner: PropTypes.string,
-  }).isRequired,
+  profile: PropTypes.object.isRequired,
   spots: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
   like: PropTypes.array.isRequired,
