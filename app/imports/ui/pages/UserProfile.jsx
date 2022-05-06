@@ -89,14 +89,17 @@ export default withTracker(() => {
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   const subscriptionProfile = Meteor.subscribe(Profiles.userPublicationName);
   const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
+  const visitedSubscription = Meteor.subscribe(VisitedSpots.userPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready() && subscriptionProfile.ready() && likeSubscription.ready();
+  const ready = subscription.ready() && subscriptionProfile.ready() && likeSubscription.ready() && visitedSubscription.ready();
   // Get the documents
   const spots = Spots.collection.find({}).fetch();
   const profile = Profiles.collection.findOne();
   const like = Likes.collection.find({}).fetch();
+  const visited = VisitedSpots.collection.find({}).fetch();
   return {
     like,
+    visited,
     spots,
     profile,
     ready,
