@@ -98,6 +98,8 @@ class SpotPage extends React.Component {
             </Grid.Column>
             <Grid.Column>
               <Image src={this.props.spot.picture}/>
+              <Header as='h4'>Description:</Header>
+              <p>{this.props.spot.description}</p>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
