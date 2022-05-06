@@ -361,7 +361,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "picture": "images/BS.jpg",
+      "picture" : "images/BS.jpg",
       "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.3188889,
       "coordinatesY": -157.9047222
@@ -372,7 +372,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture": "images/DH.jpeg",
+      "picture" : "images/DH.jpeg",
       "description": "Learn the water sport of Hawai'i!! This class is for beginners and transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.264007,
       "coordinatesY": -157.804318
@@ -383,7 +383,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 0,
-      "picture": "images/Sand-Island.jpeg",
+      "picture" : "images/Sand-Island.jpeg",
       "description": "Learn the basics of Stand-Up Paddling, one of the newest, fastest growing water sports. Participants must be able to swim. Transportation and equipment provided.",
       "coordinatesX": 21.306675,
       "coordinatesY": -157.879145
@@ -394,7 +394,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture": "images/BB.jpeg",
+      "picture" : "images/BB.jpeg",
       "description": "Body Boarding is enjoyed at most beaches in the State of Hawai'i. Come learn the basics of body boarding and water safety at a beach with shore break. Transportation and equipment are provided. Participants must be able to swim. Body boarding is limited to UH students, faculty, staff and their guests.",
       "coordinatesX": 21.330790,
       "coordinatesY": -157.687088
@@ -405,7 +405,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 0,
-      "picture": "images/koko.jpeg",
+      "picture" : "images/koko.jpeg",
       "description": "Explore the island of Oahu. Join organized hikes to scenic locations.\n\nTransportation provided.",
       "coordinatesX": 21.262127,
       "coordinatesY": -157.703867
@@ -416,7 +416,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture": "images/ke.jpeg",
+      "picture" : "images/ke.jpeg",
       "description": "Excursions are lead to different parts of Oahu and are intended for the beginner kayaker. Learn kayak and water safety skills while experiencing different scenic areas around the island.",
       "coordinatesX": 21.39661392,
       "coordinatesY": -157.731385794
@@ -427,7 +427,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 0,
-      "picture": "images/hl.jpeg",
+      "picture" : "images/hl.jpeg",
       "description": "Hours: 8:00am – 10:00pm",
       "coordinatesX": 21.300286,
       "coordinatesY": -157.816174
@@ -438,7 +438,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
-      "picture": "images/wl.jpeg",
+      "picture" : "images/wl.jpeg",
       "description": "Hours: 8:00am – 7:00pm",
       "coordinatesX": 21.296285,
       "coordinatesY": -157.816770
@@ -449,7 +449,7 @@
       "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "picture": "images/at.jpeg",
+      "picture" : "images/at.jpeg",
       "description": "Discover the natural beauty of Kualoa Ranch on a self-drive UTV tour of Ka’a’awa Valley. Following a guide, traverse the lush valley in an open-air 4WD vehicle to check out filming sites from Hollywood movies such as Jurassic Park. $UHM discount 20% off",
       "coordinatesX": 21.5233333,
       "coordinatesY": -157.8402778
@@ -460,7 +460,7 @@
       "owner": "admin chan",
       "spotType": "park",
       "likes": 12,
-      "picture": "images/ot.jpeg",
+      "picture" : "images/ot.jpeg",
       "description": "We invite you to join us for a full-day, action-packed tour that will guide you to the finest sights on Oahu, and leave you in total amazement. $UHM discount 20% off",
       "coordinatesX": 21.254947,
       "coordinatesY": -157.807105
@@ -471,7 +471,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 12,
-      "picture": "images/sc.jpeg",
+      "picture" : "images/sc.jpeg",
       "description": "Plan your vacation ahead of time by purchasing tickets for this 2-hour cruise from Oahu. Dine on a crab and steak dinner while watching live Hawaiian entertainment, a show called '60 Years of Aloha' and enjoying vistas over the Oahu coast.Read more about Star Casual Sunset and Show Cruise. $UHM discount 15% off",
       "coordinatesX": 21.3102778,
       "coordinatesY": -157.8686111
@@ -482,7 +482,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
-      "picture": "images/oa.png",
+      "picture" : "images/oa.png",
       "description": "Ride a personal, self-propelled, electric underwater scooter through Oahu's underwater world. $UHM discount 10% off",
       "coordinatesX": 21.285405,
       "coordinatesY": -157.708300
@@ -493,7 +493,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 12,
-      "picture": "images/ml.png",
+      "picture" : "images/ml.png",
       "description": "Hours: 8:00am – 2:30pm",
       "coordinatesX": 21.34887,
       "coordinatesY": -157.89152
@@ -504,7 +504,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 17,
-      "picture": "images/slpl.png",
+      "picture" : "images/slpl.png",
       "description": "Hours: 8:00am – 4:00pm",
       "coordinatesX": 21.3432348,
       "coordinatesY": -157.9125879
@@ -515,7 +515,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 14,
-      "picture": "images/kppl.png",
+      "picture" : "images/kppl.png",
       "description": "Hours: 8:00am – 5:00pm",
       "coordinatesX": 21.333233,
       "coordinatesY": -157.872313
@@ -526,7 +526,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 15,
-      "picture": "images/hccl.png",
+      "picture" : "images/hccl.png",
       "description": "Hours: 9:00am – 3:00pm",
       "coordinatesX": 21.32067367716786,
       "coordinatesY": -157.8697529782404
@@ -537,7 +537,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 21,
-      "picture": "images/lpl.png",
+      "picture" : "images/lpl.png",
       "description": "Hours: 9:00am – 4:00pm",
       "coordinatesX": 21.32064,
       "coordinatesY": -157.86033
@@ -548,7 +548,7 @@
       "owner": "admin chan",
       "spotType": "library",
       "likes": 21,
-      "picture": "images/apl.png",
+      "picture" : "images/apl.png",
       "description": "Hours: 9:00am – 4:00pm",
       "coordinatesX": 21.38054,
       "coordinatesY": -157.93119
@@ -559,7 +559,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 8,
-      "picture": "images/klb.png",
+      "picture" : "images/klb.png",
       "description": "Keehi Lagoon Beach is a great place for canoeing and boating since the waters are usually calm in the protected lagoon. Provide free lesson to UHM students",
       "coordinatesX": 21.3319238,
       "coordinatesY": -157.8970574
@@ -570,7 +570,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 28,
-      "picture": "images/ab.png",
+      "picture" : "images/ab.png",
       "description": "Good beach to see the sunset in a very chill environment on this side of the island.",
       "coordinatesX": 21.2927778,
       "coordinatesY": -157.8502778
@@ -581,7 +581,7 @@
       "owner": "admin chan",
       "spotType": "beach",
       "likes": 3,
-      "picture": "images/kb.png",
+      "picture" : "images/kb.png",
       "description": "Kai Beach is displayed on the Pearl Harbor USGS topo map quad. UHM student who is interested in visiting Kai Beach can print the free topographic map and other maps using the link above. Login hawaii.edu emails.",
       "coordinatesX": 21.3605556,
       "coordinatesY": -157.9688889
@@ -592,7 +592,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 13,
-      "picture": "images/mtk.png",
+      "picture" : "images/mtk.png",
       "description": "Further along Kalanianaole Highway is the Makapuu Lighthouse hiking trail. This easy route with its moderate incline to the 647-ft.",
       "coordinatesX": 21.308778,
       "coordinatesY": -157.650445
@@ -603,7 +603,7 @@
       "owner": "John Foo",
       "spotType": "hike",
       "likes": 23,
-      "picture": "images/kth.png",
+      "picture" : "images/kth.png",
       "description": "Depending on your speed, the Koko Head trail can take anywhere from 15 minutes running, to a slower climb of 90 minutes to hike to the top",
       "coordinatesX": 21.2775,
       "coordinatesY": -157.69406
@@ -614,7 +614,7 @@
       "owner": "John Foo",
       "spotType": "library",
       "likes": 13,
-      "picture": "images/kccl.jpeg",
+      "picture" : "images/kccl.jpeg",
       "description": "Needs UHM student to enter",
       "coordinatesX": 21.270984129933087,
       "coordinatesY": -157.79941880250445
@@ -625,7 +625,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 4,
-      "picture": "images/ahpl.png",
+      "picture" : "images/ahpl.png",
       "description": "“Swimming with dolphins” is on a thousand bucket lists, but Dolphin Quest Oahu lets you turn your dreams into a slippery, rubbery reality.",
       "coordinatesX": 21.278820131459884,
       "coordinatesY": -157.7532414178674
@@ -636,7 +636,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture": "images/pcc.png",
+      "picture" : "images/pcc.png",
       "description": "The Polynesian Cultural Center is a living theme park where you can find everything from hula dancing to spear throwing.",
       "coordinatesX": 21.2866687190997,
       "coordinatesY": -157.83455072114262
@@ -647,7 +647,7 @@
       "owner": "John Foo",
       "spotType": "beach",
       "likes": 9,
-      "picture": "images/sc.png",
+      "picture" : "images/sc.png",
       "description": "If you want to strap on an oxygen tank and explore the coral for yourself, Shark’s Cove is the place to go.",
       "coordinatesX": 21.652090274822214,
       "coordinatesY": -158.06299452295002
@@ -658,7 +658,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture": "images/dqo.png",
+      "picture" : "images/dqo.png",
       "description": "“Swimming with dolphins” is on a thousand bucket lists, but Dolphin Quest Oahu lets you turn your dreams into a slippery, rubbery reality.",
       "coordinatesX": 21.272023980529216,
       "coordinatesY": -157.7742067499818
@@ -669,7 +669,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture": "images/mf.png",
+      "picture" : "images/mf.png",
       "description": "Nestled in the heart of a tropical rainforest, Manoa Falls is a 150-foot waterfall that empties into a shimmering rock pool.",
       "coordinatesX": 21.346619121300336,
       "coordinatesY": -157.80178582580888
@@ -680,7 +680,7 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 9,
-      "picture": "images/hz.png",
+      "picture" : "images/hz.png",
       "description": "Home to more than 900 species, the Honolulu Zoo showcases a variety of rare and exotic animals.",
       "coordinatesX": 21.271394522339243,
       "coordinatesY": -157.8213712143308
@@ -691,12 +691,230 @@
       "owner": "John Foo",
       "spotType": "park",
       "likes": 11,
-      "picture": "images/ph.png",
+      "picture" : "images/ph.png",
       "description": "There’s a sober shadow amidst the glittering beaches and resorts of Honolulu, and that shadow is named Pearl Harbor.",
       "coordinatesX": 21.3545465013813,
       "coordinatesY": -157.98079428482768
+    },
+    {
+      "name": "Mānoa Falls Trail",
+      "address": "Na Ala Hele, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 13,
+      "picture" : "images/mft.png",
+      "description": "Manoa Falls trail is a beautiful and easy hiking trail located in the Honolulu area of the Hawaiian island of Oahu.",
+      "coordinatesX": 21.336226026692753,
+      "coordinatesY": -157.79990776035206
+    },
+    {
+      "name": "Tantalus Arboretum Trailhead",
+      "address": "3330 Tantalus Dr, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 3,
+      "picture" : "images/tat.png",
+      "description": "The Tantalus-Arboretum Trail is a short, 0.25 mile long loop trail in the Honolulu area of O'ahu.",
+      "coordinatesX": 21.32607711211943,
+      "coordinatesY": -157.8276826072547
+    },
+    {
+      "name": "Pu'u Ohia Trail",
+      "address": " Pu'u Ohia Trail, Honolulu, HI 96813",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 7,
+      "picture" : "images/pot.png",
+      "description": "Explore this 3.2-mile out-and-back trail near Honolulu, Oahu.",
+      "coordinatesX": 21.337034186557354,
+      "coordinatesY": -157.81252344430428
+    },
+    {
+      "name": "Nahuina Trail",
+      "address": " Na Ala Hele: Nahuina Trail, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 3,
+      "picture" : "images/nt.png",
+      "description": "Nature at its best, wear good shoes/boots make sure phone is charged and someone knows where u going. Enjoy the hike.",
+      "coordinatesX": 21.329779785860765,
+      "coordinatesY": -157.8224601720002
+    },
+    {
+      "name": "Ualakaʻa Trail",
+      "address": "Ualaka'a Trail, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 5,
+      "picture" : "images/ut.png",
+      "description": "Enjoy this 2.3-mile loop trail near Honolulu, Oahu. Generally considered an easy route, it takes an average of 1 h 7 min to complete.",
+      "coordinatesX": 21.318825931887567,
+      "coordinatesY": -157.81869881608077
+    },
+    {
+      "name": "Nā Ala Hele Trail",
+      "address": "2135 Makiki Heights Dr, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 8,
+      "picture" : "images/naht.png",
+      "description": "It is a high-elevation hike through one of Hawaii's largest dry forest areas.",
+      "coordinatesX": 21.31792580486175,
+      "coordinatesY": -157.82618080268207
+    },
+    {
+      "name": "Makiki Valley Trail",
+      "address": "Na Ala Hele: Makiki Valley Trail, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 2,
+      "picture" : "images/mvt.png",
+      "description": "Great loop trail, accessible in a few places and not too difficult. Very beautiful forest hike without a major attraction but still great.",
+      "coordinatesX": 21.33146949416488,
+      "coordinatesY": -157.82454476844248
+    },
+    {
+      "name": "Queens Beach",
+      "address": "Honolulu, HI 96815",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 3,
+      "picture" : "images/qb.png",
+      "description": "Queen's Beach is just east of Waikiki Beach but much more quiet and relaxing. It can get so crowded on Waikiki Beach with all of the hotels and restaurants in the area.",
+      "coordinatesX": 21.270967954925496,
+      "coordinatesY": -157.82290167187935
+    },
+    {
+      "name": "Oneʻula Beach Park",
+      "address": "91-295 Papipi Rd, Ewa Beach, HI 96706",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/ob.png",
+      "description": "Beautiful beach and park. Plenty of parking, good waves. Great for jsut hanging out, surfing, shore fishing and even bbq",
+      "coordinatesX": 21.270967954925496,
+      "coordinatesY": -157.82290167187935
+    },
+    {
+      "name": "Kuhio Beach Park",
+      "address": "Honolulu, HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/kbp.png",
+      "description": "This highly popular beach is nicknamed “Kuhio Ponds” because the beach is divided by two concrete walls that stretch 40 years into the ocean.",
+      "coordinatesX": 21.272938798790026,
+      "coordinatesY": -157.8237721799564
+    },
+    {
+      "name": "Temple Beach Park",
+      "address": "HI-83, Laie, HI 96762",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 9,
+      "picture" : "images/tbp.png",
+      "description": "Temple Beach A low key beach located in Laie near the Laie Temple. This beach is walking distance for most vacation rentals in Laie.",
+      "coordinatesX": 21.649542731999823,
+      "coordinatesY": -157.92319638918198
+    },
+    {
+      "name": "Kawela Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 9,
+      "picture" : "images/kawb.png",
+      "description": "kawela Bay (view panorama) is one of the most secluded beaches on Oahu. Located near the Turtle Bay Resort on the island's North Shore.",
+      "coordinatesX": 21.69495677991286,
+      "coordinatesY": -158.01953025358287
+    },
+    {
+      "name": "Āweoweo Beach Park",
+      "address": "68-197 Au St, Waialua, HI 96791",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 2,
+      "picture" : "images/abp.png",
+      "description": "Awesome little beach, with an amazing basketball court, jungle gym, plenty of grass, and plenty of beach!",
+      "coordinatesX": 21.583456028737515,
+      "coordinatesY": -158.14006618918302
+    },
+    {
+      "name": "Mākua Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 4,
+      "picture" : "images/makb.png",
+      "description": "Quiet beach located on Oahu's leeward (west) coast, far away from crowds · Beautiful white-sand beach, but can be hot and dry.",
+      "coordinatesX": 21.53218460265343,
+      "coordinatesY": -158.2292724151952
+    },
+    {
+      "name": "Makao Beach",
+      "address": "84-369 Farrington Hwy, Waianae, HI 96792",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 8,
+      "picture" : "images/maokaob.png",
+      "description": "Makao Beach is located in Hauula on the northern side of Oahu's east coast. This beach isn't visited by many people so don't expect to see any crowds over",
+      "coordinatesX": 21.607550812067032,
+      "coordinatesY": -157.90664034131436
+    },
+    {
+      "name": "Jackass Ginger Trail head",
+      "address": "4072-, 4156 Nuuanu Pali Dr, Honolulu, HI 96817",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 7,
+      "picture" : "images/jgth.png",
+      "description": "Jackass Ginger Pool is a small, charming-looking 10-foot (3 m) waterfall in the Honolulu neighborhood of Nu'uanu.",
+      "coordinatesX": 21.347237515540023,
+      "coordinatesY": -157.82072982967034
+    },
+    {
+      "name": "Kaihalulu Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 8,
+      "picture" : "images/kaib.png",
+      "description": "Kaihalulu Beach is located east of the Turtle Bay Resort on Oahu's North Shore. The beach is backed by a small forest.",
+      "coordinatesX": 21.71666241150877,
+      "coordinatesY": -157.99283736589064
+    },
+    {
+      "name": "Hanaka‘ilio Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/hb.png",
+      "description": "On the north shore of Oahu lies Hanakailio Beach, a furbulous large beach with white sand where you and your fur-buddy can throw down a blanket and relax",
+      "coordinatesX": 21.710031940407067,
+      "coordinatesY": -157.9805698776285
+    },
+    {
+      "name": "Waimea Valley",
+      "address": "59-864 Kamehameha Hwy, Haleiwa, HI 96712",
+      "owner": "admin chan",
+      "spotType": "park",
+      "likes": 7,
+      "picture" : "images/wv.png",
+      "description": "This place is absolutely gorgeous, there is about 0.8 miles paved path up to a waterfall where one can swim.",
+      "coordinatesX": 21.642310843516576,
+      "coordinatesY": -158.0595279260629
+    },
+    {
+      "name": "Uppers Beach Park",
+      "address": "61-212 Kamehameha Hwy, Haleiwa, HI 96712",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/ubp.png",
+      "description": "Uppers Beach Park, 2021. Not to far from the road and a small hike down from where you park",
+      "coordinatesX": 21.63390853396143,
+      "coordinatesY": -158.06979184500625
     }
   ]
 }
-
-
