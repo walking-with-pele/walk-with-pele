@@ -81,11 +81,11 @@ class SpotPage extends React.Component {
               <Label size='large' color='green'>{this.props.spot.spotType}</Label>
               <Header as='h3'>{this.props.spot.address}</Header>
               <div className="ui labeled button" tabIndex="0">
-                <Button className="ui button" icon labelPosition='right' active={likedPage} onClick={() => this.userLikesSpot()}>
+                <Button id="add-like" className="ui button" icon labelPosition='right' active={likedPage} onClick={() => this.userLikesSpot()}>
                   Like
                   <Icon name="heart"/>
                 </Button>
-                <Label as='a' basic>
+                <Label id="number-likes" as='a' basic>
                   {this.props.spot.likes}
                 </Label>
               </div>
@@ -123,7 +123,7 @@ class SpotPage extends React.Component {
 SpotPage.propTypes = {
   spot: PropTypes.object.isRequired,
   like: PropTypes.array.isRequired,
-  visited: PropTypes.object.isRequired,
+  visited: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };

@@ -67,7 +67,7 @@ test('Test View Spot button on Spot component', async (testController) => {
   await spotPage.isDisplayed(testController);
 });
 
-test('Test Add Comment button on Spot component', async (testController) => {
+test('Test Add Comment button on Spot page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
@@ -76,6 +76,17 @@ test('Test Add Comment button on Spot component', async (testController) => {
   await spotComp.viewPage(testController);
   await spotPage.isDisplayed(testController);
   await spotPage.addcomment(testController, 'great place!');
+});
+
+test('Test Add Like button on Spot page', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.gotoTopSpotPage(testController);
+  await topSpotPage.isDisplayed(testController);
+  await spotComp.viewPage(testController);
+  await spotPage.isDisplayed(testController);
+  await spotPage.addlike(testController);
 });
 
 test('Test Search Filter on List Spots page', async (testController) => {
@@ -104,6 +115,9 @@ test('Test the Add Spot form', async (testController) => {
   await addSpotPage.addspot(testController, 'Waianae Beach', 'Waianae', 'images/meteor-logo.png', 'A beach in Waianae', '12', '13');
   await navBar.gotoListSpotPage(testController);
   await listSpotPage.isDisplayedAfterAdd(testController);
+  await listSpotPage.searchspot(testController, 'Waianae Beach');
+  await spotComp.viewPage(testController);
+  await spotPage.isDisplayed(testController);
 });
 
 test('Test the Map page', async (testController) => {
