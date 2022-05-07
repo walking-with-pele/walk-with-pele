@@ -123,7 +123,7 @@ class SpotPage extends React.Component {
 SpotPage.propTypes = {
   spot: PropTypes.object.isRequired,
   like: PropTypes.array.isRequired,
-  visited: PropTypes.object.isRequired,
+  visited: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
