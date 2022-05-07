@@ -21,6 +21,9 @@ class Spot extends React.Component {
         <Card.Content>
           <Card.Header>{this.props.spot.name}</Card.Header>
           <Card.Meta>{this.props.spot.address}</Card.Meta>
+          <Card.Description>
+            {this.props.spot.description}
+          </Card.Description>
         </Card.Content>
         <Card.Content>
           <Button id='view-page' className="ui button" as={Link} to={`/spot-page/${this.props.spot._id}`}>

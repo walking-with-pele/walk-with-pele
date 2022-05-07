@@ -7,34 +7,10 @@ import PropTypes from 'prop-types';
 import { Spots } from '../../api/spot/Spots';
 import { Likes } from '../../api/like/Likes';
 import { Comments } from '../../api/comment/Comments';
+import { VisitedSpots } from '../../api/visitedSpot/VisitedSpots';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 import GoogleMapSpot from '../components/GoogleMapSpot';
-
-/*
-const MakeCard = (props) => (
-  <Card>
-    <Card.Content>
-      <Image size='large' src='/images/meteor-logo.png'/>
-      <Card.Header>Spot Name</Card.Header>
-      <Card.Meta>
-        <span className='date'>spot category</span>
-      </Card.Meta>
-      <Card.Description>
-        Description of place
-      </Card.Description>
-    </Card.Content>
-  </Card>
-);
-
-const options = [
-  { text: 'My Likes', value: 1 },
-  { text: 'Liked Likes', value: 2 },
-  { text: 'Visited Likes', value: 3 },
-];
-
-const defVal = 1;
- */
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class SpotPage extends React.Component {
@@ -69,6 +45,24 @@ class SpotPage extends React.Component {
     Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
   }
 
+  userVisitedSpot() {
+    const data = this.props.visited;
+    const visited = true;
+    const spotID = this.props.spot._id;
+    const owner = Meteor.user().username;
+
+    if (data.some(e => e.spotID === this.props.spot._id)) {
+      console.log('page already visited');
+
+      VisitedSpots.collection.update(
+        { _id: data[0]._id },
+        { $set: { visited: !(data[0].visited) } },
+      );
+      return;
+    }
+    VisitedSpots.collection.insert({ visited, spotID, owner });
+  }
+
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
@@ -77,6 +71,7 @@ class SpotPage extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     const likedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
+    const visitedPage = this.props.like.some(e => e.spotID === this.props.spot._id);
     return (
       <Container id="spot-page" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
         <Header as='h1'>{this.props.spot.name}</Header>
@@ -94,11 +89,17 @@ class SpotPage extends React.Component {
                   {this.props.spot.likes}
                 </Label>
               </div>
+              <Button className="ui button" icon labelPosition='right' active={visitedPage} onClick={() => this.userVisitedSpot()}>
+                Mark as visited
+                <Icon name="user icon"/>
+              </Button>
               <Header as='h3'>Map ↓</Header>
               <GoogleMapSpot spot={this.props.spot}/>
             </Grid.Column>
             <Grid.Column>
               <Image src={this.props.spot.picture}/>
+              <Header as='h4'>Description:</Header>
+              <p>{this.props.spot.description}</p>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -122,6 +123,7 @@ class SpotPage extends React.Component {
 SpotPage.propTypes = {
   spot: PropTypes.object.isRequired,
   like: PropTypes.array.isRequired,
+  visited: PropTypes.object.isRequired,
   comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -133,15 +135,18 @@ export default withTracker(({ match }) => {
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
   const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
+  const visitedSubscription = Meteor.subscribe(VisitedSpots.userPublicationName);
   const commentSubscription = Meteor.subscribe(Comments.userPublicationName);
-  const ready = subscription.ready() && likeSubscription.ready() && commentSubscription.ready();
+  const ready = subscription.ready() && likeSubscription.ready() && commentSubscription.ready() && visitedSubscription.ready();
   // Get the Stuff documents
   const spot = Spots.collection.findOne(spotId);
   const like = Likes.collection.find({}).fetch();
+  const visited = VisitedSpots.collection.find({}).fetch();
   const comments = Comments.collection.find({}).fetch();
   return {
     spot,
     like,
+    visited,
     comments,
     ready,
   };

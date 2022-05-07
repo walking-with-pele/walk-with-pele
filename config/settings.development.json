@@ -1,19 +1,332 @@
 {
   "defaultAccounts": [
-    { "firstName": "admin", "lastName":  "chan", "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "firstName": "John", "lastName":  "Foo", "email": "john@foo.com", "password": "changeme" }
+    {
+      "email": "admin@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "john@foo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "kelvin2006@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "citlalli.gorcza@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "jasen.adam5@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "santina_cormi@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "madelynn1974@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "torrance1979@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "efren_torph8@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "audra_sydney@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "clarabelle_gutkows@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "melia.heidenrei@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "audra_monah@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "trystan2017@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "talia2004@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "santina_norman@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "cesar_johnst@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "kylie1976@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "dana.larso8@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "isadore1998@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "justina.cumm@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "jerrell_conr@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "haleigh2014@yahoo.com",
+      "password": "changeme"
+    },
+    {
+      "email": "cecile.anders@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "cheyenne_strei@gmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "kaleigh.tow@hotmail.com",
+      "password": "changeme"
+    },
+    {
+      "email": "jewell2014@yahoo.com",
+      "password": "changeme"
+    }
   ],
-
   "defaultProfiles": [
-    { "firstName": "admin", "lastName":  "chan", "major": "Computer Science", "bio": "hi this is bio for admin", "owner": "admin@foo.com", "image": "/images/meteor-logo.png" },
-    { "firstName": "Phillip", "lastName":  "Johnson", "major": "Computer Science", "bio": "hi this is bio", "owner": "john@foo.com", "image": "/images/pele.jpg" }
-  ],
-
-  "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+    {
+      "firstName": "admin",
+      "lastName": "chan",
+      "major": "Computer Science",
+      "bio": "hi this is bio for admin",
+      "owner": "admin@foo.com",
+      "image": "/images/meteor-logo.png"
+    },
+    {
+      "firstName": "Phillip",
+      "lastName": "Johnson",
+      "major": "Computer Science",
+      "bio": "hi this is bio",
+      "owner": "john@foo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Melisa B",
+      "lastName": "Smith",
+      "major": "Computer Science",
+      "bio": "I believe that the will of the people is resolved by a strong leadership. Even in a democratic society",
+      "owner": "kelvin2006@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Audrey S",
+      "lastName": "Chappell",
+      "major": "Computer Science",
+      "bio": "Internet lover. Total explorer. Food buff. Devoted introvert",
+      "owner": "citlalli.gorcza@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Sheldon S",
+      "lastName": "Smith",
+      "major": "Computer Science",
+      "bio": "There is a trade off - as you grow older you gain wisdom but you lose spontaneity.",
+      "owner": "jasen.adam5@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Norman E",
+      "lastName": "Wilson",
+      "major": "Computer Science",
+      "bio": "Coffee practitioner. Subtly charming introvert. Writer. Analyst. Pop culture evangelist. Professional entrepreneur.",
+      "owner": "santina_cormi@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Elizabeth M",
+      "lastName": "Smith",
+      "major": "Computer Science",
+      "bio": "Freelance music fan. Zombie nerd. Communicator. Bacon maven. Student. Unable to type with boxing gloves on. Alcohol guru.",
+      "owner": "madelynn1974@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Mildred L",
+      "lastName": "Horton",
+      "major": "Computer Science",
+      "bio": "Tv practitioner. Professional troublemaker. Unable to type with boxing gloves on. Freelance student.",
+      "owner": "torrance1979@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Michael L",
+      "lastName": "Bouchard",
+      "major": "Computer Science",
+      "bio": "When life gives you lemons, squirt the juice in Justin Bieber’s eyes and run.",
+      "owner": "efren_torph8@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Sydney G",
+      "lastName": "Cohen",
+      "major": "Computer Science",
+      "bio": "Web fanatic. Gamer. Friendly travel enthusiast. Writer. Creator. Foodaholic.",
+      "owner": "audra_monah@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Gary K",
+      "lastName": "Swisher",
+      "major": "Computer Science",
+      "bio": "You can't be a proper comic unless you've been out on stage and felt the fear.",
+      "owner": "clarabelle_gutkows@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Robert K",
+      "lastName": "Bouton",
+      "major": "Computer Science",
+      "bio": "Evil internet advocate. Avid writer. Wannabe tv expert. Professional troublemaker.",
+      "owner": "melia.heidenrei@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Sydney G",
+      "lastName": "Cohen",
+      "major": "Computer Science",
+      "bio": "Web fanatic. Gamer. Friendly travel enthusiast. Writer. Creator. Foodaholic.",
+      "owner": "audra_sydney@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Janet P",
+      "lastName": "Copeland",
+      "major": "Computer Science",
+      "bio": "Subtly charming food practitioner. Freelance troublemaker. Evil reader. Friendly music nerd.",
+      "owner": "trystan2017@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Robert P",
+      "lastName": "Morgan",
+      "major": "Computer Science",
+      "bio": "Subtly charming food practitioner. Freelance troublemaker. Evil reader. Friendly music nerd.",
+      "owner": "talia2004@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Norman E",
+      "lastName": "Wilson",
+      "major": "Computer Science",
+      "bio": "Travelling expands the mind rarely.;Hans Christian Andersen;travel",
+      "owner": "santina_norman@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Charles O",
+      "lastName": "Breunig",
+      "major": "Computer Science",
+      "bio": "Devoted tv ninja. Entrepreneur. Internet lover. Friendly food nerd. Beer trailblazer. Problem solver. Bacon aficionado.",
+      "owner": "cesar_johnst@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Norman J",
+      "lastName": "Dittman",
+      "major": "Computer Science",
+      "bio": "My heart lies in music and acting, however, my inspiration comes from adrenaline rush I get from sports... and life.",
+      "owner": "kylie1976@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Joe B",
+      "lastName": "Morris",
+      "major": "Computer Science",
+      "bio": "Hope is a necessity for normal life and the major weapon against the suicide impulse.",
+      "owner": "dana.larso8@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Joseph A",
+      "lastName": "Leishman",
+      "major": "Computer Science",
+      "bio": "General coffeeaholic. Web buff. Prone to fits of apathy. Professional introvert.",
+      "owner": "isadore1998@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Ashley D",
+      "lastName": "Schmidt",
+      "major": "Computer Science",
+      "bio": "Falls down a lot. Introvert. Award-winning thinker. Certified communicator. Bacon specialist.",
+      "owner": "justina.cumm@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Julie R",
+      "lastName": "Brown",
+      "major": "Computer Science",
+      "bio": "Professional social media expert. Avid creator. Food nerd. Passionate zombie evangelist.",
+      "owner": "jerrell_conr@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Joan J",
+      "lastName": "Focht",
+      "major": "Computer Science",
+      "bio": "Explorer. Certified tv geek. Bacon maven. Entrepreneur. Analyst. Evil zombie specialist. Organizer.",
+      "owner": "haleigh2014@yahoo.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Loretta M",
+      "lastName": "Corbo",
+      "major": "Computer Science",
+      "bio": "Hipster-friendly bacon aficionado. Coffee fanatic. Evil explorer. Beer evangelist. Devoted reader. Falls down a lot. Alcohol buff.",
+      "owner": "cecile.anders@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Gary K",
+      "lastName": "Swisher",
+      "major": "Computer Science",
+      "bio": "Thinker. Travel fanatic. Twitter nerd. Gamer. Zombie evangelist.",
+      "owner": "cheyenne_strei@gmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Helen A",
+      "lastName": "Holte",
+      "major": "Computer Science",
+      "bio": "Internet enthusiast. Alcohol expert. Zombie practitioner. Gamer. Wannabe thinker. Explorer.",
+      "owner": "kaleigh.tow@hotmail.com",
+      "image": "/images/pele.jpg"
+    },
+    {
+      "firstName": "Andre S",
+      "lastName": "Duvall",
+      "major": "Computer Science",
+      "bio": "Friendly problem solver. Wannabe music fanatic. Gamer. Subtly charming tv evangelist. Twitter expert. Creator.",
+      "owner": "jewell2014@yahoo.com",
+      "image": "/images/pele.jpg"
+    }
   ],
   "defaultSpots": [
     {
@@ -23,7 +336,7 @@
       "spotType": "beach",
       "likes": 0,
       "picture" : "images/BS.jpg",
-     "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
+      "description": "This is a great opportunity to learn a great lifetime sport. Instruction will include basic sailing theory and concentrate on boat handling techniques at Keehi Lagoon. Transportation and equipment are provided. Participants must be able to swim.",
       "coordinatesX": 21.3188889,
       "coordinatesY": -157.9047222
     },
@@ -356,6 +669,226 @@
       "description": "There’s a sober shadow amidst the glittering beaches and resorts of Honolulu, and that shadow is named Pearl Harbor.",
       "coordinatesX": 21.3545465013813,
       "coordinatesY": -157.98079428482768
+    },
+    {
+      "name": "Mānoa Falls Trail",
+      "address": "Na Ala Hele, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 13,
+      "picture" : "images/mft.png",
+      "description": "Manoa Falls trail is a beautiful and easy hiking trail located in the Honolulu area of the Hawaiian island of Oahu.",
+      "coordinatesX": 21.336226026692753,
+      "coordinatesY": -157.79990776035206
+    },
+    {
+      "name": "Tantalus Arboretum Trailhead",
+      "address": "3330 Tantalus Dr, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 3,
+      "picture" : "images/tat.png",
+      "description": "The Tantalus-Arboretum Trail is a short, 0.25 mile long loop trail in the Honolulu area of O'ahu.",
+      "coordinatesX": 21.32607711211943,
+      "coordinatesY": -157.8276826072547
+    },
+    {
+      "name": "Pu'u Ohia Trail",
+      "address": " Pu'u Ohia Trail, Honolulu, HI 96813",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 7,
+      "picture" : "images/pot.png",
+      "description": "Explore this 3.2-mile out-and-back trail near Honolulu, Oahu.",
+      "coordinatesX": 21.337034186557354,
+      "coordinatesY": -157.81252344430428
+    },
+    {
+      "name": "Nahuina Trail",
+      "address": " Na Ala Hele: Nahuina Trail, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 3,
+      "picture" : "images/nt.png",
+      "description": "Nature at its best, wear good shoes/boots make sure phone is charged and someone knows where u going. Enjoy the hike.",
+      "coordinatesX": 21.329779785860765,
+      "coordinatesY": -157.8224601720002
+    },
+    {
+      "name": "Ualakaʻa Trail",
+      "address": "Ualaka'a Trail, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 5,
+      "picture" : "images/ut.png",
+      "description": "Enjoy this 2.3-mile loop trail near Honolulu, Oahu. Generally considered an easy route, it takes an average of 1 h 7 min to complete.",
+      "coordinatesX": 21.318825931887567,
+      "coordinatesY": -157.81869881608077
+    },
+    {
+      "name": "Nā Ala Hele Trail",
+      "address": "2135 Makiki Heights Dr, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 8,
+      "picture" : "images/naht.png",
+      "description": "It is a high-elevation hike through one of Hawaii's largest dry forest areas.",
+      "coordinatesX": 21.31792580486175,
+      "coordinatesY": -157.82618080268207
+    },
+    {
+      "name": "Makiki Valley Trail",
+      "address": "Na Ala Hele: Makiki Valley Trail, Honolulu, HI 96822",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 2,
+      "picture" : "images/mvt.png",
+      "description": "Great loop trail, accessible in a few places and not too difficult. Very beautiful forest hike without a major attraction but still great.",
+      "coordinatesX": 21.33146949416488,
+      "coordinatesY": -157.82454476844248
+    },
+    {
+      "name": "Queens Beach",
+      "address": "Honolulu, HI 96815",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 3,
+      "picture" : "images/qb.png",
+      "description": "Queen's Beach is just east of Waikiki Beach but much more quiet and relaxing. It can get so crowded on Waikiki Beach with all of the hotels and restaurants in the area.",
+      "coordinatesX": 21.270967954925496,
+      "coordinatesY": -157.82290167187935
+    },
+    {
+      "name": "Oneʻula Beach Park",
+      "address": "91-295 Papipi Rd, Ewa Beach, HI 96706",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/ob.png",
+      "description": "Beautiful beach and park. Plenty of parking, good waves. Great for jsut hanging out, surfing, shore fishing and even bbq",
+      "coordinatesX": 21.270967954925496,
+      "coordinatesY": -157.82290167187935
+    },
+    {
+      "name": "Kuhio Beach Park",
+      "address": "Honolulu, HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/kbp.png",
+      "description": "This highly popular beach is nicknamed “Kuhio Ponds” because the beach is divided by two concrete walls that stretch 40 years into the ocean.",
+      "coordinatesX": 21.272938798790026,
+      "coordinatesY": -157.8237721799564
+    },
+    {
+      "name": "Temple Beach Park",
+      "address": "HI-83, Laie, HI 96762",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 9,
+      "picture" : "images/tbp.png",
+      "description": "Temple Beach A low key beach located in Laie near the Laie Temple. This beach is walking distance for most vacation rentals in Laie.",
+      "coordinatesX": 21.649542731999823,
+      "coordinatesY": -157.92319638918198
+    },
+    {
+      "name": "Kawela Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 9,
+      "picture" : "images/kawb.png",
+      "description": "kawela Bay (view panorama) is one of the most secluded beaches on Oahu. Located near the Turtle Bay Resort on the island's North Shore.",
+      "coordinatesX": 21.69495677991286,
+      "coordinatesY": -158.01953025358287
+    },
+    {
+      "name": "Āweoweo Beach Park",
+      "address": "68-197 Au St, Waialua, HI 96791",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 2,
+      "picture" : "images/abp.png",
+      "description": "Awesome little beach, with an amazing basketball court, jungle gym, plenty of grass, and plenty of beach!",
+      "coordinatesX": 21.583456028737515,
+      "coordinatesY": -158.14006618918302
+    },
+    {
+      "name": "Mākua Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 4,
+      "picture" : "images/makb.png",
+      "description": "Quiet beach located on Oahu's leeward (west) coast, far away from crowds · Beautiful white-sand beach, but can be hot and dry.",
+      "coordinatesX": 21.53218460265343,
+      "coordinatesY": -158.2292724151952
+    },
+    {
+      "name": "Makao Beach",
+      "address": "84-369 Farrington Hwy, Waianae, HI 96792",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 8,
+      "picture" : "images/maokaob.png",
+      "description": "Makao Beach is located in Hauula on the northern side of Oahu's east coast. This beach isn't visited by many people so don't expect to see any crowds over",
+      "coordinatesX": 21.607550812067032,
+      "coordinatesY": -157.90664034131436
+    },
+    {
+      "name": "Jackass Ginger Trail head",
+      "address": "4072-, 4156 Nuuanu Pali Dr, Honolulu, HI 96817",
+      "owner": "John Foo",
+      "spotType": "hike",
+      "likes": 7,
+      "picture" : "images/jgth.png",
+      "description": "Jackass Ginger Pool is a small, charming-looking 10-foot (3 m) waterfall in the Honolulu neighborhood of Nu'uanu.",
+      "coordinatesX": 21.347237515540023,
+      "coordinatesY": -157.82072982967034
+    },
+    {
+      "name": "Kaihalulu Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 8,
+      "picture" : "images/kaib.png",
+      "description": "Kaihalulu Beach is located east of the Turtle Bay Resort on Oahu's North Shore. The beach is backed by a small forest.",
+      "coordinatesX": 21.71666241150877,
+      "coordinatesY": -157.99283736589064
+    },
+    {
+      "name": "Hanaka‘ilio Beach",
+      "address": "Honolulu HI",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/hb.png",
+      "description": "On the north shore of Oahu lies Hanakailio Beach, a furbulous large beach with white sand where you and your fur-buddy can throw down a blanket and relax",
+      "coordinatesX": 21.710031940407067,
+      "coordinatesY": -157.9805698776285
+    },
+    {
+      "name": "Waimea Valley",
+      "address": "59-864 Kamehameha Hwy, Haleiwa, HI 96712",
+      "owner": "admin chan",
+      "spotType": "park",
+      "likes": 7,
+      "picture" : "images/wv.png",
+      "description": "This place is absolutely gorgeous, there is about 0.8 miles paved path up to a waterfall where one can swim.",
+      "coordinatesX": 21.642310843516576,
+      "coordinatesY": -158.0595279260629
+    },
+    {
+      "name": "Uppers Beach Park",
+      "address": "61-212 Kamehameha Hwy, Haleiwa, HI 96712",
+      "owner": "admin chan",
+      "spotType": "beach",
+      "likes": 5,
+      "picture" : "images/ubp.png",
+      "description": "Uppers Beach Park, 2021. Not to far from the road and a small hike down from where you park",
+      "coordinatesX": 21.63390853396143,
+      "coordinatesY": -158.06979184500625
     }
   ]
 }
