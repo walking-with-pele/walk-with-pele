@@ -38,6 +38,10 @@ class SpotPage {
     }
   }
 
+  async checkcomment(testController, comment) {
+    const spotComment = Selector('#spot-comment-text').innerText;
+    await testController.expect(spotComment).eql(comment);
+  }
 }
 
 export const spotPage = new SpotPage();

@@ -34,16 +34,16 @@ class EditSpot extends React.Component {
           <Header as="h2" textAlign="center">Edit Stuff</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
-              <TextField name='name'/>
-              <TextField name='address'/>
-              <SelectField name='spotType'/>
-              <LongTextField name='description'/>
-              <NumField name='coordinatesX'/>
-              <NumField name='coordinatesY'/>
-              <SubmitField value='Submit'/>
+              <TextField id='edit-spot-name' name='name'/>
+              <TextField id='edit-spot-address' name='address'/>
+              <SelectField id='edit-spot-type' name='spotType'/>
+              <SelectField id='edit-spot-picture' name='picture'/>
+              <LongTextField id='edit-spot-description' name='description'/>
+              <NumField id='edit-spot-x' name='coordinatesX'/>
+              <NumField id='edit-spot-y' name='coordinatesY'/>
+              <SubmitField id='edit-spot-submit' value='Submit'/>
               <ErrorsField/>
               <HiddenField name='owner' />
-              <HiddenField name='picture' />
             </Segment>
           </AutoForm>
         </Grid.Column>

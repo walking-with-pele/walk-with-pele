@@ -12,6 +12,7 @@ import { mapPage } from './map.page';
 import { userProfilePage } from './userprofile.page';
 import { adminPage } from './admin.page';
 import { spotPage } from './spotpage.page';
+import { editSpotPage } from './editspot.page';
 
 /* global fixture:false, test:false */
 
@@ -80,6 +81,7 @@ test('Test View Spot button on Spot component', async (testController) => {
 });
 
 test('Test Add Comment button on Spot page', async (testController) => {
+  const comment = 'great place!';
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
@@ -87,7 +89,8 @@ test('Test Add Comment button on Spot page', async (testController) => {
   await listSpotPage.isDisplayed(testController);
   await spotComp.viewPage(testController);
   await spotPage.isDisplayed(testController);
-  await spotPage.addcomment(testController, 'great place!');
+  await spotPage.addcomment(testController, comment);
+  await spotPage.checkcomment(testController, comment);
 });
 
 test('Test Add Like button on Spot page', async (testController) => {
@@ -108,8 +111,8 @@ test('Test Mark Visited button on Spot page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
-  await navBar.gotoTopSpotPage(testController);
-  await topSpotPage.isDisplayed(testController);
+  await navBar.gotoListSpotPage(testController);
+  await listSpotPage.isDisplayed(testController);
   await spotComp.viewPage(testController);
   await spotPage.isDisplayed(testController);
   await spotPage.markvisited(testController);
@@ -141,10 +144,10 @@ test('Test the Add Spot form', async (testController) => {
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.gotoAddSpotPage(testController);
   await addSpotPage.isDisplayed(testController);
-  await addSpotPage.addspot(testController, 'Waianae Beach', 'Waianae', 'images/meteor-logo.png', 'A beach in Waianae', '12', '13');
+  await addSpotPage.addspot(testController, 'Lualualei Beach Park', 'Waianae', 'images/meteor-logo.png', 'A beautiful beach in Waianae', '21.437', '-158.186');
   await navBar.gotoListSpotPage(testController);
   await listSpotPage.isDisplayedAfterAdd(testController);
-  await listSpotPage.searchspot(testController, 'Waianae Beach');
+  await listSpotPage.searchspot(testController, 'Lualualei Beach Park');
   await spotComp.viewPage(testController);
   await spotPage.isDisplayed(testController);
 });
@@ -171,4 +174,30 @@ test('Test the Admin page', async (testController) => {
   await navBar.isLoggedIn(testController, credentialsAdmin.username);
   await navBar.gotoAdminPage(testController);
   await adminPage.isDisplayed(testController);
+});
+
+test('Test the Edit Spot page', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentialsAdmin.username, credentialsAdmin.password);
+  await navBar.isLoggedIn(testController, credentialsAdmin.username);
+  await navBar.gotoAdminPage(testController);
+  await adminPage.isDisplayed(testController);
+  await adminPage.viewEditSpot(testController);
+  await editSpotPage.isDisplayed(testController);
+});
+
+test('Test the Edit Spot form', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentialsAdmin.username, credentialsAdmin.password);
+  await navBar.isLoggedIn(testController, credentialsAdmin.username);
+  await navBar.gotoAdminPage(testController);
+  await adminPage.isDisplayed(testController);
+  await adminPage.viewEditSpot(testController);
+  await editSpotPage.isDisplayed(testController);
+  await editSpotPage.editspot(testController, 'Intermediate Sailing');
+  await navBar.gotoListSpotPage(testController);
+  await listSpotPage.isDisplayedAfterAdd(testController);
+  await listSpotPage.searchspot(testController, 'Intermediate Sailing');
+  await spotComp.viewPage(testController);
+  await spotPage.isDisplayed(testController);
 });

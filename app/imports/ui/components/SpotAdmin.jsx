@@ -67,7 +67,7 @@ class SpotAdmin extends React.Component {
           </Feed>
         </Card.Content>
         <Card.Content extra>
-          <Link to={`/edit/${this.props.spot._id}`}>Edit</Link>
+          <Link id="edit-spot" to={`/edit/${this.props.spot._id}`}>Edit</Link>
         </Card.Content>
       </Card>
     );

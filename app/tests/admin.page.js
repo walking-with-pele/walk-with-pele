@@ -11,6 +11,10 @@ class AdminPage {
     // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
     await testController.expect(this.pageSelector.exists).ok();
   }
+
+  async viewEditSpot(testController) {
+    await testController.click('#edit-spot');
+  }
 }
 
 export const adminPage = new AdminPage();

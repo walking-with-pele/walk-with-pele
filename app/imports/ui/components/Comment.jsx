@@ -8,13 +8,13 @@ import { Link, withRouter } from 'react-router-dom';
 class Comment extends React.Component {
   render() {
     return (
-      <Feed.Event >
+      <Feed.Event id="spot-comment">
         <Feed.Content>
           <Feed.Summary>
             <Feed.User as={Link} to={`/user/${Meteor.user().username}`}>{Meteor.user().username}</Feed.User>
             <Feed.Date content={this.props.comment.createdAt.toLocaleDateString('en-US')} />
           </Feed.Summary>
-          <Feed.Meta>
+          <Feed.Meta id="spot-comment-text">
             {this.props.comment.comment}
           </Feed.Meta>
         </Feed.Content>
