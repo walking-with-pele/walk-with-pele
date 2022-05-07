@@ -11,14 +11,14 @@ class ListSpotPage {
     // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
     await testController.expect(this.pageSelector.exists).ok();
     const cardCount = Selector('.ui .card').count;
-    await testController.expect(cardCount).eql(25);
+    await testController.expect(cardCount).eql(51);
   }
 
   async isDisplayedAfterAdd(testController) {
     // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
     await testController.expect(this.pageSelector.exists).ok();
     const cardCount = Selector('.ui .card').count;
-    await testController.expect(cardCount).eql(26);
+    await testController.expect(cardCount).eql(52);
   }
 
   async searchspot(testController, query) {

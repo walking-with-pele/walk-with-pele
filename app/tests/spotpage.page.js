@@ -22,6 +22,15 @@ class SpotPage {
     }
   }
 
+  async addlike(testController) {
+    const loggedInUser = await Selector('#navbar-current-user').exists;
+    if (loggedInUser) {
+      await testController.click('#add-like');
+      const likes = await Selector('#number-likes').innerText;
+      await testController.expect(likes).eql('29');
+    }
+  }
+
 }
 
 export const spotPage = new SpotPage();
