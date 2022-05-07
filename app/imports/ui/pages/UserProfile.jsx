@@ -47,16 +47,16 @@ class UserProfile extends React.Component {
               <Header as='h3'>{this.props.profile.bio}</Header>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width={8} style={{ height: '200px' }}>
+          <Grid.Row columns={2}>
+            <Grid.Column>
               <Header as='h3'>Visited Spots</Header>
-              <List style={{ height: '250px', overflow: 'scroll' }}>
+              <List id="visited-spots-list" divided style={{ height: '250px', overflow: 'scroll' }}>
                 {ArrOfSpots2.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
               </List>
             </Grid.Column>
-            <Grid.Column width={8}>
+            <Grid.Column>
               <Header as='h3'>Liked Spots</Header>
-              <List style={{ height: '250px', overflow: 'scroll' }}>
+              <List id="liked-spots-list" divided style={{ height: '250px', overflow: 'scroll' }}>
                 {ArrOfSpots.map((spot, index) => <SpotForUp key={index} spot={spot}/>)}
               </List>
             </Grid.Column>

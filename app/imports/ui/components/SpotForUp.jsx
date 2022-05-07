@@ -1,25 +1,41 @@
 import React from 'react';
-import { Image, List } from 'semantic-ui-react';
+import { Image, Label, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class SpotForUp extends React.Component {
+  checkType(spotType) {
+    let labelColor = '';
+    switch (spotType) {
+    case 'beach':
+      labelColor = 'blue';
+      break;
+    case 'hike':
+      labelColor = 'red';
+      break;
+    case 'library':
+      labelColor = 'yellow';
+      break;
+    case 'park':
+      labelColor = 'green';
+      break;
+    default:
+      break;
+    }
+    return labelColor;
+  }
+
   render() {
     return (
       <List.Item>
-        <Image size='tiny' src='/images/meteor-logo.png' />
+        <Image size='tiny' src={this.props.spot.picture} />
         <List.Content>
           <List.Header as={Link} to={`/spot-page/${this.props.spot._id}`}>{this.props.spot.name}</List.Header>
           <List.Description>
             {this.props.spot.address}
           </List.Description>
-          <List.Description>
-            {this.props.spot.spotType}
-          </List.Description>
-          <List.Description>
-            Date Visited
-          </List.Description>
+          <Label size='tiny' color={`${this.checkType(this.props.spot.spotType)}`}>{this.props.spot.spotType}</Label>
         </List.Content>
       </List.Item>
     );
@@ -28,14 +44,7 @@ class SpotForUp extends React.Component {
 
 // Require a document to be passed to this component.
 SpotForUp.propTypes = {
-  spot: PropTypes.shape({
-    name: PropTypes.string,
-    address: PropTypes.string,
-    owner: PropTypes.string,
-    spotType: PropTypes.string,
-    likes: PropTypes.number,
-    _id: PropTypes.string,
-  }).isRequired,
+  spot: PropTypes.object.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.

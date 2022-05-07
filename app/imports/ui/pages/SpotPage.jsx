@@ -15,6 +15,27 @@ import GoogleMapSpot from '../components/GoogleMapSpot';
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class SpotPage extends React.Component {
 
+  checkType(spotType) {
+    let labelColor = '';
+    switch (spotType) {
+    case 'beach':
+      labelColor = 'blue';
+      break;
+    case 'hike':
+      labelColor = 'red';
+      break;
+    case 'library':
+      labelColor = 'yellow';
+      break;
+    case 'park':
+      labelColor = 'green';
+      break;
+    default:
+      break;
+    }
+    return labelColor;
+  }
+
   incrementMe = () => {
     Spots.collection.update();
   }
@@ -78,7 +99,7 @@ class SpotPage extends React.Component {
         <Grid columns={2}>
           <Grid.Row>
             <Grid.Column>
-              <Label size='large' color='green'>{this.props.spot.spotType}</Label>
+              <Label size='large' color={`${this.checkType(this.props.spot.spotType)}`}>{this.props.spot.spotType}</Label>
               <Header as='h3'>{this.props.spot.address}</Header>
               <div className="ui labeled button" tabIndex="0">
                 <Button id="add-like" className="ui button" icon labelPosition='right' active={likedPage} onClick={() => this.userLikesSpot()}>
@@ -89,7 +110,7 @@ class SpotPage extends React.Component {
                   {this.props.spot.likes}
                 </Label>
               </div>
-              <Button className="ui button" icon labelPosition='right' active={visitedPage} onClick={() => this.userVisitedSpot()}>
+              <Button id="mark-visited" className="ui button" icon labelPosition='right' active={visitedPage} onClick={() => this.userVisitedSpot()}>
                 Mark as visited
                 <Icon name="user icon"/>
               </Button>

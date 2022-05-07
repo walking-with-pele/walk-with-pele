@@ -1,11 +1,33 @@
 import React from 'react';
 import { Card, Feed, Image, Button } from 'semantic-ui-react';
+import { _ } from 'meteor/underscore';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Spot extends React.Component {
+  checkType(spotType) {
+    let labelColor = '';
+    switch (spotType) {
+    case 'beach':
+      labelColor = 'blue';
+      break;
+    case 'hike':
+      labelColor = 'red';
+      break;
+    case 'library':
+      labelColor = 'yellow';
+      break;
+    case 'park':
+      labelColor = 'green';
+      break;
+    default:
+      break;
+    }
+    return labelColor;
+  }
+
   render() {
     const cardStyle = {
       boxShadow: '5px 5px 10px 2px rgba(56, 125, 255, 0.17)',
@@ -14,13 +36,15 @@ class Spot extends React.Component {
       <Card centered style={cardStyle}>
         <Image label={{
           as: 'a',
-          color: 'green',
+          color: `${this.checkType(this.props.spot.spotType)}`,
           content: `${this.props.spot.spotType}`,
           ribbon: true,
         }} src={this.props.spot.picture} wrapped/>
         <Card.Content>
           <Card.Header>{this.props.spot.name}</Card.Header>
           <Card.Meta>{this.props.spot.address}</Card.Meta>
+        </Card.Content>
+        <Card.Content>
           <Card.Description>
             {this.props.spot.description}
           </Card.Description>
@@ -39,7 +63,7 @@ class Spot extends React.Component {
         <Card.Content extra>
           <Card.Header>Comments</Card.Header>
           <Feed>
-            {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
+            {(this.props.comments.length > 0) ? _.sample(this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)) : 'No Comments'}
           </Feed>
         </Card.Content>
       </Card>
