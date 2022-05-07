@@ -6,29 +6,29 @@ import PropTypes from 'prop-types';
 import { Loader } from 'semantic-ui-react';
 import { Spots } from '../../api/spot/Spots';
 
-function checkType(spotType) {
-  let markerColor = '';
-  switch (spotType) {
-  case 'beach':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_blue.png';
-    break;
-  case 'hike':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_red.png';
-    break;
-  case 'library':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_yellow.png';
-    break;
-  case 'park':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_green.png';
-    break;
-  default:
-    break;
-  }
-  return markerColor;
-}
-
 // Setting the lat and lng of the spot
 class Map extends React.Component {
+  checkType(spotType) {
+    let markerColor = '';
+    switch (spotType) {
+    case 'beach':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_blue.png';
+      break;
+    case 'hike':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_red.png';
+      break;
+    case 'library':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_yellow.png';
+      break;
+    case 'park':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_green.png';
+      break;
+    default:
+      break;
+    }
+    return markerColor;
+  }
+
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
   }
@@ -39,7 +39,7 @@ class Map extends React.Component {
       defaultZoom={10}
       defaultCenter={{ lat: 21.315603, lng: -157.858093 }} // map center view
     >
-      {this.props.spots.map((spot, index) => <Marker key={index} icon={{ url: checkType(spot.spotType) }}
+      {this.props.spots.map((spot, index) => <Marker key={index} icon={{ url: this.checkType(spot.spotType) }}
         position={{ lat: spot.coordinatesX, lng: spot.coordinatesY }}/>)}
     </GoogleMap>));
 

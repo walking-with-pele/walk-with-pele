@@ -31,6 +31,13 @@ class SpotPage {
     }
   }
 
+  async markvisited(testController) {
+    const loggedInUser = await Selector('#navbar-current-user').exists;
+    if (loggedInUser) {
+      await testController.click('#mark-visited');
+    }
+  }
+
 }
 
 export const spotPage = new SpotPage();

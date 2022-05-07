@@ -89,6 +89,20 @@ test('Test Add Like button on Spot page', async (testController) => {
   await spotPage.addlike(testController);
 });
 
+test('Test Mark Visited button on Spot page', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.gotoTopSpotPage(testController);
+  await topSpotPage.isDisplayed(testController);
+  await spotComp.viewPage(testController);
+  await spotPage.isDisplayed(testController);
+  await spotPage.markvisited(testController);
+  await navBar.gotoUserProfilePage(testController);
+  await userProfilePage.isDisplayed(testController);
+  await userProfilePage.visitedSpots(testController);
+});
+
 test('Test Search Filter on List Spots page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);

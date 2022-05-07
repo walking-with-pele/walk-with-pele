@@ -7,18 +7,47 @@ import AddComment from '../components/AddComment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class SpotAdmin extends React.Component {
+  checkType(spotType) {
+    let labelColor = '';
+    switch (spotType) {
+    case 'beach':
+      labelColor = 'blue';
+      break;
+    case 'hike':
+      labelColor = 'red';
+      break;
+    case 'library':
+      labelColor = 'yellow';
+      break;
+    case 'park':
+      labelColor = 'green';
+      break;
+    default:
+      break;
+    }
+    return labelColor;
+  }
+
   render() {
+    const cardStyle = {
+      boxShadow: '5px 5px 10px 2px rgba(56, 125, 255, 0.17)',
+    };
     return (
-      <Card centered>
+      <Card centered style={cardStyle}>
         <Image label={{
           as: 'a',
-          color: 'green',
+          color: `${this.checkType(this.props.spot.spotType)}`,
           content: `${this.props.spot.spotType}`,
           ribbon: true,
         }} src={this.props.spot.picture} wrapped/>
         <Card.Content>
           <Card.Header>{this.props.spot.name}</Card.Header>
           <Card.Meta>{this.props.spot.address}</Card.Meta>
+        </Card.Content>
+        <Card.Content>
+          <Card.Description>
+            {this.props.spot.description}
+          </Card.Description>
         </Card.Content>
         <Card.Content>
           <Button className="ui button" as={Link} to={`/spot-page/${this.props.spot._id}`}>
@@ -36,9 +65,6 @@ class SpotAdmin extends React.Component {
           <Feed>
             {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
           </Feed>
-        </Card.Content>
-        <Card.Content extra>
-          <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button floated='right' icon='comment'/>} hoverable/>
         </Card.Content>
         <Card.Content extra>
           <Link to={`/edit/${this.props.spot._id}`}>Edit</Link>
