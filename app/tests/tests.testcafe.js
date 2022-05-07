@@ -1,5 +1,6 @@
 import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
+import { signupPage } from './signup.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { spotComp } from './spotcomp.component';
@@ -17,6 +18,7 @@ import { spotPage } from './spotpage.page';
 /** Credentials for one of the sample users defined in settings.development.json. */
 const credentials = { username: 'john@foo.com', password: 'changeme' };
 const credentialsAdmin = { username: 'admin@foo.com', password: 'changeme' };
+const credentialsTest = { firstName: 'test', lastName: 'case', major: 'tester', bio: 'this is a test', image: 'images/meteor-logo.png', email: 'test@foo.com', password: 'changeme' };
 
 fixture('walking-with-pele localhost test with default db')
   .page('http://localhost:3000');
@@ -25,7 +27,17 @@ test('Test that landing page shows up', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
-test('Test that signin and signout work', async (testController) => {
+test('Test that signup and signout work', async (testController) => {
+  await navBar.gotoSignupPage(testController);
+  await signupPage.signupUser(testController, credentialsTest.firstName, credentialsTest.lastName, credentialsTest.major, credentialsTest.bio, credentialsTest.image, credentialsTest.email, credentialsTest.password);
+  await navBar.isLoggedIn(testController, credentialsTest.email);
+  await navBar.gotoUserProfilePage(testController);
+  await userProfilePage.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+
+test('Test that signin and signout works', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
@@ -87,6 +99,9 @@ test('Test Add Like button on Spot page', async (testController) => {
   await spotComp.viewPage(testController);
   await spotPage.isDisplayed(testController);
   await spotPage.addlike(testController);
+  await navBar.gotoUserProfilePage(testController);
+  await userProfilePage.isDisplayed(testController);
+  await userProfilePage.likedSpots(testController);
 });
 
 test('Test Mark Visited button on Spot page', async (testController) => {
