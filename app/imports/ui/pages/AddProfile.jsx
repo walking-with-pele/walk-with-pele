@@ -13,12 +13,15 @@ const formSchema = new SimpleSchema({
   lastName: String,
   major: String,
   bio: String,
-  image: String,
+  image: {
+    type: String,
+    optional: true,
+  },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 
-/** Renders the Page for adding a document. */
+/** Renders the Page for adding a Profile document. */
 class AddProfile extends React.Component {
 
   // On submit, insert the data.

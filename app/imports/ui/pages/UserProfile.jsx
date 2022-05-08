@@ -10,7 +10,7 @@ import { Profiles } from '../../api/profile/Profiles';
 import { Likes } from '../../api/like/Likes';
 import { VisitedSpots } from '../../api/visitedSpot/VisitedSpots';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders the page for the current logged-in user. */
 class UserProfile extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
@@ -42,7 +42,7 @@ class UserProfile extends React.Component {
               <Image size='medium' circular src={this.props.profile.image} />
             </Grid.Column>
             <Grid.Column width={12}>
-              <Header as='h1'>{this.props.profile.firstName} {this.props.profile.lastName} </Header>
+              <Header as='h1'>{this.props.profile.firstName} {this.props.profile.lastName}</Header>
               <Header as='h3'>{this.props.profile.major}</Header>
               <Header as='h3'>{this.props.profile.bio}</Header>
             </Grid.Column>

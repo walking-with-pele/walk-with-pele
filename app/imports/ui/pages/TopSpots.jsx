@@ -8,7 +8,7 @@ import { Spots } from '../../api/spot/Spots';
 import Spot from '../components/Spot';
 import { Comments } from '../../api/comment/Comments';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders 3 Cards containing the Spots with the most likes. */
 class TopSpots extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
@@ -18,6 +18,7 @@ class TopSpots extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
+    // finds the top 3 most liked spots in the collection
     const topThreeSpots = _.first((_.sortBy(this.props.spots, 'likes')).reverse(), 3);
     const allSpots = topThreeSpots.map((spot, index) => <Spot key={index} spot={spot}
       comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>);
@@ -34,7 +35,7 @@ class TopSpots extends React.Component {
   }
 }
 
-// Require an array of Stuff documents in the props.
+// Require an array of Spots documents in the props.
 TopSpots.propTypes = {
   spots: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
@@ -43,12 +44,12 @@ TopSpots.propTypes = {
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
-  // Get access to Stuff documents.
+  // Get access to Spot documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   const subscription2 = Meteor.subscribe(Comments.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready() && subscription2.ready();
-  // Get the Stuff documents
+  // Get the Spot documents
   const spots = Spots.collection.find({}).fetch();
   const comments = Comments.collection.find({}).fetch();
   return {

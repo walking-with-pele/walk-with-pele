@@ -12,12 +12,11 @@ class AddSpotPage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  async addspot(testController, name, address, picture, description, coordX, coordY) {
+  async addspot(testController, name, address, description, coordX, coordY) {
     const loggedInUser = await Selector('#navbar-current-user').exists;
     if (loggedInUser) {
       await testController.typeText('#add-form-name', name);
       await testController.typeText('#add-form-address', address);
-      await testController.typeText('#add-form-picture', picture);
       await testController.typeText('#add-form-description', description);
       await testController.typeText('#add-form-x', coordX);
       await testController.typeText('#add-form-y', coordY);

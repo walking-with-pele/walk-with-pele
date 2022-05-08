@@ -25,7 +25,10 @@ class SpotsCollection {
         type: Number,
         defaultValue: 0,
       },
-      picture: String,
+      picture: {
+        type: String,
+        defaultValue: 'images/meteor-logo.png',
+      },
       description: String,
       coordinatesX: Number,
       coordinatesY: Number,

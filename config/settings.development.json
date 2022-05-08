@@ -112,16 +112,16 @@
   ],
   "defaultProfiles": [
     {
-      "firstName": "admin",
-      "lastName": "chan",
+      "firstName": "Admin",
+      "lastName": "Chan",
       "major": "Computer Science",
       "bio": "hi this is bio for admin",
       "owner": "admin@foo.com",
       "image": "/images/meteor-logo.png"
     },
     {
-      "firstName": "Phillip",
-      "lastName": "Johnson",
+      "firstName": "John",
+      "lastName": "Foo",
       "major": "Computer Science",
       "bio": "hi this is bio",
       "owner": "john@foo.com",

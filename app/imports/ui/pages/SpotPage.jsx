@@ -12,9 +12,10 @@ import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 import GoogleMapSpot from '../components/GoogleMapSpot';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders a Page for a certain Spot document. */
 class SpotPage extends React.Component {
 
+  // returns color based on Spot type
   checkType(spotType) {
     let labelColor = '';
     switch (spotType) {
@@ -36,10 +37,12 @@ class SpotPage extends React.Component {
     return labelColor;
   }
 
+  // updates Spots collection
   incrementMe = () => {
     Spots.collection.update();
   }
 
+  // updates Likes collection if User presses 'Like' button
   userLikesSpot() {
     let data = this.props.like;
     const like = true;
@@ -66,6 +69,7 @@ class SpotPage extends React.Component {
     Spots.collection.update({ _id: this.props.spot._id }, { $set: { likes: this.props.spot.likes + 1 } });
   }
 
+  // updates VisitedSpots collection if User presses 'Marked Visited' button
   userVisitedSpot() {
     const data = this.props.visited;
     const visited = true;
@@ -140,7 +144,7 @@ class SpotPage extends React.Component {
   }
 }
 
-// Require an array of Stuff documents in the props.
+// Require an array of Spots documents in the props.
 SpotPage.propTypes = {
   spot: PropTypes.object.isRequired,
   like: PropTypes.array.isRequired,
@@ -152,14 +156,14 @@ SpotPage.propTypes = {
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(({ match }) => {
   const spotId = match.params._id;
-  // Get access to Stuff documents.
+  // Get access to Spot documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   // Determine if the subscription is ready
   const likeSubscription = Meteor.subscribe(Likes.userPublicationName);
   const visitedSubscription = Meteor.subscribe(VisitedSpots.userPublicationName);
   const commentSubscription = Meteor.subscribe(Comments.userPublicationName);
   const ready = subscription.ready() && likeSubscription.ready() && commentSubscription.ready() && visitedSubscription.ready();
-  // Get the Stuff documents
+  // Get the Spot documents
   const spot = Spots.collection.findOne(spotId);
   const like = Likes.collection.find({}).fetch();
   const visited = VisitedSpots.collection.find({}).fetch();

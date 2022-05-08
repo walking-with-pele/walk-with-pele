@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
 
-/** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
+/** Renders a single single card in the List Spots page. See pages/ListSpot.jsx. */
 class Spot extends React.Component {
   checkType(spotType) {
     let labelColor = '';

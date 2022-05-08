@@ -17,7 +17,10 @@ class ProfilesCollection {
       lastName: String,
       major: String,
       bio: String,
-      image: String,
+      image: {
+        type: String,
+        defaultValue: 'images/meteor-logo.png',
+      },
       owner: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

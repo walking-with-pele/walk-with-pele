@@ -10,7 +10,7 @@ import { Spots } from '../../api/spot/Spots';
 
 const bridge = new SimpleSchema2Bridge(Spots.schema);
 
-/** Renders the Page for editing a single document. */
+/** Renders the Page for editing a Spot document. */
 class EditSpot extends React.Component {
 
   // On successful submit, insert the data.

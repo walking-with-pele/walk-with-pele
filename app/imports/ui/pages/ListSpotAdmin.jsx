@@ -21,7 +21,7 @@ const searchSchema = new SimpleSchema({
 
 const bridge = new SimpleSchema2Bridge(searchSchema);
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders a Card group containing all Spots documents. */
 class ListSpotAdmin extends React.Component {
   constructor(props) {
     super(props);
@@ -86,7 +86,7 @@ class ListSpotAdmin extends React.Component {
   }
 }
 
-// Require an array of Stuff documents in the props.
+// Require an array of Spots documents in the props.
 ListSpotAdmin.propTypes = {
   spots: PropTypes.array.isRequired,
   comments: PropTypes.array.isRequired,
@@ -95,12 +95,12 @@ ListSpotAdmin.propTypes = {
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
-  // Get access to Stuff documents.
+  // Get access to Spots documents.
   const subscription = Meteor.subscribe(Spots.userPublicationName);
   const subscription2 = Meteor.subscribe(Comments.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready() && subscription2.ready();
-  // Get the Stuff documents
+  // Get the Spots documents
   const spots = Spots.collection.find({}).fetch();
   const comments = Comments.collection.find({}).fetch();
   return {

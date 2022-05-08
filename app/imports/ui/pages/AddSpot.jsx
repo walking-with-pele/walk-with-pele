@@ -16,7 +16,10 @@ const formSchema = new SimpleSchema({
     allowedValues: ['beach', 'hike', 'library', 'park'],
     defaultValue: 'beach',
   },
-  picture: String,
+  picture: {
+    type: String,
+    optional: true,
+  },
   description: String,
   coordinatesX: Number,
   coordinatesY: Number,
@@ -24,7 +27,7 @@ const formSchema = new SimpleSchema({
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 
-/** Renders the Page for adding a document. */
+/** Renders the Page for adding a Spot document. */
 class AddSpot extends React.Component {
 
   // On submit, insert the data.
