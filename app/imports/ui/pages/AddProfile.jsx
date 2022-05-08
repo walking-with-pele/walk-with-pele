@@ -30,7 +30,7 @@ class AddProfile extends React.Component {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Item added successfully', 'success');
+          swal('Success', 'Profile Information updated!', 'success');
           formRef.reset();
         }
       });
@@ -40,7 +40,7 @@ class AddProfile extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Grid id="add-Profile-page" container centered>
+      <Grid id="add-profile-page" container centered>
         <Grid.Column>
           <Header as="h2" textAlign="center">Add Profile</Header>
           <AutoForm id='add-profile-form' ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >

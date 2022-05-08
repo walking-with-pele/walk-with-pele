@@ -22,7 +22,7 @@ class RandomSpot extends React.Component {
       comments={this.props.comments.filter(comment => (comment.spotId === spot._id))}/>));
     return (
       <Container id="random-spot-page">
-        <Header as="h2" textAlign="center">Spot of the Day</Header>
+        <Header as="h2" textAlign="center">Random Spot</Header>
         <Card.Group>
           {rand}
         </Card.Group>

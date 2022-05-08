@@ -3,36 +3,36 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-map
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function checkType(spotType) {
-  let markerColor = '';
-  switch (spotType) {
-  case 'beach':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_blue.png';
-    break;
-  case 'hike':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_red.png';
-    break;
-  case 'library':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_yellow.png';
-    break;
-  case 'park':
-    markerColor = 'https://labs.google.com/ridefinder/images/mm_20_green.png';
-    break;
-  default:
-    break;
-  }
-  return markerColor;
-}
-
 // Setting the lat and lng of the spot
 class MapSpot extends React.Component {
+  checkType(spotType) {
+    let markerColor = '';
+    switch (spotType) {
+    case 'beach':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_blue.png';
+      break;
+    case 'hike':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_red.png';
+      break;
+    case 'library':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_yellow.png';
+      break;
+    case 'park':
+      markerColor = 'https://labs.google.com/ridefinder/images/mm_20_green.png';
+      break;
+    default:
+      break;
+    }
+    return markerColor;
+  }
+
   // Render the page once subscriptions have been received.
   render() {
     const WrappedMap = withScriptjs(withGoogleMap(() => <GoogleMap
       defaultZoom={13}
       defaultCenter={{ lat: this.props.spot.coordinatesX, lng: this.props.spot.coordinatesY }} // map center view
     >
-      <Marker icon={{ url: checkType(this.props.spot.spotType) }}
+      <Marker icon={{ url: this.checkType(this.props.spot.spotType) }}
         position={{ lat: this.props.spot.coordinatesX, lng: this.props.spot.coordinatesY }}/>
     </GoogleMap>));
 

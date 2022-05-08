@@ -18,7 +18,7 @@ class EditSpot extends React.Component {
     const { name, address, spotType, picture, description, coordinatesX, coordinatesY, _id } = data;
     Spots.collection.update(_id, { $set: { name, address, spotType, picture, description, coordinatesX, coordinatesY } }, (error) => (error ?
       swal('Error', error.message, 'error') :
-      swal('Success', 'Item updated successfully', 'success')));
+      swal('Success', 'Spot updated successfully', 'success')));
   }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.

@@ -21,7 +21,7 @@ class NavBar extends React.Component {
         {this.props.currentUser ? (
           [<Menu.Item id="navbar-random-spot" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/rand" key='rand'>
             <Icon name='star outline'/>
-          Spot of the Day
+          Random Spot
           </Menu.Item>,
           <Menu.Item id="navbar-top-spot" className={'nav-button'} as={NavLink} activeClassName="active" exact to="/top-spots" key='top-spots'>
             <Icon name='heart outline'/>
