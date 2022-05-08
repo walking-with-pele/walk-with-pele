@@ -112,7 +112,7 @@ class SpotPage extends React.Component {
               </div>
               <Button id="mark-visited" className="ui button" icon labelPosition='right' active={visitedPage} onClick={() => this.userVisitedSpot()}>
                 Mark as visited
-                <Icon name="user icon"/>
+                <Icon name="user"/>
               </Button>
               <Header as='h3'>Map ↓</Header>
               <GoogleMapSpot spot={this.props.spot}/>
@@ -132,7 +132,7 @@ class SpotPage extends React.Component {
             </Segment>
           </Grid.Row>
           <Grid.Row>
-            <Popup content={<AddComment owner={this.props.spot.owner} spotId={this.props.spot._id}/>} trigger={<Button id='add-comment-popup' icon='comment'/>} hoverable/>
+            <Popup content={<AddComment owner={Meteor.user().username} spotId={this.props.spot._id}/>} trigger={<Button id='add-comment-popup' icon='comment'/>} hoverable/>
           </Grid.Row>
         </Grid>
       </Container>
