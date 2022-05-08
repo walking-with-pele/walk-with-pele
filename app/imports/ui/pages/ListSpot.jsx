@@ -64,18 +64,20 @@ class ListSpot extends React.Component {
   renderPage() {
     let fRef = null;
     return (
-      <Container id="list-spot-page">
+      <Container centered id="list-spot-page">
         <Header as="h2" textAlign="center">List Spots</Header>
-        <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submitSearch(data, fRef)} >
-          <Segment>
-            <SelectField id='search-form-filter' name='searchBy'/>
-            <TextField id='search-form-text' name='containing'/>
-            <SubmitField id='search-form-submit' value='Search'/>
-            <ErrorsField/>
-          </Segment>
-        </AutoForm>
+        <div style={{ paddingBottom: '5px' }}>
+          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submitSearch(data, fRef)} >
+            <Segment>
+              <SelectField id='search-form-filter' name='searchBy'/>
+              <TextField id='search-form-text' name='containing'/>
+              <SubmitField id='search-form-submit' value='Search'/>
+              <ErrorsField/>
+            </Segment>
+          </AutoForm>
 
-        <Button onClick={() => this.resetSearch()}>Reset Search</Button>
+          <Button onClick={() => this.resetSearch()}>Reset Search</Button>
+        </div>
         <Card.Group>
           {this.renderCards()}
         </Card.Group>
