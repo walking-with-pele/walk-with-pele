@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Feed, Button, Image, Popup } from 'semantic-ui-react';
+import { Card, Feed, Button, Image } from 'semantic-ui-react';
+import { _ } from 'meteor/underscore';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '../components/Comment';
-import AddComment from '../components/AddComment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class SpotAdmin extends React.Component {
@@ -63,7 +63,7 @@ class SpotAdmin extends React.Component {
         <Card.Content extra>
           <Card.Header>Comments</Card.Header>
           <Feed>
-            {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
+            {(this.props.comments.length > 0) ? _.sample(this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)) : 'No Comments'}
           </Feed>
         </Card.Content>
         <Card.Content extra>

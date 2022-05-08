@@ -13,7 +13,8 @@ class Comment extends React.Component {
   }
 
   deleteButton() {
-    return (this.props.comment.owner === Meteor.user().username || Roles.userIsInRole(Meteor.userId(), 'admin')) ? <Button floated='right' icon='trash' size='tiny' onClick={() => this.handleClick(this.props.comment._id)}></Button> : null;
+    return (this.props.comment.owner === Meteor.user().username || Roles.userIsInRole(Meteor.userId(), 'admin')) ? <Button id='delete-comment-button'
+      floated='right' icon='trash' size='tiny' onClick={() => this.handleClick(this.props.comment._id)}/> : null;
   }
 
   render() {

@@ -22,6 +22,13 @@ class SpotPage {
     }
   }
 
+  async deletecomment(testController) {
+    const loggedInUser = await Selector('#navbar-current-user').exists;
+    if (loggedInUser) {
+      await testController.click('#delete-comment-button');
+    }
+  }
+
   async addlike(testController) {
     const loggedInUser = await Selector('#navbar-current-user').exists;
     if (loggedInUser) {
@@ -41,6 +48,11 @@ class SpotPage {
   async checkcomment(testController, comment) {
     const spotComment = Selector('#spot-comment-text').innerText;
     await testController.expect(spotComment).eql(comment);
+  }
+
+  async checkdelete(testController) {
+    const commentCount = await Selector('.ui .feed .content').count;
+    await testController.expect(commentCount).eql(0);
   }
 }
 

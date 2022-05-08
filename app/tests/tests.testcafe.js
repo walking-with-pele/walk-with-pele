@@ -93,6 +93,18 @@ test('Test Add Comment button on Spot page', async (testController) => {
   await spotPage.checkcomment(testController, comment);
 });
 
+test('Test Delete Comment button on Spot page', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.gotoListSpotPage(testController);
+  await listSpotPage.isDisplayed(testController);
+  await spotComp.viewPage(testController);
+  await spotPage.isDisplayed(testController);
+  await spotPage.deletecomment(testController);
+  await spotPage.checkdelete(testController);
+});
+
 test('Test Add Like button on Spot page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
