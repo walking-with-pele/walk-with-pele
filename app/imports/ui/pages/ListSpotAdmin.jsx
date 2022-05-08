@@ -65,7 +65,7 @@ class ListSpotAdmin extends React.Component {
     let fRef = null;
     return (
       <Container id="admin-page">
-        <Header as="h2" textAlign="center">List Spots (Admin)</Header>
+        <Header as="h2" textAlign="center">All Spots (Admin)</Header>
         <div style={{ paddingBottom: '5px' }}>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submitSearch(data, fRef)} >
             <Segment>

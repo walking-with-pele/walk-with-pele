@@ -65,7 +65,7 @@ class ListSpot extends React.Component {
     let fRef = null;
     return (
       <Container centered="true" id="list-spot-page">
-        <Header as="h2" textAlign="center">List Spots</Header>
+        <Header as="h2" textAlign="center">All Spots</Header>
         <div style={{ paddingBottom: '5px' }}>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submitSearch(data, fRef)} >
             <Segment>
