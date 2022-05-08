@@ -15,7 +15,7 @@ class SpotPage {
   async addcomment(testController, comment) {
     const loggedInUser = await Selector('#navbar-current-user').exists;
     if (loggedInUser) {
-      await testController.click('#add-comment-popup');
+      await testController.hover('#add-comment-popup');
       await testController.typeText('#comment-form-text', comment);
       await testController.click('#comment-form-submit');
       await testController.click(Selector('.swal-button--confirm'));
