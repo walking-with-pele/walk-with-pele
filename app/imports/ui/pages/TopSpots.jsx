@@ -26,7 +26,6 @@ class TopSpots extends React.Component {
     return (
       <Container id="top-spots-page">
         <Header as="h2" textAlign="center">Top 3 Spots</Header>
-        <Header as="h3" textAlign="center">Click on card to view spot details!</Header>
         <Card.Group>
           {allSpots}
         </Card.Group>
