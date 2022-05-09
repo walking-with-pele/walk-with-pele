@@ -76,7 +76,8 @@ class Landing extends React.Component {
             </Header>
           </Grid.Row>
           <Grid.Row centered>
-            <Image style={imageStyle} src={'images/list-spots3.png'} size='huge'/>
+            <Image style={imageStyle} src={'images/list-spots4.png'} size='huge'/>
+            <Image style={imageStyle} src={'images/top-spots.png'} size='huge'/>
           </Grid.Row>
         </Grid>
         <Grid style={{ width: '90%', margin: 'auto', marginTop: '50px' }}>
