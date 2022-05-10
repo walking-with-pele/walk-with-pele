@@ -66,8 +66,8 @@ class Landing extends React.Component {
             <Header style={textStyle2} inverted>Create Our own Stories</Header>
           </Grid.Column>
         </Grid>
-        <Grid style={{ width: '90%', margin: 'auto', marginTop: '50px' }}>
-          <Grid.Row>
+        <Grid style={{ width: '90%', margin: 'auto', marginTop: '40px' }}>
+          <Grid.Row style={{ backgroundColor: '#024731' }}>
             <Header style={textStyle} inverted>View Potential Spots</Header>
           </Grid.Row>
           <Grid.Row>
@@ -79,9 +79,25 @@ class Landing extends React.Component {
             <Image style={imageStyle} src={'images/list-spots4.png'} size='huge'/>
             <Image style={imageStyle} src={'images/top-spots.png'} size='huge'/>
           </Grid.Row>
+          <Grid.Row>
+            <Header style={textStyle2} inverted>
+              Start conversations with other Users on each Spot Page!
+            </Header>
+          </Grid.Row>
+          <Grid.Row centered>
+            <Image style={imageStyle} src={'images/spot-comment2.png'} size='huge'/>
+          </Grid.Row>
+          <Grid.Row>
+            <Header style={textStyle2} inverted>
+              Add Spots to your Liked and Visited collections!
+            </Header>
+          </Grid.Row>
+          <Grid.Row centered>
+            <Image style={imageStyle} src={'images/user-page4.png'} size='huge'/>
+          </Grid.Row>
         </Grid>
         <Grid style={{ width: '90%', margin: 'auto', marginTop: '50px' }}>
-          <Grid.Row>
+          <Grid.Row style={{ backgroundColor: '#024731' }}>
             <Header style={textStyle} inverted>Contribute to the Collection</Header>
           </Grid.Row>
           <Grid.Row>
@@ -90,7 +106,20 @@ class Landing extends React.Component {
             </Header>
           </Grid.Row>
           <Grid.Row centered>
-            <Image style={imageStyle} src={'images/add-spot3.png'} size='huge'/>
+            <Image style={imageStyle} src={'images/add-spot4.png'} size='huge'/>
+          </Grid.Row>
+        </Grid>
+        <Grid style={{ width: '90%', margin: 'auto', marginTop: '50px' }}>
+          <Grid.Row style={{ backgroundColor: '#024731' }}>
+            <Header style={textStyle} inverted>Check Out the Map</Header>
+          </Grid.Row>
+          <Grid.Row>
+            <Header style={textStyle2} inverted>
+              See each Spot marked on the map!
+            </Header>
+          </Grid.Row>
+          <Grid.Row centered>
+            <Image style={imageStyle} src={'images/map-wwp.png'} size='huge'/>
           </Grid.Row>
         </Grid>
       </div>
