@@ -96,7 +96,7 @@ class Signup extends React.Component {
                   onChange={this.handleChange}
                 />
                 <Form.Input
-                  label="image"
+                  label="Image"
                   id="signup-form-image"
                   icon="camera"
                   iconPosition="left"
