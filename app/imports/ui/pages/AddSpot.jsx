@@ -39,7 +39,7 @@ class AddSpot extends React.Component {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Item added successfully', 'success');
+          swal('Success', 'Spot added successfully', 'success');
           formRef.reset();
         }
       });
@@ -57,10 +57,10 @@ class AddSpot extends React.Component {
               <TextField id='add-form-name' name='name'/>
               <TextField id='add-form-address' name='address'/>
               <SelectField name='spotType'/>
-              <TextField id='add-form-picture' name='picture'/>
+              <TextField id='add-form-picture' label='Picture (optional)' name='picture'/>
               <LongTextField id='add-form-description' name='description'/>
-              <NumField id='add-form-x' label="x-coordinate" name='coordinatesX'/>
-              <NumField id='add-form-y' label="y-coordinate" name='coordinatesY'/>
+              <NumField id='add-form-x' label='x-coordinate' name='coordinatesX'/>
+              <NumField id='add-form-y' label='y-coordinate' name='coordinatesY'/>
               <SubmitField id='add-form-submit' value='Submit'/>
               <ErrorsField/>
             </Segment>

@@ -21,7 +21,7 @@ const searchSchema = new SimpleSchema({
 
 const bridge = new SimpleSchema2Bridge(searchSchema);
 
-/** Renders a card group containing all Spot documents.*/
+/** Renders a card group containing all Spot documents. */
 class ListSpot extends React.Component {
   constructor(props) {
     super(props);

@@ -37,5 +37,6 @@ jobs:
         shell: bash -l {0}
         run: |
           meteor npm install
+          meteor npm install --save react-google-maps
           meteor npm run lint
           meteor npm run testcafe
